@@ -1,0 +1,22 @@
+/* flex, 가로, 세로 */
+.flex { display: flex; }
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+
+/* 정렬 : 상단, 중앙, 하단 */
+.align-up { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-down { align-items: flex-end; }
+
+/* 정렬 : 좌측, 중앙, 우측, 일정, 양쪽 */
+.just-left { justify-content: flex-start; }
+.just-center { justify-content: center; }
+.just-right { justify-content: flex-end; }
+.just-around { justify-content: space-around; }
+.just-between { justify-content: space-between; }
+
+/* 텍스트 : 좌측, 중앙, 우측, 양쪽 */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
