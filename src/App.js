@@ -4,13 +4,18 @@ import './css/font.css';
 import './css/move.css';
 import './css/size.css';
 import './css/sort.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Open from './pages/open/open';
 
 function App() {
   return (
-    <div className="App">
-      충돌테스트 2
-
-    </div>
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path='/' element={<Open />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

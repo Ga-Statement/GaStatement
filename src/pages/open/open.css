@@ -1,0 +1,24 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* { box-sizing: border-box; }
+
+/* 폰트 + 스크롤 숨기기 */
+body {
+    margin: 0px;
+    font-family: Pretendard;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar { display: none; }
+
+.open-Ldiv { width: 2vw; height: 4vh; }
+
+.open-wrap {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.open-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
