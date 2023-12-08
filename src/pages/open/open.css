@@ -1,4 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url(https://db.onlinewebfonts.com/c/203ca707d5875159f71d2aff42401749?family=Athelas+Regular);
+@import url(https://db.onlinewebfonts.com/c/4d7f27cfd708f4160690732603ab13a2?family=Athelas+Italic);
+
+/*font-family: "Athelas Italic", "Athelas Regular */
 
 * { box-sizing: border-box; }
 
