@@ -1,1 +1,37 @@
-#OPEN{font-family: "Athelas Italic";}
+
+
+#div1{background-color: gray;}
+
+/* ---------------상단 이미지 박스---------------- */
+#img_box{margin:none; padding: 0;}
+#img1{object-fit: contain;}
+#img2{object-fit: contain;}
+#img3{object-fit: contain;}
+#img5{object-fit: contain;}
+
+#img_camera{object-fit: contain; width: 25vw;}
+
+/* --------------- 센터 텍스트 ------------------ */
+
+#text_wrap{width: 100%; height: 100%;
+            display: flex; }
+#OPEN{font-family: "Athelas Italic"; position: fixed;
+        top:-10vw; left:-4vw; margin: 0; padding: 0; }
+#DRAWER{width: 100%; margin: 0; position: fixed;
+        top:-10vw; left: -36vw; }
+
+
+/* ----------------- 하단 이미지 박스 ----------------- */
+
+#img6{object-fit: contain; }
+#img7{object-fit: contain;}
+#img8{object-fit: contain;}
+#img9{object-fit: contain;}
+#img10{object-fit: contain;}
+#img11{object-fit: contain;}
+#img12{object-fit: contain;}
+#img13{object-fit: contain;}
+#img14{object-fit: contain;}
+
+#mouse_logo{width: 100%; background-color: pink;}
+
