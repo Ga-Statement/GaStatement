@@ -1,0 +1,86 @@
+.carouselContainer{
+    background: url("/public/pic/main_pic/mainBackground.png");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contents_1, .contents_2, .contents_3, .contents_4{
+    display: flex;
+}
+
+.prodImg_1 img, .prodImg_4 img{
+    width: 20vw;
+}
+
+.prodImg_2 img{
+    width: 15vw;
+}
+
+.prodImg_3 img{
+    width: 10vw;
+    position: relative;
+    top: -10%;
+    left: 10%;
+}
+
+.desc_one, .desc_two, .desc_three, .desc_four{
+    display: none;
+}
+
+.desc_1{
+    font-size: 2vw;
+    font-weight: bold;
+    position: relative;
+    top: 30%;
+    left: 20%;
+}
+
+.desc_2{
+    font-size: 1.5vw;
+    position: relative;
+    top: 30%;
+    left: 20%;
+}
+
+.desc_3{
+    position: relative; 
+    top: 32%;
+    left: 20%;
+    z-index: 1;
+    text-decoration: none;
+    color: white;
+}
+
+.moveBtn{
+    height: 10vh;
+    width: 5vw;
+    color: rgba(242, 242, 242, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.description {
+    position: absolute;
+    top: 45%;
+    left: 59%;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .description.visible {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  
+  .description.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+  }

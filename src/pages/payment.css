@@ -1,0 +1,228 @@
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.paymentContainer{
+    margin: 0 auto;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(238, 238, 238);
+}
+
+.paymentContainerTitle{
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bolder;
+    color: rgb(78, 78, 78);
+}
+
+.paymentLR{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.paymentLeft{
+    margin: 10px;
+    flex: 1;
+    max-width: 25%;
+}
+
+.paymentRight{
+    margin: 10px;
+    flex: 1;
+    max-width: 25%;
+}
+
+.payProdInfo{
+    border-radius: 5px;
+    margin: 10px;
+    /* border: 1px solid gray; */
+    padding: 10px;
+    background-color: white;
+}
+
+.payProdInfoTitle{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.payProdList{
+    display: flex;
+    flex-direction: row;
+}
+
+.payProdImg{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(191, 191, 191);
+}
+
+.payProdName{
+    margin: 5px;
+}
+
+.payProdPrice{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.payCustomerInfo{
+    border-radius: 5px;
+    margin: 10px;
+    /* border: 1px solid gray; */
+    padding: 10px;
+    background-color: white;
+}
+
+.payCustInfoEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.payCustomerInfoTitle{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.customerName, .customerPhone, .customerId, .customerEdit{
+    margin: 5px;
+}
+
+.customerEdit{
+    border: 1px solid rgb(74, 74, 74);
+    border-radius: 3px;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 12%;
+    height: 20%;
+    white-space : nowrap
+}
+
+.customerEdit:hover{
+    cursor: pointer;
+}
+
+.payDeliveryInfo{
+    border-radius: 5px;
+    margin: 10px;
+    /* border: 1px solid gray; */
+    padding: 10px;
+    background-color: white;
+}
+
+.payDeliveryInfoTitle{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.deliveryInfoEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.deliveryName, .deliveryPhone, .deliveryAddress, .deliverEdit, .deliveryMemo{
+    margin: 5px;
+}
+
+.deliveryEdit{
+    border: 1px solid rgb(74, 74, 74);
+    border-radius: 3px;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 12%;
+    height: 20%;
+    white-space : nowrap
+}
+
+.deliveryEdit:hover{
+    cursor: pointer;
+}
+
+.deliveryMemoTitle{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.finalPayment{
+    border-radius: 5px;
+    margin: 10px;
+    /* border: 1px solid gray; */
+    padding: 10px;
+    background-color: white;
+}
+
+.finalPaymentTitle{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.finalPayment_1, .finalPayment_2, .finalPayment_3{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.finalPayment_2{
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.finalPaymentPrice, .DeliverFee{
+    color: rgb(165, 165, 165);
+
+}
+
+.totalPaymentAmount{
+    color: rgb(78, 78, 78);
+    font-weight: bold;
+}
+
+.paymentMethod{
+    border-radius: 5px;
+    margin: 10px;
+    /* border: 1px solid gray; */
+    padding: 10px;
+    background-color: white;
+}
+
+.paymentMethodTitle{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.paymentMethodList{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.purchaseTerms{
+    margin: 10px;
+}
+
+.purchaseBtn{
+    background-color: rgb(198, 198, 198);
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    border-radius: 5px;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+.purchaseBtn:hover{
+    cursor: pointer;
+}

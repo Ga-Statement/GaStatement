@@ -1,0 +1,20 @@
+.daumAddress{
+    display: none;
+}
+
+.searchAddress{
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.searchAddress.invalid{
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
