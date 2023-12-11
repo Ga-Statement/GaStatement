@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300&display=swap');
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* 텍스트 선택 방지 */
+    -webkit-user-drag: none; /* 웹킷 기반 브라우저에서 드래그 방지 */
+    -webkit-user-select: none; /* 웹킷 기반 브라우저에서 텍스트 선택 방지 */
+    touch-action: pan-y; /* 모바일에서의 드래그 방지 */
+}
+
+.category, .search, .loginBtn, .signUpBtn{
+    display: flex;
+    align-items: center;
+}
+
+.home img{
+    width: 2vw;
+}
+
+.home, .category_1, .category_2, .category_3, .login{
+    margin: 0 8vw;
+    cursor: pointer; 
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 2.5vh;
+    white-space: nowrap
+}
+
+.myStory{
+    position: fixed;
+    top: 5%;
+    right: 0;
+    width: 40%;
+    height: 85%;
+    display: flex;
+    flex-direction: block;
+    align-items: center;
+    justify-content:center;
+    background-color: rgba(255, 255, 255, 0.9);    
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transform: translateX(0%);
+    transition: transform 1.5s ease-in-out;
+    z-index: 4;
+}
+
+.myStory.close{
+    transform: translateX(100%);
+    transition: transform 1.5s ease-in-out;
+}
+
+.loginPage{
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 2.5vh;
+}
+
+.loginContainer{
+    position: fixed;
+    top: 37%;
+    right: 0;
+    width: 35%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color: rgba(255, 255, 255, 0.9);    
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transform: translateX(-5%);
+    transition: transform 1.5s ease-in-out;
+    z-index: 4;
+    text-align: center;
+}
+
+.loginContainer.close{
+    transform: translateX(100%); 
+    transition: transform 1.5s ease-in-out;
+}
+
+.signUp{
+    position: fixed;
+    bottom: 0;
+    left: 37%;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color: rgba(255, 255, 255, 0.9);    
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transform: translateY(-16%);
+    transition: transform 1.5s ease-in-out;
+    z-index: 3;
+    text-align: center;
+}
+
+.signUp.close{
+    transform: translateY(100%); 
+    transition: transform 1.5s ease-in-out;
+}
+
+.sidebar{
+    display: none;
+}
+
+.loginPage.active, .category_3.active{
+    color: rgb(177, 177, 177);  
+}
+/* 
+.drawerB {
+    position: relative;
+} */
+
+.drawerBtn{
+    background-color: rgba(215, 210, 210);
+    border-radius: 21px;
+    width: 54px;
+    height: 54px;
+    position: fixed;
+    bottom: 105px;
+    left: 100px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.drawerApply{
+    position: fixed;
+    bottom: 0;
+    left: 35%;
+    width: 35%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color: rgba(255, 255, 255, 0.9);    
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transform: translateY(-15%);
+    transition: transform 1.5s ease-in-out;
+    z-index: 3;
+    text-align: center;
+}
+
+.drawerApply.close{
+    transform: translateY(100%); 
+    transition: transform 1.5s ease-in-out;
+}
+  
+@media only screen and (max-width: 850px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .sidebar{
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        background-color: transparent;
+        height: 100%;
+    }
+
+    .sidebar .sideOpenBtn, .sideCloseBtn{
+        padding: 5px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: rgba(240, 240, 240, 0.8);
+        opacity: 1;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .openSidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: rgba(50, 50, 50, 0.8);
+        transition: transform 1.7s ease-in-out;
+        transform: translateX(100%);
+        z-index: 5;
+    }
+
+    .openSidebar.hide{
+        transition: transform 1.7s ease-in-out;
+        transform: translateX(0%);
+    }
+
+    .sidebar nav div{
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        margin: 5px 20px;
+    }
+
+    .homeSideBar{
+        font-size: 1.5rem;
+        margin: 0 2rem;
+        color: white;
+        text-decoration: none;
+    }
+
+    .list{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
+    }
+
+    .list ul{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        margin: 5px;
+    }
+
+    .list div:hover{
+        cursor: pointer;
+    }
+
+    .sellBuyLink, .communityLink, .drawerLink, .myStoryLink, .yourStoryLink{
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    .sideLoginBtn{
+        font-size: 15px;
+        padding-right: 100px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        text-decoration: none;
+        margin: 10px;
+    }
+
+    .sideOpenBtn.visible{
+        visibility: visible;
+    }
+
+    .sideOpenBtn{
+        visibility: hidden;
+        z-index: 5; 
+    }
+
+    .sideCloseBtn.visible {
+        visibility: visible;
+    }
+
+    .sideCloseBtn {
+        visibility: hidden;
+    }
+
+    .sellBuyBtnP.hidden, .communityBtnP.hidden, .introBtnP.hidden, .infoBtnP.hidden, .noticeBtnP.hidden{
+        width: 0;
+        transition: width 1s ease-in-out;
+    }
+
+    .sellBuyBtnP.visible, .communityBtnP.visible, .introBtnP.visible, .infoBtnP.visible, .noticeBtnP.visible{
+        width: 13px;
+        transition: width 1s ease-in-out;
+        margin-left: 10px;
+    }
+
+    .sellBuyBtnM.hidden, .communityBtnM.hidden, .introBtnM.hidden, .infoBtnM.hidden, .noticeBtnM.hidden{
+        width: 0;
+        transition: width 1s ease-in-out;
+    }
+
+    .sellBuyBtnM.visible, .communityBtnM.visible, .introBtnM.visible, .infoBtnM.visible, .noticeBtnM.visible{
+        width: 18px;
+        transition: width 1s ease-in-out;
+        margin-left: 10px;
+    }
+
+    .sellBuy, .community, .intro, .info, .notice{
+        max-height: 500px;
+        transition: max-height 1s ease-in-out;
+    }
+
+    .sellBuy.hide, .community.hide, .intro.hide, .info.hide, .notice.hide{
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 1s ease-in-out;
+    }
+
+    .sellBuyBtn:hover, .communityBtn:hover, .introBtn:hover, .infoBtn:hover, .noticeBtn:hover {
+        cursor: pointer; 
+    }
+}

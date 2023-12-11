@@ -1,0 +1,319 @@
+.myInfo.close, .specs.close, .addToBag.close{
+    display:none;
+}
+
+.my_story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 30%;
+}
+
+.myStoryTitle{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px 50px 10px;
+    position: fixed;
+    top: 13px;
+    z-index: 1;
+}
+
+.myInfoTitle, .specsTitle, .shoppingBag{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.myInfoTitle.none, .specsTitle.none, .shoppingBag.none{
+    font-weight: normal;
+}
+
+.borderR{
+    border-right: 1px solid black;
+    margin: 0 10px;
+    height: 25px;
+}
+
+.closeMystoryBtn img{
+    width: 40px;
+    position: fixed;
+    top: 3%;
+    right: 15%;
+}
+
+.closeMystoryBtn img:hover{
+    cursor: pointer;
+}
+
+.myInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    top: -6px;
+    padding: 10px;
+}
+
+.basicInfoTitle{
+    margin: 10px;
+}
+
+.basicInfo{
+    width: 100%;
+    height: 60%;
+    border: 2px solid rgba(161, 161, 161, 0.9);
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.basicInfoContents{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+}
+
+.emailInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+}
+
+.profileIcon{
+    width: 20px;
+    height: 25px;
+}
+
+.phoneIcon{
+    width: 20px;
+    height: 25px;
+}
+
+.addressIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.emailIcon{
+    width: 20px;
+    height: 25px;
+}
+
+.onoffIcon{
+    width: 40px;
+    height: 25px;
+}
+
+.phoneInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+}
+
+.addressInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+}
+
+.promotionTitle{
+    margin: 10px;
+}
+
+.promotion{
+    width: 100%;
+    height: 20%;
+    border: 2px solid rgba(161, 161, 161, 0.9);
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px;
+}
+
+.phoneAgree{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+}
+
+.emailAgree{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+}
+
+.alarmTitle{
+    margin: 10px;
+}
+
+.alarm{
+    width: 440px;
+    height: 20%;
+    border: 2px solid rgba(161, 161, 161, 0.9);
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px;
+}
+
+.specs{
+    /* display: flex;
+    flex-direction: column; */
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    top: 2px;
+}
+
+.specsname{
+    margin: 10px;
+}
+
+.sales{
+    width: 100%;
+    height: 45%;
+    border: 2px solid rgba(161, 161, 161, 0.9);
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px;
+    overflow: auto;
+}
+
+.salesList{
+    display: flex;
+    flex-direction: column;
+}
+
+.salesInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+}
+
+.date{
+    text-align: left;
+    padding: 10px;
+}
+
+.plus{
+    text-align: center;
+}
+
+.purchase{
+    width: 440px;
+    height: 45%;
+    border: 2px solid rgba(161, 161, 161, 0.9);
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px;
+    overflow: auto;
+}
+
+.purchaseList{
+    display: flex;
+    flex-direction: column;
+}
+
+.purchaseInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+}
+
+.addToBag{
+    /* display: flex;
+    flex-direction: column; */
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    top: -100px;
+}
+
+.shoppingBagList{
+    margin: 10px;
+}
+
+.shoppingProduct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    border: 2px solid rgba(161, 161, 161, 0.9);
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px;
+}
+
+.shoppingProductInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(215, 215, 215);
+    margin: 10px;
+    width: 400px;
+    white-space: nowrap;
+}
+
+.shoppingImg{
+    margin: 10px;
+}
+
+.shoppingProdName{
+    margin: 10px;
+}
+
+.shoppingPrice{
+    margin: 10px;
+}
+
+.buyButton{
+    float : right;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(205, 205, 205);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.withdrawal{
+    margin: 10px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0%;
+}
+
+/* .admin{
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+} */

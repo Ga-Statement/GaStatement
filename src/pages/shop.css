@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&family=Jua&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo:wght@800&family=Noto+Sans+KR:wght@400;500&family=Titillium+Web:wght@700&display=swap');
+
+.product_list{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    cursor: grab;
+    background-color: rgb(19, 19, 19);
+}
+
+.product_container{
+    background-color: transparent;
+}
+
+.product_container_1 {
+    position: absolute;
+    top: -10%;
+    left: 0%;
+    width: 30vw;
+    height: 50vh;
+    margin: 20px;
+    /* background-color: rgb(214, 214, 214); */
+    box-sizing: border-box;
+}
+
+.product_container_2 {
+    position: absolute;
+    top: -10%;
+    left: 35%;
+    width: 30vw;
+    height: 50vh;
+    margin: 20px;
+    /* background-color: rgb(214, 214, 214); */
+    box-sizing: border-box;
+}
+
+.product_container_3 {
+    position: absolute;
+    top: -10%;
+    left: 70%;
+    width: 30vw;
+    height: 50vh;
+    margin: 20px;
+    /* background-color: rgb(214, 214, 214); */
+    box-sizing: border-box;
+}
+
+.product_container_4 {
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    width: 30vw;
+    height: 50vh;
+    margin: 20px;
+    /* background-color: rgb(214, 214, 214); */
+    box-sizing: border-box;
+}
+
+.product_container_5 {
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    width: 30vw;
+    height: 50vh;
+    margin: 20px;
+    /* background-color: rgb(214, 214, 214); */
+    box-sizing: border-box;
+}
+
+.product_container_6 {
+    position: absolute;
+    top: 55%;
+    left: 90%;
+    width: 30vw;
+    height: 50vh;
+    margin: 20px;
+    /* background-color: rgb(214, 214, 214); */
+    box-sizing: border-box;
+}
+
+.product_img{
+    position: absolute;
+    top: 22%;
+    left: 18%;
+    width: 300px;
+    z-index: 1;
+    margin: 10px auto;
+}
+
+.product_img_2 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 300px;
+    z-index: 1;
+    margin: 10px auto;
+}
+
+.product_img_3 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    z-index: 1;
+    margin: 10px auto;
+}
+
+.product_img_4 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    z-index: 1;
+    margin: 10px auto;
+}
+
+.product_img_5 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    z-index: 1;
+    margin: 10px auto;
+}
+
+.product_img_6 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    z-index: 1;
+    margin: 10px auto;
+}
+
+.product_name{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_name_2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_name_3 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_name_4 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_name_5 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_name_6 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_name::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-family: 'Nanum Myeongjo', serif;
+}
+/* ::before	요소 내용 앞쪽에 새 컨텐츠를 추가 */
+
+.product_name_2::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 94, 94);
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_name_3::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-family: 'Nanum Myeongjo', serif;
+}
+/* ::before	요소 내용 앞쪽에 새 컨텐츠를 추가 */
+
+.product_name_4::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 94, 94);
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_name_5::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-family: 'Nanum Myeongjo', serif;
+}
+/* ::before	요소 내용 앞쪽에 새 컨텐츠를 추가 */
+
+.product_name_6::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(255, 94, 94);
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_img:hover, .product_img_2:hover, .product_img_3:hover, .product_img_4:hover, .product_img_5:hover, .product_img_6:hover{
+    cursor: pointer;
+}
+
+.product_link:hover + .product_name::before,
+.product_img_2:hover + .product_name_2::before, .product_img_3:hover + .product_name_3::before, .product_img_4:hover + .product_name_4::before, .product_img_5:hover + .product_name_5::before, .product_img_6:hover + .product_name_6::before{
+    transition: all 0.2s linear;
+    width: 100%;
+}
+
+.product_link:not(:hover) + .product_name::before,
+.product_img_2:not(:hover) + .product_name_2::before, .product_img_3:not(:hover) + .product_name_3::before, .product_img_4:not(:hover) + .product_name_4::before, .product_img_5:not(:hover) + .product_name_5::before, .product_img_6:not(:hover) + .product_name_6::before{
+    transition: all 0.2s linear;
+    width: 0;
+}
+
+.product_img_2:hover + .product_name_2,
+.product_img_2:hover + .product_name_2::before{
+    z-index: 2;
+}
+
+.product_img_4:hover + .product_name_4,
+.product_img_4:hover + .product_name_4::before{
+    z-index: 2;
+}
+
+.product_img_6:hover + .product_name_6,
+.product_img_6:hover + .product_name_6::before{
+    z-index: 2;
+}
+
+.product_sub_name_1{
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_2{
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_3{
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_4{
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_5{
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_6{
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(145, 145, 145, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
