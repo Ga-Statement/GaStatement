@@ -16,8 +16,8 @@
     display: flex;
 }
 
-.prodImg_1 img, .prodImg_4 img{
-    width: 20vw;
+.prodImg_1 img{
+    width: 15vw;
 }
 
 .prodImg_2 img{
@@ -25,10 +25,11 @@
 }
 
 .prodImg_3 img{
-    width: 10vw;
-    position: relative;
-    top: -10%;
-    left: 10%;
+    width: 15vw;
+}
+
+.prodImg_4 img{
+    width: 15vw;
 }
 
 .desc_one, .desc_two, .desc_three, .desc_four{

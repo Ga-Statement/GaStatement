@@ -27,9 +27,9 @@ const Mainpage = () => {
 			  <img src="/pic/main_pic/canon.png" alt="이미지"/>
 			</div>
 			<div className="desc_one">
-			  <div className='desc_1'>색감을 담으세요</div>
+			  <div className='desc_1'>"색감을 담으세요"</div>
 			  <div className='desc_2'>CANON-OG Camera.</div>
-			  <Link to='/premium' className='desc_3'>바로가기 &gt;</Link>
+			  <Link to='/premium1' className='desc_3'>바로가기 &gt;</Link>
 			</div>
 		  </div>
 		),
@@ -39,12 +39,12 @@ const Mainpage = () => {
 		content: (
 		  <div className="contents_2">
 			<div className="prodImg_2">
-				<img src="/pic/main_pic/jewelbox.png" alt="이미지2"/>
+				<img src="/pic/main_pic/teacup.png" alt=""/>
 			</div>
 			<div className="desc_two">
-				<div  className='desc_1'>보석을 담으세요</div>
-				<div className='desc_2'>PEARL JEWEL BOX</div>
-				<div className='desc_3'>바로가기 &gt;</div>
+				<div  className='desc_1'>"마음을 담으세요"</div>
+				<div className='desc_2'>Noritake</div>
+				<Link to='/premium2' className='desc_3'>바로가기 &gt;</Link>
 			</div> 
 			</div>
 		),
@@ -54,12 +54,12 @@ const Mainpage = () => {
 		content: (
 		  <div className="contents_3">
 			<div className="prodImg_3">
-			  <img src="/pic/main_pic/lamp.png" alt="이미지3"/>
+			  <img src="/pic/main_pic/book.png" alt=""/>
 			</div>
 			<div className="desc_three">
-			  <div className='desc_1'>빛을 느껴보세요</div>
-			  <div className='desc_2'>PEARL JEWEL BOX</div>
-			  <div className='desc_3'>바로가기 &gt;</div>
+			  <div className='desc_1'>"감동을 느껴보세요"</div>
+			  <div className='desc_2'>THE Passion within</div>
+			  <Link to='/standard1' className='desc_3'>바로가기 &gt;</Link>
 			</div> 
 			</div>
 		),
@@ -69,12 +69,12 @@ const Mainpage = () => {
 		content: (
 		  <div className="contents_4">
 			<div className="prodImg_4">
-			  <img src="/pic/main_pic/teacup.png" alt="이미지4"/>
+			  <img src="/pic/main_pic/LP.png" alt="이미지"/>
 			</div>
 			<div className="desc_four">
-			  <div className='desc_1'>마음을 담으세요</div>
-			  <div className='desc_2'>CANON-OG Camera.</div>
-			  <div className='desc_3'>바로가기 &gt;</div>
+			  <div className='desc_1'>"음악을 담으세요"</div>
+			  <div className='desc_2'>The Beatles 1st LP</div>
+			  <Link to='/standard2' className='desc_3'>바로가기 &gt;</Link>
 			</div>
 		  </div>
 		),
@@ -92,7 +92,7 @@ const Mainpage = () => {
 	};
   
 	useEffect(() => {
-	  const intervalId = setInterval(nextSlide, 6000);
+	  const intervalId = setInterval(nextSlide, 7000);
   
 	  return () => clearInterval(intervalId);
 	}, []);

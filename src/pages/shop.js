@@ -21,58 +21,40 @@ const ShopPage = () => {
   return (
     <div className='product_list'  {...events} ref={ref}>
         <div className="product_container_1">
-            <Link to='/premium' className='product_link'><img className="product_img" src="/pic/shop_pic/canon.png" alt=""/></Link> 
-            <div prod_title="CERAMICMIC" className="product_name">
-              CERAMICMIC
-            </div>
-            <div className="product_sub_name_1">
-              CERAMICMIC
-            </div>
+          <Link to='/premium1' className='product_link'><img className="product_img" src="/pic/shop_pic/canon.png" alt=""/></Link> 
+          <div prod_title="CANON-OG Camera." className="product_name">
+            CANON-OG Camera.
+          </div>
+          <div className="product_sub_name_1">
+            CANON-OG Camera.
+          </div>
         </div>
         <div className="product_container_2">
-            <img className="product_img_2" src="/pic/shop_pic/jewelbox.png" alt=""/>
-            <div prod_title="SOFASOFA" className="product_name_2">
-              SOFASOFA
-            </div>
-            <div className="product_sub_name_2">
-              SOFASOFA
-            </div>
+          <Link to='/premium2' className='product_link'><img className="product_img_2" src="/pic/shop_pic/teacup.png" alt=""/></Link> 
+          <div prod_title="Noritake" className="product_name_2">
+            Noritake
+          </div>
+          <div className="product_sub_name_2">
+            Noritake
+          </div>
         </div>
         <div className="product_container_3">
-            <img className="product_img_3" src="/pic/shop_pic/lamp.png" alt="" />
-            <div prod_title="CHAIRCHAIR" className="product_name_3">
-              CHAIRCHAIR
-            </div>
-            <div className="product_sub_name_3">
-              CHAIRCHAIR
-            </div>
+          <Link to='/standard1' className='product_link'><img className="product_img_3" src="/pic/shop_pic/book.png" alt="" /></Link> 
+          <div prod_title="THE Passion within" className="product_name_3">
+            THE Passion within
+          </div>
+          <div className="product_sub_name_3">
+            THE Passion within
+          </div>
         </div>
         <div className="product_container_4">
-            <img className="product_img_4" src="/pic/shop_pic/teacup.png" alt="" />
-            <div prod_title="CHAIRCHAIR" className="product_name_4">
-              CHAIRCHAIR
-            </div>
-            <div className="product_sub_name_4">
-              CHAIRCHAIR
-            </div>
-        </div>
-        <div className="product_container_5">
-            <img className="product_img_5" src="/open/image(1).png" alt="" />
-            <div prod_title="CERAMICMIC" className="product_name_5">
-              CERAMICMIC
-            </div>
-            <div className="product_sub_name_5">
-              CERAMICMIC
-            </div>
-        </div>
-        <div className="product_container_6">
-            <img className="product_img_6" src="/open/image(5).png" alt="" />
-            <div prod_title="SOFASOFA" className="product_name_6">
-              SOFASOFA
-            </div>
-            <div className="product_sub_name_6">
-              SOFASOFA
-            </div>
+          <Link to='/standard2' className='product_link'><img className="product_img_4" src="/pic/shop_pic/LP.png" alt="" /></Link> 
+          <div prod_title="The Beatles 1st LP" className="product_name_4">
+            The Beatles 1st LP
+          </div>
+          <div className="product_sub_name_4">
+            The Beatles 1st LP
+          </div>
         </div>
     </div>
   );

@@ -9,20 +9,21 @@
     justify-content: center;
     margin: 0 auto;
     height: 30%;
+    position: relative;
+    width: 100vw;
 }
 
 .myStoryTitle{
     display: flex;
     flex-direction: row;
-    margin: 10px 10px 50px 10px;
-    position: fixed;
-    top: 13px;
+    position: absolute;
+    top: -26vh;
     z-index: 1;
+    font-size: 1.1vw;
 }
 
 .myInfoTitle, .specsTitle, .shoppingBag{
     cursor: pointer;
-    font-size: 20px;
     font-weight: bolder;
 }
 
@@ -32,47 +33,48 @@
 
 .borderR{
     border-right: 1px solid black;
-    margin: 0 10px;
-    height: 25px;
+    margin: 0 1vw;
+    height: 4vh;
 }
 
 .closeMystoryBtn img{
-    width: 40px;
-    position: fixed;
-    top: 3%;
-    right: 15%;
+    width: 2vw;
+    position: absolute;
+    right: -6vw;
 }
 
 .closeMystoryBtn img:hover{
     cursor: pointer;
 }
 
-.myInfo{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    text-align: left;
-    position: relative;
-    top: -6px;
-    padding: 10px;
+.basicInfoTitle{
+    position: absolute;
+    top: -21vh;
+    left: 6vw;
+    font-size: 1.9vh;
 }
 
-.basicInfoTitle{
-    margin: 10px;
-}
 
 .basicInfo{
-    width: 100%;
-    height: 60%;
+    width: 30vw;
+    height: 24vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
-    border-radius: 5px;
+    border-radius: 1vw;
     margin: 0 auto;
     background-color: white;
+    position: absolute;
+    top: -18vh;
+    left: 5vw;
 }
 
 .basicInfoContents{
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    width: 28vw;
+    font-size: 1.9vh;
 }
 
 .profile{
@@ -80,7 +82,8 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
+    margin: 1vh;
+    font-size: 1.9vh;
 }
 
 .emailInfo{
@@ -88,32 +91,32 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
+    margin: 1vh;
+    font-size: 1.9vh;
 }
 
 .profileIcon{
-    width: 20px;
-    height: 25px;
+    width: 2vw;
+    height: 3vh;
 }
 
 .phoneIcon{
-    width: 20px;
-    height: 25px;
+    width: 2vw;
+    height: 3vh;
 }
 
 .addressIcon{
-    width: 20px;
-    height: 20px;
+    width: 2vw;
+    height: 3vh;
 }
 
 .emailIcon{
-    width: 20px;
-    height: 25px;
+    width: 2vw;
+    height: 3vh;
 }
 
-.onoffIcon{
-    width: 40px;
-    height: 25px;
+.onoffIcon:hover{
+    cursor: pointer;
 }
 
 .phoneInfo{
@@ -121,7 +124,8 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
+    margin: 1vh;
+    font-size: 1.9vh;
 }
 
 .addressInfo{
@@ -129,21 +133,27 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
+    margin: 1vh;
+    font-size: 1.9vh;
 }
 
 .promotionTitle{
-    margin: 10px;
+    margin: 1vh;
+    position: absolute;
+    top: 7vh;
+    right: 25vw;
+    font-size: 1.9vh;
 }
 
 .promotion{
-    width: 100%;
-    height: 20%;
+    width: 30vw;
+    height: 13vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
-    border-radius: 5px;
-    margin: 0 auto;
+    border-radius: 1vw;
     background-color: white;
-    padding: 5px;
+    position: absolute;
+    top: 11vh;
+    left: 5vw;
 }
 
 .phoneAgree{
@@ -151,7 +161,8 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
+    margin: 2vh;
+    font-size: 2vh;
 }
 
 .emailAgree{
@@ -159,45 +170,49 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
+    margin: 2vh;
+    font-size: 2vh;
 }
 
 .alarmTitle{
-    margin: 10px;
+    margin: 1vh;
+    position: absolute;
+    top: 25vh;
+    right: 24vw;
+    font-size: 1.9vh;
 }
 
 .alarm{
-    width: 440px;
-    height: 20%;
+    width: 30vw;
+    height: 13vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
-    border-radius: 5px;
+    border-radius: 1vw;
     margin: 0 auto;
     background-color: white;
-    padding: 5px;
-}
-
-.specs{
-    /* display: flex;
-    flex-direction: column; */
-    margin: 10px;
-    text-align: left;
-    position: relative;
-    top: 2px;
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
 }
 
 .specsname{
-    margin: 10px;
+    font-size: 1.9vh;
+    position: absolute;
+    top: -21vh;
+    left: 6vw;
 }
 
 .sales{
-    width: 100%;
-    height: 45%;
+    width: 30vw;
+    height: 18vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
-    border-radius: 5px;
+    border-radius: 1vw;
     margin: 0 auto;
     background-color: white;
-    padding: 5px;
     overflow: auto;
+    font-size: 1.9vh;
+    position: absolute;
+    top: -18vh;
+    left: 5vw;
 }
 
 .salesList{
@@ -210,27 +225,37 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
+    margin: 2vh;
 }
 
 .date{
-    text-align: left;
-    padding: 10px;
+    padding-left: 1vw;
+    padding-top: 1vh;
 }
 
 .plus{
     text-align: center;
 }
 
+.specsname_2{
+    font-size: 1.9vh;
+    position: absolute;
+    top: 2vh;
+    left: 6vw;
+}
+
 .purchase{
-    width: 440px;
-    height: 45%;
+    width: 30vw;
+    height: 20vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
-    border-radius: 5px;
+    border-radius: 1vw;
     margin: 0 auto;
     background-color: white;
-    padding: 5px;
     overflow: auto;
+    font-size: 1.9vh;
+    position: absolute;
+    top: 6vh;
+    left: 5vw;
 }
 
 .purchaseList{
@@ -243,33 +268,30 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
-}
-
-.addToBag{
-    /* display: flex;
-    flex-direction: column; */
-    margin: 10px;
-    text-align: left;
-    position: relative;
-    top: -100px;
+    margin: 2vh;
 }
 
 .shoppingBagList{
-    margin: 10px;
+    position: absolute;
+    top: -21vh;
+    left: 6vw;
+    font-size: 1.9vh;
 }
 
 .shoppingProduct{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 60%;
+    width: 30vw;
+    height: 20vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
-    border-radius: 5px;
+    border-radius: 1vw;
     margin: 0 auto;
     background-color: white;
-    padding: 5px;
+    font-size: 1.9vh;
+    position: absolute;
+    top: -18vh;
+    left: 5vw;
 }
 
 .shoppingProductInfo{
@@ -277,38 +299,40 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 10px;
-    width: 400px;
+    margin: 2vh;
+    width: 26vw;
     white-space: nowrap;
 }
 
 .shoppingImg{
-    margin: 10px;
+    margin: 1vh;
 }
 
 .shoppingProdName{
-    margin: 10px;
+    margin: 1vh;
 }
 
 .shoppingPrice{
-    margin: 10px;
+    margin: 1vh;
 }
 
 .buyButton{
-    float : right;
-    margin: 10px;
     text-decoration: none;
     color: black;
     background-color: rgb(205, 205, 205);
-    padding: 5px;
-    border-radius: 5px;
+    border-radius: 0.5vw;
+    padding: 1vh;
+    position: absolute;
+    top: 10vh;
+    left: 18vw;
 }
 
 .withdrawal{
-    margin: 10px;
     cursor: pointer;
-    position: fixed;
-    bottom: 0%;
+    position: absolute;
+    bottom: -25vh;
+    left: 18.5vw;
+    font-size: 2.1vh;
 }
 
 /* .admin{
