@@ -4,225 +4,259 @@
     align-items: center;
     width: 100vw;
 }
-
-.paymentContainer{
-    margin: 0 auto;
-    padding: 0;
+.payment_container{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(238, 238, 238);
-}
-
-.paymentContainerTitle{
-    text-align: center;
-    font-size: 5vh;
-    font-weight: bolder;
-    color: rgb(78, 78, 78);
-}
-
-.paymentLR{
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    margin: 10px;
+    background: rgb(237, 207, 170);
 }
 
-.paymentLeft{
-    margin: 10px;
+.payment_wrapper_left{
+    flex: 1.2;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.payment_product_img{
+    width: 70%;
+}
+
+.payment_product_logo{
+    margin-top: -50px;
+    margin-right: 100px;
+}
+
+.payment_product_desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 300px;
+}
+
+.payment_product_desc1{
+    font-size: 4.5vh;
+    margin-right: 10px;
+}
+
+.payment_product_desc2{
+    font-size: 2.5vh;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.payment_wrapper_right{
     flex: 1;
-    max-width: 25%;
 }
 
-.paymentRight{
-    margin: 10px;
-    flex: 1;
-    max-width: 25%;
+.payment_wrapper_right_box{
+    width: 80%;
+    height: 87%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 10px;
 }
 
-.payProdInfo{
-    border-radius: 5px;
-    margin: 10px;
-    /* border: 1px solid gray; */
-    padding: 10px;
-    background-color: white;
-}
-
-.payProdInfoTitle{
-    margin: 5px;
-    font-weight: bold;
-}
-
-.payProdList{
-    display: flex;
-    flex-direction: row;
-}
-
-.payProdImg{
-    margin: 5px;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(191, 191, 191);
-}
-
-.payProdName{
-    margin: 5px;
-}
-
-.payProdPrice{
-    margin: 5px;
-    font-weight: bold;
-}
-
-.payCustomerInfo{
-    border-radius: 5px;
-    margin: 10px;
-    /* border: 1px solid gray; */
-    padding: 10px;
-    background-color: white;
-}
-
-.payCustInfoEdit{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.payCustomerInfoTitle{
-    margin: 5px;
-    font-weight: bold;
-}
-
-.customerName, .customerPhone, .customerId, .customerEdit{
-    margin: 5px;
-}
-
-.customerEdit{
-    border: 1px solid rgb(74, 74, 74);
-    border-radius: 3px;
-    padding: 0;
+.payment_user_info_title{
     text-align: center;
-    justify-content: center;
-    width: 12%;
-    height: 20%;
-    white-space : nowrap
-}
-
-.customerEdit:hover{
-    cursor: pointer;
-}
-
-.payDeliveryInfo{
-    border-radius: 5px;
-    margin: 10px;
-    /* border: 1px solid gray; */
-    padding: 10px;
-    background-color: white;
-}
-
-.payDeliveryInfoTitle{
-    margin: 5px;
-    font-weight: bold;
-}
-
-.deliveryInfoEdit{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.deliveryName, .deliveryPhone, .deliveryAddress, .deliverEdit, .deliveryMemo{
-    margin: 5px;
-}
-
-.deliveryEdit{
-    border: 1px solid rgb(74, 74, 74);
-    border-radius: 3px;
-    padding: 0;
-    text-align: center;
-    justify-content: center;
-    width: 12%;
-    height: 20%;
-    white-space : nowrap
-}
-
-.deliveryEdit:hover{
-    cursor: pointer;
-}
-
-.deliveryMemoTitle{
-    margin-top: 20px;
     margin-bottom: 5px;
 }
 
-.finalPayment{
-    border-radius: 5px;
-    margin: 10px;
-    /* border: 1px solid gray; */
-    padding: 10px;
+.payment_user_info{
+    border: 3px solid rgb(189, 189, 189);
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 30%;
+    font-size: 2vh;
     background-color: white;
 }
 
-.finalPaymentTitle{
-    margin: 5px;
-    font-weight: bold;
-}
-
-.finalPayment_1, .finalPayment_2, .finalPayment_3{
-    margin: 5px;
+.payment_user_info_1{
     display: flex;
     flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
 }
 
-.finalPayment_2{
-    padding-bottom: 5px;
+.payment_user_info_1_icon, .payment_user_info_2_icon, .payment_user_info_3_icon, .payment_user_info_4_icon, .payment_user_info_5_icon{
+    margin-right: 10px;
+}
+
+.payment_user_info_2{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+}
+
+.payment_user_info_3{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+}
+
+.payment_user_info_4{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+}
+
+.payment_user_info_5{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+}
+
+.payment_user_info_5_memo{
+    display: flex;
+    flex-direction: row;
+}
+
+.delivery_memo_select{
     margin-bottom: 5px;
-    border-bottom: 1px solid gray;
+    margin-left: 18px;
+    margin-top: 2px;
 }
 
-.finalPaymentPrice, .DeliverFee{
-    color: rgb(165, 165, 165);
-
-}
-
-.totalPaymentAmount{
-    color: rgb(78, 78, 78);
-    font-weight: bold;
-}
-
-.paymentMethod{
-    border-radius: 5px;
-    margin: 10px;
-    /* border: 1px solid gray; */
-    padding: 10px;
+.payment_amount{
+    border: 3px solid rgb(189, 189, 189);
     background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 20%;
+    text-align: center;
+    font-size: 2vh;
 }
 
-.paymentMethodTitle{
-    margin: 5px;
-    font-weight: bold;
+.payment_amount_title{
+    text-align: center;
+    margin-bottom: 5px;
 }
 
-.paymentMethodList{
+.payment_amount_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3px;
+}
+
+.payment_amount_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 3px solid rgb(165, 165, 165);
+    margin-bottom: 3px;
+}
+
+.payment_amount_3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.payment_method{
+    border: 3px solid rgb(189, 189, 189);
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 27%;
+    font-size: 2vh;
+}
+
+.payment_method_title{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.payment_method_list{
     display: flex;
     flex-direction: column;
-    margin: 5px;
-}
-
-.purchaseTerms{
+    flex: 1;
     margin: 10px;
 }
 
-.purchaseBtn{
-    background-color: rgb(198, 198, 198);
-    text-align: center;
-    justify-content: center;
-    width: 90%;
-    border-radius: 5px;
-    margin: 5px auto;
-    padding: 10px;
+.vertical_line{
+    width:3px;
+    background-color:#b3b3b3;
+    margin: 10px;
 }
 
-.purchaseBtn:hover{
+.drawer_pay_method{
+    flex: 1;
+    /* background-color: rgb(238, 238, 238); */
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.drawer_pay_method_title{
+    font-size: 1.6vh;
+}
+
+.drawer_pay_method_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.6vh;
+}
+
+.drawer_pay_method_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.6vh;
+}
+
+.drawer_pay_method_3{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4vh;
+    color: rgb(158, 158, 158);
+}
+
+.kb_logo{
+    width: 15px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.purchase_btn{
+    background-color: rgb(73, 73, 73);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 1%;
+    left: 45%;
+}
+
+.purchase_btn:hover{
     cursor: pointer;
 }

@@ -2,219 +2,140 @@
 
 .product_list{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     overflow: hidden;
     position: relative;
     height: 100vh;
     width: 100vw;
     cursor: grab;
-    background-color: rgb(19, 19, 19);
-}
-
-.product_container{
-    background-color: transparent;
+    background-color: rgb(59, 59, 59);
+    position: relative;
 }
 
 .product_container_1 {
     position: absolute;
-    top: -10%;
-    left: 0%;
-    width: 30vw;
-    height: 50vh;
-    margin: 20px;
+    top: 10vh;
+    left: 0vw;
+    width: 50vw;
+    height: 65vh;
     /* background-color: rgb(214, 214, 214); */
     box-sizing: border-box;
 }
 
 .product_container_2 {
     position: absolute;
-    top: -10%;
-    left: 35%;
-    width: 30vw;
-    height: 50vh;
-    margin: 20px;
+    top: 10vh;
+    left: 60vw;
+    width: 50vw;
+    height: 65vh;
     /* background-color: rgb(214, 214, 214); */
     box-sizing: border-box;
 }
 
 .product_container_3 {
     position: absolute;
-    top: -10%;
-    left: 70%;
-    width: 30vw;
-    height: 50vh;
-    margin: 20px;
-    /* background-color: rgb(214, 214, 214); */
+    top: 10vh;
+    left: 120vw;
+    width: 50vw;
+    height: 65vh;
+    background-color: rgb(214, 214, 214);
     box-sizing: border-box;
 }
 
 .product_container_4 {
     position: absolute;
-    top: 55%;
-    left: 20%;
-    width: 30vw;
-    height: 50vh;
-    margin: 20px;
-    /* background-color: rgb(214, 214, 214); */
-    box-sizing: border-box;
-}
-
-.product_container_5 {
-    position: absolute;
-    top: 55%;
-    left: 55%;
-    width: 30vw;
-    height: 50vh;
-    margin: 20px;
-    /* background-color: rgb(214, 214, 214); */
-    box-sizing: border-box;
-}
-
-.product_container_6 {
-    position: absolute;
-    top: 55%;
-    left: 90%;
-    width: 30vw;
-    height: 50vh;
-    margin: 20px;
-    /* background-color: rgb(214, 214, 214); */
+    top: 10vh;
+    left: 180vw;
+    width: 50vw;
+    height: 65vh;
+    background-color: rgb(214, 214, 214);
     box-sizing: border-box;
 }
 
 .product_img{
     position: absolute;
-    top: 22%;
-    left: 18%;
-    width: 300px;
+    top: 15vh;
+    left: 13vw;
+    width: 23vw;
+    height: 33vh;
     z-index: 1;
-    margin: 10px auto;
 }
 
 .product_img_2 {
     position: absolute;
-    top: 20%;
-    left: 25%;
-    width: 300px;
+    top: 15vh;
+    left: 14vw;
+    width: 22vw;
+    height: 32vh;
     z-index: 1;
-    margin: 10px auto;
 }
 
 .product_img_3 {
     position: absolute;
-    top: 20%;
-    left: 25%;
-    width: 50%;
+    top: 24%;
+    left: 30%;
+    width: 20vw;
+    height: 30vh;
     z-index: 1;
-    margin: 10px auto;
 }
 
 .product_img_4 {
     position: absolute;
-    top: 20%;
-    left: 25%;
-    width: 50%;
+    top: 30%;
+    left: -15%;
+    width: 20vw;
+    height: 30vh;
     z-index: 1;
-    margin: 10px auto;
-}
-
-.product_img_5 {
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    width: 50%;
-    z-index: 1;
-    margin: 10px auto;
-}
-
-.product_img_6 {
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    width: 50%;
-    z-index: 1;
-    margin: 10px auto;
 }
 
 .product_name{
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 65px;
+    top: 28vh;
+    left: 2vw;
+    font-size: 4.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
+    color: rgba(87, 87, 87, 0.3);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_name_2 {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 65px;
+    top: 22vh;
+    left: 11vw;
+    font-size: 7vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
+    color: rgba(87, 87, 87, 0.3);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_name_3 {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 65px;
+    top: 33vh;
+    left: 25vw;
+    font-size: 4.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
+    color: rgba(87, 87, 87, 0.3);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_name_4 {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 65px;
+    top: 28vh;
+    left: 10vw;
+    font-size: 4.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
-    overflow: hidden;
-    font-family: 'Nanum Myeongjo', serif;
-}
-
-.product_name_5 {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 65px;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
-    overflow: hidden;
-    font-family: 'Nanum Myeongjo', serif;
-}
-
-.product_name_6 {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 65px;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
+    color: rgba(87, 87, 87, 0.3);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
@@ -223,10 +144,10 @@
     content: attr(prod_title);
     display: block;
     position: absolute;
-    width: 0px;
+    width: 0;
     white-space: nowrap;
     overflow: hidden;
-    color: rgb(255, 255, 255);
+    color: rgb(31, 65, 255);
     font-family: 'Nanum Myeongjo', serif;
 }
 /* ::before	요소 내용 앞쪽에 새 컨텐츠를 추가 */
@@ -261,144 +182,87 @@
     width: 0px;
     white-space: nowrap;
     overflow: hidden;
-    color: rgb(255, 94, 94);
-    font-family: 'Nanum Myeongjo', serif;
-}
-
-.product_name_5::before{
-    content: attr(prod_title);
-    display: block;
-    position: absolute;
-    width: 0px;
-    white-space: nowrap;
-    overflow: hidden;
     color: rgb(255, 255, 255);
     font-family: 'Nanum Myeongjo', serif;
 }
-/* ::before	요소 내용 앞쪽에 새 컨텐츠를 추가 */
 
-.product_name_6::before{
-    content: attr(prod_title);
-    display: block;
-    position: absolute;
-    width: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    color: rgb(255, 94, 94);
-    font-family: 'Nanum Myeongjo', serif;
-}
-
-.product_img:hover, .product_img_2:hover, .product_img_3:hover, .product_img_4:hover, .product_img_5:hover, .product_img_6:hover{
+.product_img:hover, .product_img_2:hover, .product_img_3:hover, .product_img_4:hover{
     cursor: pointer;
 }
 
 .product_link:hover + .product_name::before,
-.product_img_2:hover + .product_name_2::before, .product_img_3:hover + .product_name_3::before, .product_img_4:hover + .product_name_4::before, .product_img_5:hover + .product_name_5::before, .product_img_6:hover + .product_name_6::before{
+.product_link:hover + .product_name_2::before, .product_link:hover + .product_name_3::before, .product_link:hover + .product_name_4::before{
     transition: all 0.2s linear;
     width: 100%;
 }
 
 .product_link:not(:hover) + .product_name::before,
-.product_img_2:not(:hover) + .product_name_2::before, .product_img_3:not(:hover) + .product_name_3::before, .product_img_4:not(:hover) + .product_name_4::before, .product_img_5:not(:hover) + .product_name_5::before, .product_img_6:not(:hover) + .product_name_6::before{
+.product_link:not(:hover) + .product_name_2::before, .product_link:not(:hover) + .product_name_3::before, .product_link:not(:hover) + .product_name_4::before{
     transition: all 0.2s linear;
     width: 0;
 }
 
-.product_img_2:hover + .product_name_2,
-.product_img_2:hover + .product_name_2::before{
+.product_link:hover + .product_name,
+.product_link:hover + .product_name::before{
     z-index: 2;
 }
 
-.product_img_4:hover + .product_name_4,
-.product_img_4:hover + .product_name_4::before{
-    z-index: 2;
-}
-
-.product_img_6:hover + .product_name_6,
-.product_img_6:hover + .product_name_6::before{
+.product_link:hover + .product_name_2,
+.product_link:hover + .product_name_2::before{
     z-index: 2;
 }
 
 .product_sub_name_1{
     position: absolute;
-    top: 105%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    top: 53vh;
+    left: 11vw;
+    font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
+    color: rgb(255, 255, 255);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_sub_name_2{
     position: absolute;
-    top: 105%;
-    left: 50%;
+    top: 55vh;
+    left: 25vw;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
+    color: rgb(255, 255, 255);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_sub_name_3{
     position: absolute;
-    top: 105%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
+    color: rgb(255, 255, 255);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_sub_name_4{
     position: absolute;
-    top: 105%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
-    overflow: hidden;
-    font-family: 'Nanum Myeongjo', serif;
-}
-
-.product_sub_name_5{
-    position: absolute;
-    top: 105%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
-    overflow: hidden;
-    font-family: 'Nanum Myeongjo', serif;
-}
-
-.product_sub_name_6{
-    position: absolute;
-    top: 105%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    color: rgba(145, 145, 145, 0.3);
+    color: rgb(255, 255, 255);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }

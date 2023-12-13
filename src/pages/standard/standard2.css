@@ -1,0 +1,222 @@
+.standard2_Container{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(237, 207, 170);
+}
+
+.standard2_Wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5%;
+}
+
+.standard2_originalPrice{
+    font-size: 20px;
+    color: rgb(148, 148, 148);
+    text-decoration: line-through solid rgb(247, 98, 98);
+}
+
+.standard2_currentPrice{
+    color: rgb(68, 68, 68);
+    box-sizing: border-box;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 30px;
+}
+
+.standard2_Info{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.standard2_Info_1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 150px;
+}
+
+.standard2_Info_1_1{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    justify-content: left;
+}
+
+.standard2_Info_1_1_brand{
+    margin-right: 15px;
+    color: gray;
+    font-size: 15px;
+}
+
+.standard2_Info_1_1_name{
+    margin-left: 15px;
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+
+.standard2_Info_1_2{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    justify-content: left;
+}
+
+.standard2_Info_1_2_year{
+    margin-right: 15px;
+    color: gray;
+    font-size: 15px;
+}
+
+.standard2_Info_1_2_years{
+    margin-left: 15px;
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+
+.standard2_Info_1_3{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    justify-content: left;
+}
+
+.standard2_Info_1_3_time{
+    margin-right: 15px;
+    color: gray;
+    font-size: 15px;
+}
+
+.standard2_Info_1_3_times{
+    margin-left: 15px;
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+
+.standard2_Info_2{
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.standard2_Info_2_img{
+    width: 280px;
+}
+
+.standard2_Info_3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 150px;
+}
+
+.standard2_Info_3_1{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    justify-content: right;
+}
+
+.standard2_Info_3_1_name{
+    margin-right: 15px;
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+
+.standard2_Info_3_1_specialist{
+    margin-left: 15px;
+    color: gray;
+    font-size: 15px;
+}
+
+.standard2_Info_3_2{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    justify-content: right;
+}
+
+.standard2_Info_3_2_status{
+    margin-right: 15px;
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+
+.standard2_Info_3_2_prodStatus{
+    margin-left: 15px;
+    color: gray;
+    font-size: 15px;
+}
+
+.standard2_Info_3_3{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    /* justify-content: center; */
+}
+
+.standard2_BuyBag{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 250px;
+}
+
+.standard2_BagAdd{
+    color: gray;
+    text-align: center;
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 20px;
+    flex-direction: row;
+    display: flex;
+}
+
+.standard2_BuyBtn{
+    color: gray;
+    text-align: center;
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 100px;
+    font-size: 20px;
+    flex-direction: row;
+    display: flex;
+}
+
+.standard2_buyIcon, .standard2_basketIcon{
+    margin-left: 5px;
+}

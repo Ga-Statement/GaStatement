@@ -1,0 +1,229 @@
+.premium1_1_Container{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+.premium1_1_Wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 10%;
+}
+
+.premium1_1_originalPrice{
+    font-size: 20px;
+    color: white;
+    text-decoration: line-through solid rgb(255, 255, 255);
+}
+
+.premium1_1_currentPrice{
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.premium1_1_Info{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.premium1_1_Info_1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 150px;
+}
+
+.premium1_1_Info_1_1{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    border-radius: 35px;
+    width: 300px;
+    justify-content: left;
+}
+
+.premium1_1_Info_1_1_brand{
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.premium1_1_Info_1_1_name{
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.premium1_1_Info_1_2{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    border-radius: 35px;
+    width: 300px;
+    justify-content: left;
+}
+
+.premium1_1_Info_1_2_year{
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.premium1_1_Info_1_2_years{
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.premium1_1_Info_1_3{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    border-radius: 35px;
+    width: 300px;
+    justify-content: left;
+}
+
+.premium1_1_Info_1_3_time{
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.premium1_1_Info_1_3_times{
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.premium1_1_Info_2{
+    margin: 0 10px;
+}
+
+.premium1_1_Info_2 img{
+    width: 300px;
+}
+
+.premium1_1_Info_3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 150px;
+}
+
+.premium1_1_Info_3_1{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    border-radius: 35px;
+    width: 300px;
+    justify-content: left;
+}
+
+.premium1_1_Info_3_1_specialist{
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.premium1_1_Info_3_1_name{
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.premium1_1_Info_3_2{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    border: 1px solid white;
+    color: white;
+    padding: 20px;
+    border-radius: 35px;
+    width: 300px;
+}
+
+.premium1_1_Info_3_2_status{
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.premium1_1_Info_3_2_prodStatus{
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.premium1_1_Info_3_3{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    /* border: 1px solid black; */
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+    /* justify-content: center; */
+}
+
+.premium1_1_BuyBag{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.premium1_1_BagAdd{
+    /* border: 1px solid black; */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 15px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 20px;
+    flex-direction: row;
+    display: flex;
+}
+
+.premium1_1_BuyBtn{
+    /* border: 1px solid black; */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 15px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 100px;
+    font-size: 20px;
+    flex-direction: row;
+    display: flex;
+}
+
+.premium1_1_buyIcon, .premium1_1_basketIcon{
+    margin-left: 5px;
+}

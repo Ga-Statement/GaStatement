@@ -1,0 +1,18 @@
+/* 스크롤 기능은 있지만 화면상에 보이지 않도록 */
+.premium2_combine{
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.premium2_scrollBtn{
+    position: fixed;
+    bottom: 15%;
+    right: 3%;
+}
+
+.premium2_scrollBtn:hover{
+    cursor: pointer;
+}

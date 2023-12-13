@@ -10,13 +10,28 @@ body{
     touch-action: pan-y; /* 모바일에서의 드래그 방지 */
 }
 
+.head{
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 3.3vw;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    user-select: none;
+}
+
 .category, .search, .loginBtn, .signUpBtn{
     display: flex;
     align-items: center;
 }
 
-.home img{
-    width: 2vw;
+.home_logo{
+    width: 1.4vw;
+    margin-top: 0.8vh;
 }
 
 .home, .category_1, .category_2, .category_3, .login{
@@ -24,7 +39,7 @@ body{
     cursor: pointer; 
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size: 2.5vh;
+    font-size: 1.8vh;
     white-space: nowrap
 }
 
@@ -32,8 +47,8 @@ body{
     position: fixed;
     top: 5%;
     right: 0;
-    width: 40%;
-    height: 85%;
+    width: 40vw;
+    height: 85vh;
     display: flex;
     flex-direction: block;
     align-items: center;
@@ -42,13 +57,13 @@ body{
     color: rgb(0, 0, 0);
     border-radius: 10px;
     transform: translateX(0%);
-    transition: transform 1.5s ease-in-out;
+    transition: transform 2s ease-in-out;
     z-index: 4;
 }
 
 .myStory.close{
-    transform: translateX(100%);
-    transition: transform 1.5s ease-in-out;
+    transform: translateX(150%);
+    transition: transform 2s ease-in-out;
 }
 
 .loginPage{
@@ -57,7 +72,7 @@ body{
     border: none;
     text-decoration: none;
     margin: 10px;
-    font-size: 2.5vh;
+    font-size: 1.8vh;
 }
 
 .loginContainer{
@@ -104,7 +119,7 @@ body{
 }
 
 .signUp.close{
-    transform: translateY(100%); 
+    transform: translateY(700%); 
     transition: transform 1.5s ease-in-out;
 }
 

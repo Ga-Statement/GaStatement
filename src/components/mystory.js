@@ -12,12 +12,29 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
-import { FaToggleOff } from "react-icons/fa6";
+import { LiaToggleOffSolid } from "react-icons/lia";
+import { LiaToggleOnSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom';
 import './mystory.css';
 
 const MyStory = forwardRef(({ closeMyStory }, ref) => {
     const [activeTab, setActiveTab] = useState('myInfo');
+    const [isToggleOn_1, setIsToggleOn_1] = useState(false);
+    const [isToggleOn_2, setIsToggleOn_2] = useState(false);
+    const [isToggleOn_3, setIsToggleOn_3] = useState(false);
+    const [isToggleOn_4, setIsToggleOn_4] = useState(false);
+
+    const toggleClick = (number) => {
+        if (number=== 1) {
+            setIsToggleOn_1(!isToggleOn_1)
+        } else if (number=== 2) {
+            setIsToggleOn_2(!isToggleOn_2)
+        } else if (number=== 3) {
+            setIsToggleOn_3(!isToggleOn_3)
+        } else if (number=== 4) {
+            setIsToggleOn_4(!isToggleOn_4)
+        } 
+    }
 
     const closeInfo = () => {
         closeMyStory();
@@ -46,7 +63,7 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className={`shoppingBag ${activeTab === 'addToBag' ? '' : 'none'}`}  onClick={() => setActiveTab('addToBag')}>
                     장바구니
                 </div>
-                <div className='closeMystoryBtn' onClick={closeInfo}><img src="/pic/icon_pic/closeBtn.png" alt="" /></div>
+                <div className='closeMystoryBtn' onClick={closeInfo}><img src="/img/closeBtn.png" alt="" /></div>
             </div>
             {/* 내 정보 */}
             <div className={`myInfo ${activeTab === 'myInfo' ? '' : 'close'}`}>
@@ -80,12 +97,16 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                     <div className="phoneAgree">
                         <MdOutlinePhoneAndroid className="phoneIcon" color='rgba(161, 161, 161, 0.9)'/>
                         <div>휴대폰</div>
-                        <FaToggleOff className="onoffIcon" color='rgba(161, 161, 161, 0.9)'/>
+                        <div className="onoffIcon" onClick={()=>{toggleClick(1)}}>{isToggleOn_1 ? 
+                        <LiaToggleOffSolid  color='rgba(161, 161, 161, 0.9)' size='1.3vw'/> 
+                        : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                     <div className="emailAgree">
                         <MdOutlineEmail className="emailIcon" color='rgba(161, 161, 161, 0.9)'/>
                         <div>이메일</div>
-                        <FaToggleOff className="onoffIcon" color='rgba(161, 161, 161, 0.9)'/>
+                        <div className="onoffIcon" onClick={()=>{toggleClick(2)}}>{isToggleOn_2 ? 
+                        <LiaToggleOffSolid  color='rgba(161, 161, 161, 0.9)' size='1.3vw'/> 
+                        : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                 </div>
                 <div className="alarmTitle">게시물 조치 알림 수신 동의</div>
@@ -93,12 +114,16 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                     <div className="phoneAgree">
                         <MdOutlinePhoneAndroid className="phoneIcon" color='rgba(161, 161, 161, 0.9)'/>
                         <div>휴대폰</div>
-                        <FaToggleOff className="onoffIcon" color='rgba(161, 161, 161, 0.9)'/>
+                        <div className="onoffIcon" onClick={()=>{toggleClick(3)}}>{isToggleOn_3 ? 
+                        <LiaToggleOffSolid  color='rgba(161, 161, 161, 0.9)' size='1.3vw'/> 
+                        : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                     <div className="emailAgree">
                         <MdOutlineEmail className="emailIcon" color='rgba(161, 161, 161, 0.9)'/>
                         <div>이메일</div>
-                        <FaToggleOff className="onoffIcon" color='rgba(161, 161, 161, 0.9)'/>
+                        <div className="onoffIcon" onClick={()=>{toggleClick(4)}}>{isToggleOn_4 ? 
+                        <LiaToggleOffSolid  color='rgba(161, 161, 161, 0.9)' size='1.3vw'/> 
+                        : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                 </div>
             </div>
@@ -118,33 +143,10 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                             <div>검수중 아이콘</div>
                         </div>
                     </div>
-                    <div className='salesList'>
-                        <div className='date'>날짜</div>
-                        <div className='salesInfo'>
-                            <div>이미지</div>
-                            <div>
-                                <div>물품명</div>
-                                <div>희망가격</div>
-                            </div>
-                            <div>전문가 검수 확인중</div>
-                            <div>검수중 아이콘</div>
-                        </div>
-                    </div>
                     <div className='plus'>+ 더보기</div>
                 </div>
-                <div className='specsname'>구매 내역</div>
+                <div className='specsname_2'>구매 내역</div>
                 <div className='purchase'>
-                    <div className='purchaseList'>
-                        <div className='date'>날짜</div>
-                        <div className='purchaseInfo'>
-                            <div>이미지</div>
-                            <div>
-                                <div>물품명</div>
-                                <div>가격</div>
-                            </div>
-                            <div>구매확정완료</div>
-                        </div>
-                    </div>
                     <div className='purchaseList'>
                         <div className='date'>날짜</div>
                         <div className='purchaseInfo'>

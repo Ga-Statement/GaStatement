@@ -157,6 +157,29 @@ const Navbar = () => {
         // remove 하는 이유 : 메모리 누수를 방지하기 위해?
     }, []);
 
+    // 뒤로가기 눌렀을 때 메뉴 닫히도록
+    useEffect(() => {
+        const handlePopstate = () => {
+            setNav_1(false);
+            setNav_2(false);
+            setNav_3(false);
+            setNav_4(false);
+            setSideMenu_1(false);
+            setSideMenu_2(false);
+            setSideMenu_3(false);
+            setSideMenu_4(false);
+            setSideMenu_5(false);
+            setActiveCategory(null);
+            myInfoRef.current.setMyInfo();
+        };
+
+        window.addEventListener('popstate', handlePopstate);
+
+        return () => {
+            window.removeEventListener('popstate', handlePopstate);
+        };
+    }, []);
+
     // 메뉴 스크롤따라 올라오도록 설정
     // const [scrollPosition, setScrollPosition] = useState(0);
     // const stopScrollPercent = 30.1; // 멈추길 원하는 퍼센트
@@ -186,17 +209,6 @@ const Navbar = () => {
     // 픽셀로 지정했더니 모니터마다 사이즈가 달라서 위치가 달라짐 - 퍼센트로 수정
   
     const headStyle = {
-      backgroundColor: 'rgba(255, 255, 255, 0.9)',
-      display: 'flex',
-      position: 'fixed',
-      bottom: 0,
-      left: 0,
-      height: '10%',
-      width: '100%',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 5,
-      userSelect: 'none',
     //   transform: `translateY(-${Math.min(scrollPosition, (stopScrollPercent / 100) * (documentHeight - windowHeight))}px)`,
     //   transition: 'transform 0.0001s ease-in-out',
     };
@@ -230,7 +242,7 @@ const Navbar = () => {
                         <div className='category'>
                              <Link to="#" className="category_1" onClick={() => handleCategoryClick(null)}>서랍</Link>
                             <Link to="/shop" className="category_2" onClick={() => handleCategoryClick(null)}>SHOP</Link>
-                            <Link to="/main" className="home" onClick={() => handleCategoryClick(null)}><img src="/pic/icon_pic/logo.png"/></Link>
+                            <Link to="/main" className="home" onClick={() => handleCategoryClick(null)}><img src="/pic/icon_pic/logo.png" className="home_logo"/></Link>
                             <div className={`category_3 ${activeCategory === 1 ? 'active' : ''}`} onClick={() => handleCategoryClick(1)}>나의이야기</div>
                         </div>        
                     </nav>
