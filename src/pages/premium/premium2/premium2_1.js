@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CiClock2 } from "react-icons/ci";
+import axios from 'axios';
 import './premium2_1.css';
 
 const Premium2_1 = () => {
@@ -18,6 +19,7 @@ const Premium2_1 = () => {
     const [randomNumber, setRandomNumber] = useState(null);
     const [isRunning, setIsRunning] = useState(true);
 
+    const [ pdData, setPdData ] = useState({});
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -41,23 +43,35 @@ const Premium2_1 = () => {
         }, 3000); // 2초동안 랜덤 숫자 나오도록
     
         return () => clearInterval(intervalId);
-      }, []);
+    }, []);
+
+    const productData = async () => {
+        const { data } = await axios.get(
+            `http://localhost:3000/product/2`
+        );
+        setPdData(data);
+    }
+
+    useEffect(() => {
+        productData();
+    }, []);
     
     return(
         <div className='premium2_1_Container'>
             <div className="premium2_1_Wrapper">
                 <CiClock2 className="CiClock2" color="gray" size="50"/>
-                <div className='premium2_1_originalPrice'>300,000</div>
+                <div className='premium2_1_originalPrice'>{pdData.pdMaxPrice}</div>
                 <div className="premium2_1_currentPrice">{randomNumber?.toLocaleString()}</div>
+                {/* <div className="premium2_1_Info_name">{pdData.pdName}</div> */}
                 <div className="premium2_1_Info">
                     <div className="premium2_1_Info_1">
                         <div className="premium2_1_Info_1_1">
                             <div className="premium2_1_Info_1_1_brand">Brand</div>
-                            <div className="premium2_1_Info_1_1_name">Noritake</div>
+                            <div className="premium2_1_Info_1_1_brands">{pdData.pdBrand}</div>
                         </div>
                         <div className="premium2_1_Info_1_2">
                             <div className="premium2_1_Info_1_2_year">Year</div>
-                            <div className="premium2_1_Info_1_2_years">1996</div>
+                            <div className="premium2_1_Info_1_2_years">{pdData.pdYears}</div>
                         </div>
                         <div className="premium2_1_Info_1_3">
                             <div className="premium2_1_Info_1_3_time">Time</div>
@@ -65,16 +79,16 @@ const Premium2_1 = () => {
                         </div>
                     </div>
                     <div className="premium2_1_Info_2">
-                        <img src="/pic/shop_pic/teacup.png" alt="" className='premium2_1_Info_2_img'/>
+                        <img src={pdData.pdImage} alt="" className='premium2_1_Info_2_img'/>
                         <img src="/pic/shop_pic/teacup_logo.webp" alt="" className='premium2_1_Info_2_logo'/>
                     </div>
                     <div className="premium2_1_Info_3">
                         <div className="premium2_1_Info_3_1">
-                            <div className="premium2_1_Info_3_1_name">박효연</div>
+                            <div className="premium2_1_Info_3_1_name">{pdData.pdMaster}</div>
                             <div className="premium2_1_Info_3_1_specialist">담당전문가</div>
                         </div>
                         <div className="premium2_1_Info_3_2">
-                            <div className="premium2_1_Info_3_2_status">상</div>
+                            <div className="premium2_1_Info_3_2_status">{pdData.pdState}</div>
                             <div className="premium2_1_Info_3_2_prodStatus">제품상태</div>
                         </div>
                         <div className="premium2_1_Info_3_3">

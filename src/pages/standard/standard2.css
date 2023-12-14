@@ -30,6 +30,18 @@
     font-size: 30px;
 }
 
+.standard2_Info_name {
+    color: rgb(68, 68, 68);
+    box-sizing: border-box;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 30px;
+}
+
 .standard2_Info{
     display: flex;
     flex-direction: row;
@@ -62,7 +74,7 @@
     font-size: 15px;
 }
 
-.standard2_Info_1_1_name{
+.standard2_Info_1_1_brands{
     margin-left: 15px;
     color: rgb(41, 41, 41);
     font-size: 20px;

@@ -39,7 +39,7 @@
     margin: 10px;
 }
 
-.prod_name, .when_buy, .knob_address, .knob_email, .knob_price, .applicant_name, .applicant_phone{
+.prod_name, .prod_brand, .when_buy, .knob_address, .knob_email, .knob_price, .applicant_name, .applicant_phone{
     width: 400px;
     height: 20px;
     border: none;
@@ -50,7 +50,7 @@
     background-color: transparent;
 }
 
-.prod_name:focus, .when_buy:focus, .applicant_name:focus, .applicant_phone:focus, .knob_address:focus, .knob_email:focus, .knob_price:focus, .knob_desc:focus{
+.prod_name:focus, .prod_brand:focus, .when_buy:focus, .applicant_name:focus, .applicant_phone:focus, .knob_address:focus, .knob_email:focus, .knob_price:focus, .knob_desc:focus{
     outline: none;
     background-color: #b8b8b8;
     border-radius: 10px;
