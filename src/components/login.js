@@ -45,14 +45,14 @@ const Login = ({goToSignUp, closeLogin}) => {
 
     const handleLogin = async (e) => {
         try {
-          const { loginData } = await axios.post("http://localhost:3000/user/signin", {
+          const { data } = await axios.post("http://localhost:3000/user/signin", {
             userID: emailId,
             userPW: password,
           });
-          if (loginData.result) {
+          if (data.result) {
             closeLoginBtn();
             alert("로그인이 완료되었습니다");
-            setCookie("token", {userData: loginData.userData});
+            setCookie("token", {userData: data.userData});
           } else {
             alert("아이디 / 비밀번호가 틀렸습니다.");
           }
