@@ -8,6 +8,8 @@
 */
 
 import { useState, useEffect } from 'react';
+import { useCookies } from "react-cookie";
+import axios from "axios";
 import './login.css';
 
 const Login = ({goToSignUp, closeLogin}) => {
@@ -29,6 +31,7 @@ const Login = ({goToSignUp, closeLogin}) => {
     // 입력값 상태
     const [emailId, setEmailId] = useState('');
     const [password, SetPassword] = useState('');
+    const [cookies, setCookie, removeCookie] = useCookies(["token"]);
 
     // 값이 들어오면 새로운 값으로 업데이트
     const idChange = (e) => {
@@ -40,6 +43,24 @@ const Login = ({goToSignUp, closeLogin}) => {
         SetPassword(newPw);
     };
 
+    const handleLogin = async (e) => {
+        try {
+          const { loginData } = await axios.post("http://localhost:3000/user/signin", {
+            userID: emailId,
+            userPW: password,
+          });
+          if (loginData.result) {
+            closeLoginBtn();
+            alert("로그인이 완료되었습니다");
+            setCookie("token", {userData: loginData.userData});
+          } else {
+            alert("아이디 / 비밀번호가 틀렸습니다.");
+          }
+        } catch (error) {
+          console.error("요청 실패: ", error);
+        }
+      };
+
     // 아이디, 비밀번호가 회원정보와 맞는지
     const [idPwConfirm, setIdPwConfirm] = useState(false);
 
@@ -47,10 +68,10 @@ const Login = ({goToSignUp, closeLogin}) => {
     const isPwEmpty = password.trim() !== ''; // 값이 있으면 true
 
     // // 유효성 검사
-    // useEffect(()=>{
-    //     const idPwMatch = UserData.some((user) => isIdEmpty && isPwEmpty && user.email === emailId && user.password === password);
-    //     setIdPwConfirm(idPwMatch);
-    // }, [emailId, password, isIdEmpty, isPwEmpty]);
+    useEffect(()=>{
+        const idPwMatch = emailId && password;
+        setIdPwConfirm(idPwMatch);
+    }, [emailId, password]);
 
     return(
         <div>
@@ -65,7 +86,7 @@ const Login = ({goToSignUp, closeLogin}) => {
             </div>
             <div className="login_3">
                 <div className="id_pw_find">아이디 찾기 | 비밀번호 찾기</div>
-                <button className='loginBtn' disabled={!idPwConfirm} onClick={idPwConfirm ? closeLoginBtn : null}>로그인</button>
+                <button className='loginBtn' disabled={!idPwConfirm} onClick={handleLogin}>로그인</button>
                 {/* {(!isIdEmpty || !isPwEmpty) && (<div className='idPwNotMatch'>아이디와 비밀번호를 입력해주세요.</div>)} */}
                 {isIdEmpty && isPwEmpty && !idPwConfirm && (<div className='idPwNotMatch'>아이디와 비밀번호가 일치하지 않습니다.</div>)}
             </div>

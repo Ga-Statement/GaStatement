@@ -34,7 +34,7 @@
 }
 
 .emailInput, .passwordInput, .passwordCheck, .nicknameInput, .phoneNumInput{
-    width: 200px;
+    width: 300px;
     height: 20px;
     font-size: 15px;
     margin: 10px;
@@ -68,7 +68,7 @@
 }
 
 .addressInput, .detailedAddressInput{
-    width: 200px;
+    width: 300px;
     height: 20px;
     font-size: 15px;
     margin: 10px;

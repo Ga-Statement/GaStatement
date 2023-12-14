@@ -10,6 +10,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CiClock2 } from "react-icons/ci";
+import axios from 'axios';
 import './standard1.css';
 
 const Standard1 = () => {
@@ -27,6 +28,7 @@ const Standard1 = () => {
     const [randomNumber, setRandomNumber] = useState(null);
     const [isRunning, setIsRunning] = useState(true);
 
+    const [ pdData, setPdData ] = useState({});
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -38,7 +40,7 @@ const Standard1 = () => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-          const newRandomNumber = Math.floor(Math.random() * 10000000);
+          const newRandomNumber = Math.floor(Math.random() * 1000000);
           setRandomNumber(newRandomNumber);
         }, 80); // 랜덤 숫자 업데이트
     
@@ -46,27 +48,39 @@ const Standard1 = () => {
           clearInterval(intervalId);
           setIsRunning(false);
     
-          setRandomNumber(1800000); // 마지막에 나올 숫자
+          setRandomNumber(68400); // 마지막에 나올 숫자
         }, 3000); // 2초동안 랜덤 숫자 나오도록
     
         return () => clearInterval(intervalId);
-      }, []);
+    }, []);
+
+    const productData = async () => {
+        const { data } = await axios.get(
+            `http://localhost:3000/product/3`
+        );
+        setPdData(data);
+    }
+
+    useEffect(() => {
+        productData();
+    }, []);
     
     return(
         <div className='standard1_Container'>
             <div className="standard1_Wrapper">
                 <CiClock2 className="standard1_CiClock2" color="gray" size="50"/>
-                <div className='standard1_originalPrice'>1,980,000</div>
+                <div className='standard1_originalPrice'>{pdData.pdMaxPrice}</div>
                 <div className="standard1_currentPrice">{randomNumber?.toLocaleString()}</div>
+                {/* <div className="standard1_Info_name">{pdData.pdName}</div> */}
                 <div className="standard1_Info">
                     <div className="standard1_Info_1">
                         <div className="standard1_Info_1_1">
-                            <div className="standard1_Info_1_1_brand">Name</div>
-                            <div className="standard1_Info_1_1_name">THE Passion within</div>
+                            <div className="standard1_Info_1_1_brand">Brand</div>
+                            <div className="standard1_Info_1_1_brands">{pdData.pdBrand}</div>
                         </div>
                         <div className="standard1_Info_1_2">
                             <div className="standard1_Info_1_2_year">Year</div>
-                            <div className="standard1_Info_1_2_years">1356</div>
+                            <div className="standard1_Info_1_2_years">{pdData.pdYears}</div>
                         </div>
                         <div className="standard1_Info_1_3">
                             <div className="standard1_Info_1_3_time">Time</div>
@@ -74,12 +88,12 @@ const Standard1 = () => {
                         </div>
                     </div>
                     <div className="standard1_Info_2">
-                        <img src="/pic/shop_pic/book.png" alt="" className='standard1_Info_2_img'/>
+                        <img src={pdData.pdImage} alt="" className='standard1_Info_2_img'/>
                         <img src="/pic/shop_pic/book_logo.webp" alt="" className='standard1_Info_2_logo'/>
                     </div>
                     <div className="standard1_Info_3">
                         <div className="standard1_Info_3_1">
-                            <div className="standard1_Info_3_1_name">이주원</div>
+                            <div className="standard1_Info_3_1_name">{pdData.pdMaster}</div>
                             <div className="standard1_Info_3_1_specialist">담당전문가</div>
                         </div>
                         <div className="standard1_Info_3_1_desc">
@@ -88,7 +102,7 @@ const Standard1 = () => {
                                 대표작 내면의열정<br/>
                         </div>
                         <div className="standard1_Info_3_2">
-                            <div className="standard1_Info_3_2_status">상</div>
+                            <div className="standard1_Info_3_2_status">{pdData.pdState}</div>
                             <div className="standard1_Info_3_2_prodStatus">제품상태</div>
                         </div>
                         <div className="standard1_Info_3_3">

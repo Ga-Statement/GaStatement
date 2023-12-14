@@ -8,12 +8,14 @@
 */
 
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Address from './address';
 import './signup.css';
 
 const SignUp = ({closeSignUp, signUpSuccess}) => {
     // 입력값 상태
     const [address, setAddress] = useState('');
+    const [subaddress, setSubaddress] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -37,6 +39,21 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
     // 약관동의 체크 여부
     const [isTermsChecked, setIsTermsChecked] = useState(false);
     const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
+
+    const [emailValidate, setEmailValidate] = useState(false);
+    const [isEmailChecked, setIsEmailChecked] = useState(false);
+
+    // 데이터 상태 업데이트
+    const [userData, setUserData] = useState({
+        userID: email,
+        userPW: password,
+        userName: nickname,
+        userRole: '1',      // 1: 유저로 가입
+        userStat: '1',      // 0: 회원 탈퇴 / 1: 회원 가입
+        userPhone: phoneNum,
+        userAdd: address,
+        userSubAdd: subaddress,
+    });
 
     // 유효성 검사
     useEffect(() => {
@@ -69,11 +86,23 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
         const handleEmailChange = (event) => {
             const newEmail = event.target.value;
             setEmail(newEmail);
+
+            // data값 업데이트
+            setUserData((prevData) => ({
+                ...prevData,
+                userID: newEmail,
+            }));
         };
 
         const handleNicknameChange = (event) => {
             const newNickname = event.target.value;
             setNickname(newNickname);
+
+            // data값 업데이트
+            setUserData((prevData) => ({
+                ...prevData,
+                userName: newNickname,
+            }));
         };
 
         const handleTermsChange = (event) => {
@@ -87,11 +116,23 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
         const handlePhoneNumberChange = (event) => {
             const newPhoneNumber = event.target.value;
             setPhoneNum(newPhoneNumber);
+
+            // data값 업데이트
+            setUserData((prevData) => ({
+                ...prevData,
+                userPhone: newPhoneNumber,
+            }));
         };
 
         const handlePasswordChange = (event) => {
             const newPassword = event.target.value;
             setPassword(newPassword);
+
+            // data값 업데이트
+            setUserData((prevData) => ({
+                ...prevData,
+                userPW: newPassword,
+            }));
         };
         
         const handleConfirmPasswordChange = (event) => {
@@ -101,7 +142,24 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
 
         const handleAddressChange = (address) => {
             setSelectedAddress(address);
+
+            // data값 업데이트
+            setUserData((prevData) => ({
+                ...prevData,
+                userAdd: address,
+            }));
         };
+
+        const handleSubAddressChange = (event) => {
+            const newSubaddress = event.target.value;
+            setSubaddress(newSubaddress);
+    
+            // data값 업데이트
+            setUserData((prevData) => ({
+                ...prevData,
+                userSubAdd: newSubaddress,
+            }));
+        }
 
         const handleAllAgreeChange = (event) => {
             const isChecked = event.target.checked;
@@ -134,6 +192,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
         !isNicknameDuplicate &&
         phoneNum &&
         isPhoneNumberValid &&
+        subaddress &&
         selectedAddress &&
         isTermsChecked &&
         isPrivacyChecked;
@@ -142,6 +201,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
         const onCloseSignUp = () => {
             closeSignUp();
             setAddress('');
+            setSubaddress('');
             setEmail('');
             setPassword('');
             setConfirmPassword('');
@@ -153,10 +213,35 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
         };
 
         // 회원가입 완료시 실행될 함수
-        const handleSignUp = () => {
+        const handleSignUp = async () => {
             const onSignUpSuccess = true;
             if (onSignUpSuccess) {
-              signUpSuccess(); // 부모 항목으로 전달
+                signUpSuccess(); // 부모 항목으로 전달
+
+                try {
+                    const res = await axios.post(
+                        'http://localhost:3000/user/signup', userData
+                    );
+                    alert("회원가입이 완료되었습니다.");
+                } catch (error) {
+                    console.error("요청 실패: ", error);
+                }
+            }
+        };
+
+        const isCheck = async () => {
+            try {
+                const { data } = await axios.post(
+                    'http://localhost:3000/user/validate/email', {userID: userData.userID}
+                );
+                setIsEmailChecked(true);
+                if (data.result) {
+                    setEmailValidate(true);
+                } else {
+                    setEmailValidate(false);
+                }
+            } catch (error) {
+                console.error("중복 요청 실패: ", error);
             }
         };
         
@@ -168,10 +253,11 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
             </div>
             <div className="email">
                 <input type="text" id="email" className='emailInput' value={email} onChange={handleEmailChange} placeholder='E-mail'/>
-                {email && isEmailValid && !isEmailDuplicate && (<div className='pass'>사용 가능한 이메일입니다.</div>)}
-                {email && !isEmailValid && (<div className='warning'>올바른 이메일 양식을 입력해주세요.</div>)}
-                {email && isEmailDuplicate && isEmailValid && (<div className='warning'>이미 존재하는 이메일입니다.</div>)}
+                {isEmailChecked && emailValidate && <div className='pass'>사용 가능한 이메일입니다.</div>}
+                {isEmailChecked && !emailValidate && <div className='warning'>이미 존재하는 이메일입니다.</div>}
+                {email && !isEmailValid && <div className='warning'>올바른 이메일 양식을 입력해주세요.</div>}
             </div>
+            <button className={`signUpBtn ${isFormValid ? '' : 'invalid'}`} onClick={isCheck}>중복 체크</button>
             <div className="password">
                 <div>
                     <input type="password" id="password" className='passwordInput' value={password} onChange={handlePasswordChange} placeholder='Password'/>
@@ -198,7 +284,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
             <div className="address">
                 <input className="addressInput" type="text" id="address" value={selectedAddress} placeholder='Address' readOnly/><br/>
                 <Address setAddress={handleAddressChange}/><br/>
-                <input className="detailedAddressInput" type="text" id="detailedAddress" placeholder='Address'/>
+                <input className="detailedAddressInput" type="text" id="detailedAddress" value={subaddress} onChange={handleSubAddressChange} placeholder='Address'/>
             </div>
             <div className="terms">
                 <button className={`termsBtn ${isTermsChecked && isPrivacyChecked ? '' : 'invalid'}`} onClick={openPopup}>이용약관</button>
@@ -216,7 +302,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
                     </div>
                 </div>)}
             </div>
-            <button className={`signUpBtn ${isFormValid ? '' : 'invalid'}`} disabled={!isFormValid} onClick={isFormValid ? handleSignUp : null}>가입하기</button>
+            <button className={`signUpBtn ${isEmailChecked && emailValidate && isFormValid ? '' : 'invalid'}`} disabled={!isFormValid} onClick={isEmailChecked && emailValidate && isFormValid ? handleSignUp : null}>가입하기</button>
             {isFormValid ? null : (
             <div className='totalWarning'>
                 모든 필수 항목을 작성해주세요.
