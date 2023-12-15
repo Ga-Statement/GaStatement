@@ -7,21 +7,71 @@
 -------------------------------------------------------------------------
 */
 
-import React, { useRef } from 'react';
-import { useDraggable } from "react-use-draggable-scroll";
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './shop.css';
 
-// npm install react-use-draggable-scroll
+const useHorizontalScroll = () => {
+  const elRef = useRef();
+  useEffect(() => {
+    const el = elRef.current;
+    if (el) {
+      const onWheel = (e) => {
+        if (e.deltaY === 0) return;
+        e.preventDefault();
+        el.scrollTo({
+          left: el.scrollLeft + e.deltaY*6,
+          behavior: "smooth",
+        });
+      };
+      el.addEventListener("wheel", onWheel);
+      return () => el.removeEventListener("wheel", onWheel);
+    }
+  }, []);
+  return elRef;
+}
 
 const ShopPage = () => {
-  const ref = useRef();
-  const { events } = useDraggable(ref);
+  const containerRef = useHorizontalScroll();
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [dragging, setDragging] = useState(false);
+
+  const handleMouseDown = (e) => {
+    const isImage = e.target.classList.contains('product_img') || e.target.classList.contains('product_img_2') || e.target.classList.contains('product_img_3') || e.target.classList.contains('product_img_4') ;
+
+    if (!isImage) {
+      setDragging(true);
+      setDragStart({ x: e.clientX, y: e.clientY });
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (dragging) {
+      const moveX = e.clientX - dragStart.x;
+      const moveY = e.clientY - dragStart.y;
+  
+      // 좌우 스크롤
+      containerRef.current.scrollLeft -= moveX;
+  
+      // 위아래 스크롤
+      containerRef.current.scrollTop -= moveY;
+  
+      setDragStart({ x: e.clientX, y: e.clientY });
+    }
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
 
   return (
-    <div className='product_list'  {...events} ref={ref}>
+    <div className='product_list' ref={containerRef}
+    onMouseDown={handleMouseDown}
+    onMouseUp={handleMouseUp}
+    onMouseLeave={handleMouseUp}
+    onMouseMove={handleMouseMove}>
         <div className="product_container_1">
-          <Link to='/premium1' className='product_link'><img className="product_img" src="/pic/shop_pic/canon.png" alt=""/></Link> 
+          <Link to='/premium1' className='product_link'><img className="product_img" src="/pic/shop_pic/canon.webp" alt=""/></Link> 
           <div prod_title="CANON-OG Camera." className="product_name">
             CANON-OG Camera.
           </div>
@@ -30,7 +80,7 @@ const ShopPage = () => {
           </div>
         </div>
         <div className="product_container_2">
-          <Link to='/premium2' className='product_link'><img className="product_img_2" src="/pic/shop_pic/teacup.png" alt=""/></Link> 
+          <Link to='/premium2' className='product_link'><img className="product_img_2" src="/pic/shop_pic/cup.webp" alt=""/></Link> 
           <div prod_title="Noritake" className="product_name_2">
             Noritake
           </div>
@@ -39,7 +89,7 @@ const ShopPage = () => {
           </div>
         </div>
         <div className="product_container_3">
-          <Link to='/standard1' className='product_link'><img className="product_img_3" src="/pic/shop_pic/book.png" alt="" /></Link> 
+          <Link to='/standard1' className='product_link'><img className="product_img_3" src="/pic/shop_pic/book.webp" alt="" /></Link> 
           <div prod_title="THE Passion within" className="product_name_3">
             THE Passion within
           </div>
@@ -48,7 +98,7 @@ const ShopPage = () => {
           </div>
         </div>
         <div className="product_container_4">
-          <Link to='/standard2' className='product_link'><img className="product_img_4" src="/pic/shop_pic/LP.png" alt="" /></Link> 
+          <Link to='/standard2' className='product_link'><img className="product_img_4" src="/pic/shop_pic/LP.webp" alt="" /></Link> 
           <div prod_title="The Beatles 1st LP" className="product_name_4">
             The Beatles 1st LP
           </div>

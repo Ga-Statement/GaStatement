@@ -8,14 +8,14 @@
     height: 100vh;
     width: 100vw;
     cursor: grab;
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(233, 180, 180);
     position: relative;
 }
 
 .product_container_1 {
     position: absolute;
     top: 10vh;
-    left: 0vw;
+    left: 5vw;
     width: 50vw;
     height: 65vh;
     /* background-color: rgb(214, 214, 214); */
@@ -35,29 +35,29 @@
 .product_container_3 {
     position: absolute;
     top: 10vh;
-    left: 120vw;
+    left: 115vw;
     width: 50vw;
     height: 65vh;
-    background-color: rgb(214, 214, 214);
+    /* background-color: rgb(214, 214, 214); */
     box-sizing: border-box;
 }
 
 .product_container_4 {
     position: absolute;
     top: 10vh;
-    left: 180vw;
+    left: 170vw;
     width: 50vw;
     height: 65vh;
-    background-color: rgb(214, 214, 214);
+    /* background-color: rgb(214, 214, 214); */
     box-sizing: border-box;
 }
 
 .product_img{
     position: absolute;
     top: 15vh;
-    left: 13vw;
-    width: 23vw;
-    height: 33vh;
+    left: 14vw;
+    width: 22vw;
+    height: 32vh;
     z-index: 1;
 }
 
@@ -82,7 +82,7 @@
 .product_img_4 {
     position: absolute;
     top: 30%;
-    left: -15%;
+    left: 35%;
     width: 20vw;
     height: 30vh;
     z-index: 1;
@@ -90,8 +90,8 @@
 
 .product_name{
     position: absolute;
-    top: 28vh;
-    left: 2vw;
+    top: 27vh;
+    left: 0vw;
     font-size: 4.5vw;
     font-weight: bold;
     text-align: center;
@@ -103,7 +103,7 @@
 
 .product_name_2 {
     position: absolute;
-    top: 22vh;
+    top: 24vh;
     left: 11vw;
     font-size: 7vw;
     font-weight: bold;
@@ -116,8 +116,8 @@
 
 .product_name_3 {
     position: absolute;
-    top: 33vh;
-    left: 25vw;
+    top: 28vh;
+    left: 5vw;
     font-size: 4.5vw;
     font-weight: bold;
     text-align: center;
@@ -215,7 +215,7 @@
 .product_sub_name_1{
     position: absolute;
     top: 53vh;
-    left: 11vw;
+    left: 12vw;
     font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
@@ -228,8 +228,7 @@
 .product_sub_name_2{
     position: absolute;
     top: 55vh;
-    left: 25vw;
-    transform: translate(-50%, -50%);
+    left: 20vw;
     font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
@@ -241,10 +240,9 @@
 
 .product_sub_name_3{
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    top: 53vh;
+    left: 14vw;
+    font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
@@ -255,10 +253,9 @@
 
 .product_sub_name_4{
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    top: 52vh;
+    left: 18vw;
+    font-size: 2.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;

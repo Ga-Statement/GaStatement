@@ -63,7 +63,7 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className={`shoppingBag ${activeTab === 'addToBag' ? '' : 'none'}`}  onClick={() => setActiveTab('addToBag')}>
                     장바구니
                 </div>
-                <div className='closeMystoryBtn' onClick={closeInfo}><img src="/img/closeBtn.png" alt="" /></div>
+                <div className='closeMystoryBtn' onClick={closeInfo}><img src="/pic/icon_pic/closeBtn.png" alt="" /></div>
             </div>
             {/* 내 정보 */}
             <div className={`myInfo ${activeTab === 'myInfo' ? '' : 'close'}`}>
