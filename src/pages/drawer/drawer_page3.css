@@ -1,0 +1,31 @@
+.DrawerPage3{
+    width: 100vw;
+    height: 130vh;
+    background-color: #F0F0F0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 0;
+}
+
+.svg_3{
+    margin-left: 2vw;
+    margin-top: 0;
+}
+
+.DrawerPage3_1{
+    width: 80%;
+    position: absolute;
+    background-color: #F0F0F0;
+    top: 0vh;
+    left: 11vw;
+    padding: 5vh;
+}
+
+.DrawerPage3_1_desc{
+    width: 50%;
+    
+}

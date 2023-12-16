@@ -1,7 +1,7 @@
 /* 
 -------------------------------------------------------------------------
-	파일명		: payment.js
-	설명		: 결제 페이지
+	파일명		: payment2.js
+	설명		: 결제 페이지 - 제품 2
 	담당자		: 박효연
 	개발날짜	: 2023/12/10
 -------------------------------------------------------------------------
@@ -9,17 +9,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './payment.css';
-import Loading from '../components/loading';
+import './payment2.css';
+import Loading from '../../components/loading';
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlinePhoneAndroid, MdOutlineLocalPostOffice } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { PiNoteBold } from "react-icons/pi";
 
-const Payment = () => {
+const Payment2 = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const [isTermsChecked, setIsTermsChecked] = useState(false);
-    const [showWarning, setShowWarning] = useState(false);
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
 
     useEffect(() => {
@@ -38,14 +36,9 @@ const Payment = () => {
         <>
         {isLoading ? (<div className="loadingContainer"><Loading /></div>) : 
         (
-        <div className='payment_container'>
+        <div className='payment_container_2'>
             <div className="payment_wrapper_left">
-                <img src="/pic/shop_pic/LP2.webp" alt="상품 이미지" className='payment_product_img'/>
-                <img src="/pic/shop_pic/lp_logo.webp" alt="상품 로고" className='payment_product_logo'/>
-                <div className="payment_product_desc">
-                    <div className="payment_product_desc1">The Beatles</div>
-                    <div className="payment_product_desc2">1집 LP Abbey Road</div>
-                </div>
+                <img src="/pic/shop_pic/teacup2.webp" alt="상품 이미지" className='payment_product_img'/>
             </div>
             <div className="payment_wrapper_right">
                 <div className="payment_wrapper_right_box">
@@ -149,7 +142,7 @@ const Payment = () => {
                                 </>
                         )}
                     </div>
-                    <Link to='/paycomplete' className='purchase_btn'>구매하기</Link>
+                    <Link to='/paycomplete2' className='purchase_btn'>구매하기</Link>
                 </div>
             </div>
         </div>
@@ -158,4 +151,4 @@ const Payment = () => {
     );
 };
 
-export default Payment;
+export default Payment2;

@@ -4,12 +4,12 @@
     align-items: center;
     width: 100vw;
 }
-.payment_container{
+.payment_container_2{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background: rgb(237, 207, 170);
+    background-image: linear-gradient(to right, rgb(245,181,181) 50%, rgb(200,233,228) 50%);
 }
 
 .payment_wrapper_left{
@@ -19,30 +19,7 @@
 }
 
 .payment_product_img{
-    width: 70%;
-}
-
-.payment_product_logo{
-    margin-top: -50px;
-    margin-right: 100px;
-}
-
-.payment_product_desc{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 300px;
-}
-
-.payment_product_desc1{
-    font-size: 4.5vh;
-    margin-right: 10px;
-}
-
-.payment_product_desc2{
-    font-size: 2.5vh;
-    margin-left: 10px;
-    margin-top: 15px;
+    width: 60%;
 }
 
 .payment_wrapper_right{
@@ -51,11 +28,11 @@
 
 .payment_wrapper_right_box{
     width: 80%;
-    height: 87%;
+    height: 93.1%;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 .payment_user_info_title{

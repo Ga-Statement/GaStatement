@@ -15,7 +15,7 @@ import './standard2.css';
 
 const Standard2 = () => {
     const [currentTime, setCurrentTime] = useState(new Date());
-    const [endTime, setEndTime] = useState(new Date('2023-12-25T23:59:59')); // 종료 날짜 및 시간 설정
+    const [endTime, setEndTime] = useState(new Date('2023-12-20T23:59:59'));
 
     const timeDiff = endTime.getTime() - currentTime.getTime();
     const secondsRemaining = Math.floor(timeDiff / 1000);
@@ -24,35 +24,61 @@ const Standard2 = () => {
     const hours = Math.floor((secondsRemaining % (3600 * 24)) / 3600);
     const minutes = Math.floor((secondsRemaining % 3600) / 60);
     const seconds = secondsRemaining % 60;
-    
-    const [randomNumber, setRandomNumber] = useState(null);
-    const [isRunning, setIsRunning] = useState(true);
+
+    const initialValue = 124000;
+    const decrementRate = initialValue * 0.01;
+    const interval = 2000;
+    const restartIntervalTime = 10000;
 
     const [ pdData, setPdData ] = useState({});
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-        setCurrentTime(new Date());
-        }, 1000); // 1초마다 남은 시간 업데이트
+    // localStorage에서 값을 불러와서 초기 상태를 설정
+    const storedCount = localStorage.getItem('count_4');
+    const [count_4, setCount_4] = useState(storedCount ? parseFloat(storedCount) : initialValue);
 
-        return () => clearInterval(intervalId);
+    const intervalIdRef = React.useRef(null);
+    const timerRef = React.useRef(null);
+
+    useEffect(() => {
+        intervalIdRef.current = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(intervalIdRef.current);
     }, []);
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-          const newRandomNumber = Math.floor(Math.random() * 1000000);
-          setRandomNumber(newRandomNumber);
-        }, 80); // 랜덤 숫자 업데이트
-    
+        timerRef.current = setInterval(() => {
+            setCount_4((prevCount) => Math.max(prevCount - decrementRate, 0));
+        }, interval);
+
+        return () => clearInterval(timerRef.current);
+    }, [decrementRate, interval]);
+
+    const handleButtonClick = () => {
+        clearInterval(intervalIdRef.current);
+        clearInterval(timerRef.current);
+        alert('상품이 장바구니에 담겼습니다.');
+
         setTimeout(() => {
-          clearInterval(intervalId);
-          setIsRunning(false);
-    
-          setRandomNumber(111600); // 마지막에 나올 숫자
-        }, 3000); // 2초동안 랜덤 숫자 나오도록
-    
-        return () => clearInterval(intervalId);
-    }, []);
+            intervalIdRef.current = setInterval(() => {
+                setCurrentTime(new Date());
+            }, 1000);
+
+            timerRef.current = setInterval(() => {
+                setCount_4((prevCount) => Math.max(prevCount - decrementRate, 0));
+            }, interval);
+        }, restartIntervalTime);
+    };
+
+    useEffect(() => {
+        // 페이지가 로드될 때 localStorage에 초기값을 저장
+        localStorage.setItem('count_4', count_4);
+    }, [count_4]);
+
+    const handleResetClick = () => {
+    setCount_4(initialValue);
+    };
 
     const productData = async () => {
         const { data } = await axios.get(
@@ -70,7 +96,7 @@ const Standard2 = () => {
             <div className="standard2_Wrapper">
                 <CiClock2 className="standard2_CiClock2" color="gray" size="50"/>
                 <div className='standard2_originalPrice'>{pdData.pdMaxPrice}</div>
-                <div className="standard2_currentPrice">{randomNumber?.toLocaleString()}</div>
+                <div className="standard2_currentPrice">{count_4?.toLocaleString()}</div>
                 {/* <div className="standard2_Info_name">{pdData.pdName}</div> */}
                 <div className="standard2_Info">
                     <div className="standard2_Info_1">
@@ -101,13 +127,13 @@ const Standard2 = () => {
                             <div className="standard2_Info_3_2_prodStatus">제품상태</div>
                         </div>
                         <div className="standard2_Info_3_3">
-                            <Link to='/payment'className="standard2_BuyBtn">구입하기<img src="/pic/icon_pic/buyIcon.png" alt="" className='standard2_buyIcon'/></Link>
+                            <Link to='/payment4'className="standard2_BuyBtn">구입하기<img src="/pic/icon_pic/buyIcon.png" alt="" className='standard2_buyIcon'/></Link>
                             <div className="standard2_BagAdd">장바구니<img src="/pic/icon_pic/basket.png" alt="" className='standard2_basketIcon'/></div>
                         </div>
                     </div>
                 </div>
                 <div className="standard2_BuyBag">
-                    
+                    {/* <button onClick={handleResetClick}>값 초기화</button> */}
                 </div>
             </div>
         </div>

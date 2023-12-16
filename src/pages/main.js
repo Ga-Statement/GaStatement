@@ -69,7 +69,7 @@ const Mainpage = () => {
 		content: (
 		  <div className="contents_4">
 			<div className="prodImg_4">
-			  <img src="/pic/main_pic/LP.png" alt="이미지"/>
+			  <img src="/pic/shop_pic/LP.webp" alt="이미지"/>
 			</div>
 			<div className="desc_four">
 			  <div className='desc_1'>"음악을 담으세요"</div>

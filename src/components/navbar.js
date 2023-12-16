@@ -196,39 +196,6 @@ const Navbar = () => {
         };
     }, []);
 
-    // 메뉴 스크롤따라 올라오도록 설정
-    // const [scrollPosition, setScrollPosition] = useState(0);
-    // const stopScrollPercent = 30.1; // 멈추길 원하는 퍼센트
-  
-    // useEffect(() => {
-    //   const handleScroll = () => {
-    //     setScrollPosition(window.scrollY);
-    //   };
-  
-    //   window.addEventListener('scroll', handleScroll);
-  
-    //   return () => {
-    //     window.removeEventListener('scroll', handleScroll);
-    //   };
-    // }, []);
-  
-    // const windowHeight = window.innerHeight;
-    // const documentHeight = document.documentElement.scrollHeight;
-
-    // window.scrollY : 수직으로 몇 픽셀만큼 스크롤 되었는지 나타냄
-    // window.innerHeight : 지금 보고있는 화면의 높이
-    // document.body.scrollHeight : 전체 화면의 높이
-  
-    // 스크롤 위치를 퍼센트로 변환
-    // const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
-    // https://doishalf.tistory.com/25 참고
-    // 픽셀로 지정했더니 모니터마다 사이즈가 달라서 위치가 달라짐 - 퍼센트로 수정
-  
-    const headStyle = {
-    //   transform: `translateY(-${Math.min(scrollPosition, (stopScrollPercent / 100) * (documentHeight - windowHeight))}px)`,
-    //   transition: 'transform 0.0001s ease-in-out',
-    };
-
     // 회원가입 항목이 모두 작성되었는지 - signUp.js로 전달
     // 초기에는 작성되지 않았으므로 기본값 false
     const [signUpSuccess, setSignUpSuccess] = useState(false);
@@ -253,10 +220,10 @@ const Navbar = () => {
     return (
         <header>
             <div className="navbar">
-                <div div className="head" style={headStyle}>
+                <div div className="head">
                     <nav>
                         <div className='category'>
-                            <Link to="#" className="category_1" onClick={() => handleCategoryClick(null)}>서랍</Link>
+                            <Link to="/drawer" className="category_1" onClick={() => handleCategoryClick(null)}>서랍</Link>
                             <Link to="/shop" className="category_2" onClick={() => handleCategoryClick(null)}>SHOP</Link>
                             <Link to="/main" className="home" onClick={() => handleCategoryClick(null)}><img src="/pic/icon_pic/logo.png" className="home_logo"/></Link>
                             <div className={`category_3 ${activeCategory === 1 ? 'active' : ''}`} onClick={() => handleCategoryClick(1)}>나의이야기</div>
@@ -281,9 +248,8 @@ const Navbar = () => {
                     </div>
                 </div>
                 <ChannelTalk/>
-                <div className='drawerB'>
-                    <img src='/pic/icon_pic/drawer.png' className='drawerBtn' onClick={() => handleCategoryClick(4)}/>
-                </div>
+                <img src='/pic/icon_pic/drawerIcon.webp' className='drawerBtn' onClick={() => handleCategoryClick(4)}/>
+                <div className="drawerApplyTxt">서랍 신청</div>
             </div>
             <div className="sidebar" subMenuOpen={false}>
                 <nav className={`openSidebar ${subMenuOpen ? '' : 'hide'}`}>

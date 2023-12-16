@@ -1,7 +1,7 @@
 .premium1_1_Container{
     width: 100vw;
     height: 100vh;
-    background: black;
+    background: #221F20;
 }
 
 .premium1_1_Wrapper{
@@ -224,7 +224,6 @@
 }
 
 .premium1_1_BuyBtn{
-    /* border: 1px solid black; */
     color: rgb(255, 255, 255);
     text-align: center;
     margin: 0 15px;
@@ -237,6 +236,14 @@
     display: flex;
 }
 
+.premium1_1_buyIcon{
+    width: 30px;
+}
+
 .premium1_1_buyIcon, .premium1_1_basketIcon{
     margin-left: 5px;
+}
+
+.premium1_1_BagAdd:hover{
+    cursor: pointer;
 }

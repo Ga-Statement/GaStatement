@@ -96,23 +96,23 @@
 }
 
 .profileIcon{
-    width: 2vw;
+    width: 1.5vw;
     height: 3vh;
 }
 
 .phoneIcon{
-    width: 2vw;
+    width: 1.5vw;
     height: 3vh;
 }
 
 .addressIcon{
-    width: 2vw;
+    width: 1.5vw;
     height: 3vh;
 }
 
 .emailIcon{
-    width: 2vw;
-    height: 3vh;
+    width: 1.5vw;
+    height: 2.5vh;
 }
 
 .onoffIcon:hover{
@@ -201,6 +201,20 @@
     left: 6vw;
 }
 
+.checkProd{
+    width: 1.5vw;
+    height: 4vh;
+}
+
+.purchaseConfirmList{
+    text-align: center;
+}
+
+.purchaseConfirm{
+    width: 2vw;
+    height: 4vh;
+}
+
 .sales{
     width: 30vw;
     height: 18vh;
@@ -226,11 +240,6 @@
     justify-content: space-between;
     border-bottom: 3px solid rgb(215, 215, 215);
     margin: 2vh;
-}
-
-.date{
-    padding-left: 1vw;
-    padding-top: 1vh;
 }
 
 .plus{
@@ -318,8 +327,8 @@
 
 .buyButton{
     text-decoration: none;
-    color: black;
-    background-color: rgb(205, 205, 205);
+    color: white;
+    background-color:#909090;
     border-radius: 0.5vw;
     padding: 1vh;
     position: absolute;

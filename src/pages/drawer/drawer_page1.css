@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Lora&family=Noto+Sans+KR:wght@100;200;300&display=swap');
+
+.DrawerPage1{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0E1E2A;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.DrawerPage1_list {
+    margin-bottom: -16vh;
+    margin-left: 2vw;
+}
+
+.DrawerPage1_1{
+    font-size: 5vh;
+    margin-bottom: -3vh;
+    font-family: 'Kalnia', serif;
+    font-style: oblique;
+}
+
+.DrawerPage1_2{
+    font-size: 18vh;
+    margin-bottom: -2vh;
+}
+
+.DrawerPage1_3{
+    font-size: 5vh;
+    margin-bottom: 5vh;
+    font-family: 'Kalnia', serif;
+    font-style: oblique;
+}
+
+.svg{
+    margin-bottom: -5vh;
+}
