@@ -1,10 +1,19 @@
+/* 
+-------------------------------------------------------------------------
+	파일명		: paycomplete2.js
+	설명		: 결제 완료 페이지 - 제품 2
+	담당자		: 박효연
+	개발날짜	: 2023/12/15
+-------------------------------------------------------------------------
+*/
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './paycomplete.css';
-import LoadingPayComplete from '../components/loading2';
+import './paycomplete2.css';
+import LoadingPayComplete from '../../components/loading2.js';
 import { IoMdCloseCircle } from "react-icons/io";
 
-const PaymentComplete = () => {
+const PaymentComplete2 = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [formattedDate, setFormattedDate] = useState('');
     const [formattedDateTime, setFormattedDateTime] = useState('');
@@ -52,13 +61,10 @@ const PaymentComplete = () => {
         <>
         {isLoading ? (<div className="loadingContainer"><LoadingPayComplete /></div>) : 
         (
-            <div className='pay_complete_container'>
-            <div className="payment_wrapper_left">
-                <img src="/pic/shop_pic/LP2.webp" alt="상품 이미지" className='payment_product_img'/>
-                <img src="/pic/shop_pic/lp_logo.webp" alt="상품 로고" className='payment_product_logo'/>
-                <div className="payment_product_desc">
-                    <div className="payment_product_desc1">The Beatles</div>
-                    <div className="payment_product_desc2">1집 LP Abbey Road</div>
+            <div className='pay_complete_container_2'>
+            <div className="payment_complete_wrapper_left">
+                <div className="payment_complete_wrapper_left">
+                    <img src="/pic/shop_pic/teacup2.webp" alt="상품 이미지" className='payment_complete_product_img'/>
                 </div>
             </div>
             <div className="pay_complete_wrapper_right">
@@ -94,4 +100,4 @@ const PaymentComplete = () => {
     );
 };
 
-export default PaymentComplete;
+export default PaymentComplete2;

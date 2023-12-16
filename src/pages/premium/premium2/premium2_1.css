@@ -228,6 +228,14 @@
     display: flex;
 }
 
+.premium2_1_buyIcon{
+    width: 30px;
+}
+
 .premium2_1_buyIcon, .premium2_1_basketIcon{
     margin-left: 5px;
+}
+
+.premium2_1_BagAdd:hover{
+    cursor: pointer;
 }

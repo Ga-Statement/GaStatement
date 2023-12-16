@@ -1,7 +1,7 @@
 .standard1_Container{
     width: 100vw;
     height: 100vh;
-    background: rgb(255, 238, 232);
+    background:  #FFEEE9;
 }
 
 .standard1_Wrapper{
@@ -233,6 +233,14 @@
     font-size: 20px;
     flex-direction: row;
     display: flex;
+}
+
+.standard1_buyIcon{
+    width: 30px;
+}
+
+.standard1_BagAdd:hover{
+    cursor: pointer;
 }
 
 .standard1_buyIcon, .standard1_basketIcon{

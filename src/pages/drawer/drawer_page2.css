@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.DrawerPage2{
+    width: 100vw;
+    height: 150vh;
+    background-color: #F0F0F0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'TheJamsil5Bold';
+}
+
+.svg_2{
+    margin-left: 2vw;
+}
+
+.DrawerPage2_1{
+    width: 100%;
+    background-color: #F0F0F0;
+    position: absolute;
+    padding: 5vh;
+}
+
+.DrawerPage2_1_1{
+    font-size: 8vh;
+    margin: 5vh;
+}
+
+.DrawerPage2_1_2{
+    display: flex;
+    flex-direction: row;
+}
+
+.DrawerPage2_1_2 img{
+    width: 12%;
+    margin: 0 auto;
+}
+
+.DrawerPage2_img1{
+    position: absolute;
+    left: 25vw;
+}
+
+.DrawerPage2_img2{
+    position: absolute;
+    top: 40vh;
+    left: 35vw;
+}
+
+.DrawerPage2_img3{
+    position: absolute;
+    left: 45vw;
+}
+
+.DrawerPage2_img4{
+    position: absolute;
+    top: 40vh;
+    right: 34vw;
+}
+
+.DrawerPage2_img5{
+    position: absolute;
+    right: 24vw;
+}
+
+.DrawerPage2_1_3{
+    font-size: 5vh;
+    margin-top: 58vh;
+}

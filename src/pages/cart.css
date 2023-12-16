@@ -1,0 +1,452 @@
+.payment_container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: #0E1E2A;
+    position: relative;
+}
+
+.payment_wrapper_left_2{
+    flex: 1;
+}
+
+.payment_wrapper_right{
+    flex: 1;
+}
+
+.payment_wrapper_left_box{
+    width: 40vw;
+    height: 93.1vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 6vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment_wrapper_title{
+    margin: 1vh auto;
+    position: absolute;
+    top: 0vh;
+    left: 18vw;
+}
+
+.payment_wrapper_list{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 3px solid rgb(189, 189, 189);
+    padding: 3vh;
+    position: absolute;
+    top: 6vh;
+    left: 0.8vw;
+    width: 37vw;
+    height: 78vh;
+}
+
+.prodLine1{
+    width: 33vw;
+    height: 0.3vh;
+    background-color: gray;
+    position: absolute;
+    top: 26.5vh;
+    left: 1.5vw;
+}
+
+.prodLine2{
+    width: 33vw;
+    height: 0.3vh;
+    background-color: gray;
+    position: absolute;
+    top: 53vh;
+    left: 1.5vw;
+}
+
+.prodLine3{
+    width: 0.1vw;
+    height: 15vh;
+    background-color: gray;
+    position: absolute;
+    top: 0vh;
+    left: -2vw;
+}
+
+.prodLine4{
+    width: 0.1vw;
+    height: 15vh;
+    background-color: gray;
+    position: absolute;
+    top: 1vh;
+    left: -2vw;
+}
+
+.prodLine5{
+    width: 0.1vw;
+    height: 15vh;
+    background-color: gray;
+    position: absolute;
+    top: 0vh;
+    left: -2vw;
+}
+
+.prodBuyList_1{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 2vh;
+    left: 1.5vw;
+    width: 37.5vw;
+    height: 23vh;
+    border-radius: 1vh;
+}
+
+.prodBuyList_1_img{
+    flex: 1;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    width: 18vw;
+    height: 23vh;
+}
+
+.prodBuyList_1_img img{
+    width: 13vw;
+    height: 18vh;
+    margin: 3vh auto;
+    position: absolute;
+    top: 0vh;
+    left: 2.8vw;
+}
+
+.prodBuyList_1_desc{
+    flex: 1;
+    font-size: 2.5vh;
+    margin: 2.5vh auto;
+    position: absolute;
+    top: 1vh;
+    right: 0;
+    width: 17.7vw;
+}
+
+.prodBuyList_1_desc_1{
+    margin: 2.5vh;
+}
+
+.prodBuyList_1_desc_2{
+    margin: 2.5vh;
+}
+
+.prodBuyList_2{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 28vh;
+    left: 1.5vw;
+    width: 37.5vw;
+    height: 23vh;
+    border-radius: 1vh;
+}
+
+.prodBuyList_2_img{
+    flex: 1;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    width: 18vw;
+    height: 23vh;
+}
+
+.prodBuyList_2_img img{
+    width: 13vw;
+    height: 18vh;
+    margin: 3vh auto;
+    position: absolute;
+    top: 0vh;
+    left: 2.8vw;
+}
+
+.prodBuyList_2_desc{
+    flex: 1;
+    font-size: 2.5vh;
+    margin: 2.5vh auto;
+    position: absolute;
+    top: 1vh;
+    right: 0;
+    width: 17.7vw;
+}
+
+.prodBuyList_2_desc_1{
+    margin: 2.5vh;
+}
+
+.prodBuyList_2_desc_2{
+    margin: 2.5vh;
+}
+
+.prodBuyList_3{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 54.5vh;
+    left: 1.5vw;
+    width: 37.5vw;
+    height: 23vh;
+    border-radius: 1vh;
+}
+
+.prodBuyList_3_img{
+    flex: 1;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    width: 18vw;
+    height: 23vh;
+}
+
+.prodBuyList_3_img img{
+    width: 13vw;
+    height: 18vh;
+    margin: 3vh auto;
+    position: absolute;
+    top: 0vh;
+    left: 2.8vw;
+}
+
+.prodBuyList_3_desc{
+    flex: 1;
+    font-size: 2.5vh;
+    margin: 2.5vh auto;
+    position: absolute;
+    top: 1vh;
+    right: 0;
+    width: 17.7vw;
+}
+
+.prodBuyList_3_desc_1{
+    margin: 2.5vh;
+}
+
+.prodBuyList_3_desc_2{
+    margin: 2.5vh;
+}
+
+.payment_wrapper_right_box{
+    width: 40vw;
+    height: 93.1vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 6vw;
+}
+
+.payment_user_info_title{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.payment_user_info{
+    border: 3px solid rgb(189, 189, 189);
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 70%;
+    height: 32%;
+    font-size: 2vh;
+    background-color: white;
+}
+
+.payment_user_info_1{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 95%;
+    margin: 5px auto;
+}
+
+.payment_user_info_1_icon, .payment_user_info_2_icon, .payment_user_info_3_icon, .payment_user_info_4_icon, .payment_user_info_5_icon{
+    margin-right: 10px;
+}
+
+.payment_user_info_2{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 95%;
+    margin: 5px auto;
+}
+
+.payment_user_info_3{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 95%;
+    margin: 5px auto;
+}
+
+.payment_user_info_4{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 95%;
+    margin: 5px auto;
+}
+
+.payment_user_info_5{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid rgb(175, 175, 175);
+    justify-content: space-between;
+    width: 95%;
+    margin: 5px auto;
+    white-space : nowrap;
+}
+
+.payment_user_info_5_memo{
+    display: flex;
+    flex-direction: row;
+}
+
+.delivery_memo_select{
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+.payment_amount{
+    border: 3px solid rgb(189, 189, 189);
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 70%;
+    height: 17%;
+    text-align: center;
+    font-size: 2vh;
+}
+
+.payment_amount_title{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.payment_amount_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3px;
+}
+
+.payment_amount_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 3px solid rgb(165, 165, 165);
+    margin-bottom: 3px;
+}
+
+.payment_amount_3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.payment_method{
+    border: 3px solid rgb(189, 189, 189);
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 70%;
+    height: 25%;
+    font-size: 2vh;
+}
+
+.payment_method_title{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.payment_method_list{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px;
+}
+
+.vertical_line{
+    width:3px;
+    background-color:#b3b3b3;
+    margin: 10px;
+}
+
+.drawer_pay_method{
+    flex: 1;
+    /* background-color: rgb(238, 238, 238); */
+    padding: 10px;
+    border-radius: 10px;
+    height: 90%;
+}
+
+.drawer_pay_method_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.drawer_pay_method_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.drawer_pay_method_3{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vh;
+    color: rgb(158, 158, 158);
+}
+
+.kb_logo{
+    width: 15px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.purchase_btn{
+    background-color: #909090;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 3%;
+    left: 45%;
+}
+
+.purchase_btn:hover{
+    cursor: pointer;
+}

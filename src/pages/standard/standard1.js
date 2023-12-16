@@ -15,7 +15,7 @@ import './standard1.css';
 
 const Standard1 = () => {
     const [currentTime, setCurrentTime] = useState(new Date());
-    const [endTime, setEndTime] = useState(new Date('2023-12-20T23:59:59')); // 종료 날짜 및 시간 설정
+    const [endTime, setEndTime] = useState(new Date('2023-12-20T23:59:59'));
 
     const timeDiff = endTime.getTime() - currentTime.getTime();
     const secondsRemaining = Math.floor(timeDiff / 1000);
@@ -24,35 +24,61 @@ const Standard1 = () => {
     const hours = Math.floor((secondsRemaining % (3600 * 24)) / 3600);
     const minutes = Math.floor((secondsRemaining % 3600) / 60);
     const seconds = secondsRemaining % 60;
-    
-    const [randomNumber, setRandomNumber] = useState(null);
-    const [isRunning, setIsRunning] = useState(true);
+
+    const initialValue = 76000;
+    const decrementRate = initialValue * 0.01;
+    const interval = 2000;
+    const restartIntervalTime = 10000;
 
     const [ pdData, setPdData ] = useState({});
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-        setCurrentTime(new Date());
-        }, 1000); // 1초마다 남은 시간 업데이트
+    // localStorage에서 값을 불러와서 초기 상태를 설정
+    const storedCount = localStorage.getItem('count_3');
+    const [count_3, setCount_3] = useState(storedCount ? parseFloat(storedCount) : initialValue);
 
-        return () => clearInterval(intervalId);
+    const intervalIdRef = React.useRef(null);
+    const timerRef = React.useRef(null);
+
+    useEffect(() => {
+        intervalIdRef.current = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(intervalIdRef.current);
     }, []);
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-          const newRandomNumber = Math.floor(Math.random() * 1000000);
-          setRandomNumber(newRandomNumber);
-        }, 80); // 랜덤 숫자 업데이트
-    
+        timerRef.current = setInterval(() => {
+            setCount_3((prevCount) => Math.max(prevCount - decrementRate, 0));
+        }, interval);
+
+        return () => clearInterval(timerRef.current);
+    }, [decrementRate, interval]);
+
+    const handleButtonClick = () => {
+        clearInterval(intervalIdRef.current);
+        clearInterval(timerRef.current);
+        alert('상품이 장바구니에 담겼습니다.');
+
         setTimeout(() => {
-          clearInterval(intervalId);
-          setIsRunning(false);
-    
-          setRandomNumber(68400); // 마지막에 나올 숫자
-        }, 3000); // 2초동안 랜덤 숫자 나오도록
-    
-        return () => clearInterval(intervalId);
-    }, []);
+            intervalIdRef.current = setInterval(() => {
+                setCurrentTime(new Date());
+            }, 1000);
+
+            timerRef.current = setInterval(() => {
+                setCount_3((prevCount) => Math.max(prevCount - decrementRate, 0));
+            }, interval);
+        }, restartIntervalTime);
+    };
+
+    useEffect(() => {
+        // 페이지가 로드될 때 localStorage에 초기값을 저장
+        localStorage.setItem('count_3', count_3);
+    }, [count_3]);
+
+    const handleResetClick = () => {
+    setCount_3(initialValue);
+    };
 
     const productData = async () => {
         const { data } = await axios.get(
@@ -70,21 +96,21 @@ const Standard1 = () => {
             <div className="standard1_Wrapper">
                 <CiClock2 className="standard1_CiClock2" color="gray" size="50"/>
                 <div className='standard1_originalPrice'>{pdData.pdMaxPrice}</div>
-                <div className="standard1_currentPrice">{randomNumber?.toLocaleString()}</div>
+                <div className="standard1_currentPrice">{count_3?.toLocaleString()}</div>
                 {/* <div className="standard1_Info_name">{pdData.pdName}</div> */}
                 <div className="standard1_Info">
                     <div className="standard1_Info_1">
                         <div className="standard1_Info_1_1">
-                            <div className="standard1_Info_1_1_brand">Brand</div>
-                            <div className="standard1_Info_1_1_brands">{pdData.pdBrand}</div>
+                            <div className="standard1_Info_1_1_brand">Time</div>
+                            <div className="standard1_Info_1_1_brands">{`${days}일 ${hours}시간 ${minutes}분 ${seconds}초`}</div>
                         </div>
                         <div className="standard1_Info_1_2">
-                            <div className="standard1_Info_1_2_year">Year</div>
-                            <div className="standard1_Info_1_2_years">{pdData.pdYears}</div>
+                            <div className="standard1_Info_1_2_year">Brand</div>
+                            <div className="standard1_Info_1_2_years">{pdData.pdBrand}</div>
                         </div>
                         <div className="standard1_Info_1_3">
-                            <div className="standard1_Info_1_3_time">Time</div>
-                            <div className="standard1_Info_1_3_times">{`${days}일 ${hours}시간 ${minutes}분 ${seconds}초`}</div>
+                            <div className="standard1_Info_1_3_time">Year</div>
+                            <div className="standard1_Info_1_3_times">{pdData.pdYears}</div>
                         </div>
                     </div>
                     <div className="standard1_Info_2">
@@ -106,13 +132,13 @@ const Standard1 = () => {
                             <div className="standard1_Info_3_2_prodStatus">제품상태</div>
                         </div>
                         <div className="standard1_Info_3_3">
-                            <Link to='/payment'className="standard1_BuyBtn">구입하기<img src="/pic/icon_pic/buyIcon.png" alt="" className='standard1_buyIcon'/></Link>
-                            <div className="standard1_BagAdd">장바구니<img src="/pic/icon_pic/basket.png" alt="" className='standard1_basketIcon'/></div>
+                            <Link to='/payment3'className="standard1_BuyBtn">구입하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='standard1_buyIcon'/></Link>
+                            <div className="standard1_BagAdd" onClick={handleButtonClick}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='standard1_basketIcon'/></div>
                         </div>
                     </div>
                 </div>
                 <div className="standard1_BuyBag">
-                    
+                    {/* <button onClick={handleResetClick}>값 초기화</button> */}
                 </div>
             </div>
         </div>

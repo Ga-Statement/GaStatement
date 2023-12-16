@@ -1,0 +1,37 @@
+.DrawerPage4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    background-color: #F0F0F0;
+    position: relative;
+  }
+  
+  .slick-slider {
+    width: 80%;
+    position: absolute;
+    top: 10vh;
+  }
+  
+  .slick-slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 1; /* 슬라이더 위에 나타나도록 설정 */
+  }
+  
+  .slick-prev {
+    left: 6vw;
+  }
+  
+  .slick-next {
+    right: 6vw;
+  }
+  

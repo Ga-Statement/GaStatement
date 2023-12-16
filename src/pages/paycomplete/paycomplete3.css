@@ -1,42 +1,19 @@
-.pay_complete_container{
+.pay_complete_container_3{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background: rgb(237, 207, 170);
+    background-color: #FFEEE9;
 }
 
-.payment_wrapper_left{
+.payment_complete_wrapper_left{
     flex: 1.2;
     text-align: center;
     margin-top: 100px;
 }
 
-.payment_product_img{
-    width: 70%;
-}
-
-.payment_product_logo{
-    margin-top: -50px;
-    margin-right: 100px;
-}
-
-.payment_product_desc{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 300px;
-}
-
-.payment_product_desc1{
-    font-size: 4.5vh;
-    margin-right: 10px;
-}
-
-.payment_product_desc2{
-    font-size: 2.5vh;
-    margin-left: 10px;
-    margin-top: 15px;
+.payment_complete_product_img{
+    width: 60%;
 }
 
 .pay_complete_wrapper_right{
@@ -45,13 +22,13 @@
 
 .pay_complete_wrapper_right_box{
     width: 80%;
-    height: 85%;
+    height: 93.1%;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 .pay_complete_wrapper{

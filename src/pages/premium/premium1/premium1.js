@@ -12,11 +12,6 @@ import { FiArrowUpCircle } from "react-icons/fi";
 import './premium1.css';
 import Premium1_1 from "./premium1_1";
 import Premium1_2 from "./premium1_2";
-import Premium1_3 from "./premium1_3";
-import Premium1_4 from "./premium1_4";
-import Premium1_5 from "./premium1_5";
-import Premium1_6 from "./premium1_6";
-import Premium1_7 from "./premium1_7";
 
 const Premium1 = () => {
     const [showButton, setShowButton] = useState(false);
@@ -48,14 +43,9 @@ const Premium1 = () => {
 
     return(
         <div className="premium1_combine">
-            {showButton && (<FiArrowUpCircle color='gray' className='premium1_scrollBtn' size='35' onClick={scrollToTop}/>)}
+            {showButton && (<img src='/pic/icon_pic/camera_backtotop.webp' className='premium1_scrollBtn' onClick={scrollToTop}/>)}
             <Premium1_1/>
             <Premium1_2/>
-            <Premium1_3/>
-            <Premium1_4/>
-            <Premium1_5/>
-            <Premium1_6/>
-            <Premium1_7/>
         </div>
     );
 };
