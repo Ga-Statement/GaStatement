@@ -24,6 +24,7 @@ import Standard1 from './pages/standard/standard1';
 import Standard2 from './pages/standard/standard2';
 import Drawer from './pages/drawer/drawer';
 import Cart from './pages/cart.js';
+import Admin from './pages/admin';
 
 const AnimatedRoute = ({ children, animationType }) => {
   const location = useLocation();
@@ -66,6 +67,7 @@ function App() {
           <Route path="/standard2" element={<AnimatedRoute animationType="fade"><Standard2/></AnimatedRoute>} />
           <Route path="/drawer" element={<AnimatedRoute animationType="fade"><Drawer/></AnimatedRoute>} />
           <Route path="/cart" element={<AnimatedRoute animationType="fade"><Cart/></AnimatedRoute>} />
+          <Route path="/admin" element={<AnimatedRoute animationType="fade"><Admin/></AnimatedRoute>} />
         </Routes>
       </div>
     </BrowserRouter>

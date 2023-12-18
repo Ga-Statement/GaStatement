@@ -45,6 +45,13 @@ const Navbar = () => {
         removeCookie('token');
         setIsLogin(false);
         alert("로그아웃 되었습니다");
+
+        setNav_1(false);
+        setNav_2(false);
+        setNav_3(false);
+        setNav_4(false);
+        setActiveCategory(null);
+        myInfoRef.current.setMyInfo();
     }
 
     // 버튼 누르면 선택된 메뉴만 상태 변경
@@ -226,7 +233,7 @@ const Navbar = () => {
                             <Link to="/drawer" className="category_1" onClick={() => handleCategoryClick(null)}>서랍</Link>
                             <Link to="/shop" className="category_2" onClick={() => handleCategoryClick(null)}>SHOP</Link>
                             <Link to="/main" className="home" onClick={() => handleCategoryClick(null)}><img src="/pic/icon_pic/logo.png" className="home_logo"/></Link>
-                            <div className={`category_3 ${activeCategory === 1 ? 'active' : ''}`} onClick={() => handleCategoryClick(1)}>나의이야기</div>
+                            <div className={`category_3 ${activeCategory === 1 ? 'active' : ''}`} onClick={() => {!isLogin ? alert("로그인을 해주세요") : handleCategoryClick(1)}}>나의이야기</div>
                         </div>        
                     </nav>
                     <div className='login'>
@@ -248,7 +255,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <ChannelTalk/>
-                <img src='/pic/icon_pic/drawerIcon.webp' className='drawerBtn' onClick={() => handleCategoryClick(4)}/>
+                <img src='/pic/icon_pic/drawerIcon.webp' className='drawerBtn' onClick={() => {!isLogin ? alert("로그인을 해주세요") : handleCategoryClick(4)}}/>
                 <div className="drawerApplyTxt">서랍 신청</div>
             </div>
             <div className="sidebar" subMenuOpen={false}>

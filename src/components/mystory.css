@@ -408,9 +408,17 @@
 
 }
 
-/* .admin{
+.admin{
     cursor: pointer;
     font-size: 20px;
     text-decoration: none;
     color: black;
-} */
+    position: absolute;
+    bottom: -25vh;
+    left: 30vw;
+    font-size: 2.1vh;
+}
+
+.hidden {
+    visibility: hidden;
+}

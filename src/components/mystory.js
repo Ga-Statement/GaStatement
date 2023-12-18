@@ -7,12 +7,14 @@
 -------------------------------------------------------------------------
 */
 
-import React, { forwardRef, useImperativeHandle, useState } from 'react';
+import React, { forwardRef, useImperativeHandle, useState, useEffect } from 'react';
 import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 import { LiaToggleOffSolid } from "react-icons/lia";
 import { LiaToggleOnSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+import axios from 'axios';
 import './mystory.css';
 
 const MyStory = forwardRef(({ closeMyStory }, ref) => {
@@ -21,6 +23,9 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
     const [isToggleOn_2, setIsToggleOn_2] = useState(false);
     const [isToggleOn_3, setIsToggleOn_3] = useState(false);
     const [isToggleOn_4, setIsToggleOn_4] = useState(false);
+
+    const [cookies, setCookie] = useCookies(['token']);
+    const [userInfo, setUserInfo] = useState(null);
 
     const toggleClick = (number) => {
         if (number=== 1) {
@@ -47,6 +52,28 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
         setMyInfo
     }));
 
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            if (cookies.token) {
+              const userNO = cookies.token.userData;
+    
+              const res = await axios.get(`http://localhost:3000/user/mypage?userNO=${userNO}`);
+              setUserInfo(res.data);
+              console.log("data: ", res.data);
+            }
+          } catch (error) {
+            console.error('Error fetching user data:', error);
+          }
+        };
+
+        if(!cookies.token) {
+            setUserInfo(null);
+        }
+    
+        fetchData();
+    }, [cookies.token]);
+
     return (
         <div className="my_story">
             <div className='myStoryTitle'>
@@ -71,28 +98,28 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                         <div className="profile">
                             <div className='profile_list'>
                                 <img src='/pic/icon_pic/name.webp' className="profileIcon"/>
-                                <div className="name">이름</div>      
+                                {userInfo ? <div className="name">{userInfo.userName}</div> : <div className="name">이름</div>}        
                             </div>                  
                             <div className='editInfo'>수정</div>
                         </div>
                         <div className="emailInfo">
                             <div className='profile_list'>
                                 <img src='/pic/icon_pic/mail.webp' className="emailIcon"/>
-                                <div className="emailInfo_address">이메일</div>                        
+                                {userInfo ? <div className="emailInfo_address">{userInfo.userID}</div> : <div className="emailInfo_address">이메일</div>  }                         
                             </div>
                             <div className='editInfo'>수정</div>
                         </div>
                         <div className="phoneInfo">
                             <div className='profile_list'>
                                 <img src='/pic/icon_pic/phone.webp' className="phoneIcon"/>
-                                <div className="phoneNum">핸드폰번호</div>
+                                {userInfo ? <div className="phoneNum">{userInfo.userPhone}</div> : <div className="phoneNum">핸드폰번호</div>}
                             </div>
                             <div className='editInfo'>수정</div>
                         </div>
                         <div className="addressInfo">
                             <div className='profile_list'>
                                 <img src='/pic/icon_pic/address.webp' className="addressIcon"/>
-                                <div className="addresshome">배송지 관리</div>
+                                {userInfo ? <div className="addresshome">{userInfo.userAdd}</div> : <div className="addresshome">배송지 관리</div>}  
                             </div>
                             <div className='editInfo'>수정</div>
                         </div>
@@ -141,6 +168,8 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                     </div>
                 </div>
                 <div className='withdrawal'>회원탈퇴 &gt;</div>
+                {userInfo ? <Link to='/admin' className={`admin ${userInfo.userRole === 0 ? '' : 'hidden'}`} onClick={closeInfo}>관리자 페이지</Link> : 
+                <Link to='/admin' className="admin hidden" onClick={closeInfo}>관리자 페이지</Link>}
             </div>
             {/* 나의 명세서 */}
             <div className={`specs ${activeTab === 'specs' ? '' : 'close'}`}>
