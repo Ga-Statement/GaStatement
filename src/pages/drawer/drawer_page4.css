@@ -29,9 +29,11 @@
   
   .slick-prev {
     left: 6vw;
+    top: 60vh;
   }
   
   .slick-next {
     right: 6vw;
+    top: 60vh;
   }
   

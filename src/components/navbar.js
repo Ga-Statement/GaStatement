@@ -18,7 +18,7 @@ import SignUpComplete from './sjgnupcomplete';
 import Login from './login';
 import MyStory from './mystory';
 import ChannelTalk from './channeltalk';
-import Knob from '../pages/knob';
+import Knob from './knob';
 
 //npm install react-icons
 

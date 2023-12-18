@@ -8,7 +8,7 @@
 */
 
 import { useState } from 'react';
-import Address from '../components/address';
+import Address from './address';
 import './knob.css';
 
 const Knob = ({closeKnobBtn}) => {
@@ -87,15 +87,15 @@ const Knob = ({closeKnobBtn}) => {
                 <div className='check_p'><label>프리미엄 마케팅<input type="radio" name="premium" value=""/></label></div>
                 <div className='check_b'><label>기본 마케팅<input type="radio" name="premium" value=""/></label></div>
             </div>
-            <div><input className='prod_name' type="text" placeholder='상품명' value={knobProd} onChange={handleProd}/></div>
-            <div><input className='prod_brand' type="text" placeholder='브랜드' value={knobBrand} onChange={handleBrand}/></div>
-            <div><input className='when_buy' type="text" placeholder='구입시기' value={knobYear} onChange={handleYear}/></div>
+            <div><input className='knob_email' type="text" placeholder='이메일' value={knobEmail} onChange={handleEmail}/></div>
             <div><input className='applicant_name' type="text" placeholder='신청자 성함' value={knobName} onChange={handleName}/></div>
             <div><input className='applicant_phone' type="text" placeholder='전화번호' value={knobPhone} onChange={handlePhone}/></div>
             <div><input className='knob_address' type="text" placeholder='주소' value={selectedAddress} readOnly/></div>
             <div><Address setAddress={handleAddressChange}/><br/></div>
             <div><input className="knob_address" type="text" placeholder='상세주소' value={knobAddress} onChange={handleAddr}/></div>
-            <div><input className='knob_email' type="text" placeholder='이메일' value={knobEmail} onChange={handleEmail}/></div>
+            <div><input className='prod_name' type="text" placeholder='상품명' value={knobProd} onChange={handleProd}/></div>
+            <div><input className='prod_brand' type="text" placeholder='브랜드' value={knobBrand} onChange={handleBrand}/></div>
+            <div><input className='when_buy' type="text" placeholder='구입시기' value={knobYear} onChange={handleYear}/></div>
             <div><input className='knob_price' type="text" placeholder='구입가격/희망가격' value={knobPrice} onChange={handlePrice}/></div>
             <div><input className='knob_file' type="file" placeholder='첨부파일(제품이미지, 영수증, 구매내역)' multiple/></div>
             <textarea className="knob_desc" placeholder='프리미엄 마케팅 신청시

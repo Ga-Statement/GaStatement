@@ -68,32 +68,24 @@ const Premium1_1 = () => {
     }, [count_1]);
 
     const handleResetClick = () => {
-    setCount_1(initialValue);
-    };
+        setCount_1(initialValue);
+        };
 
     // useEffect(() => {
-    //     const intervalId = setInterval(() => {
-    //     setCurrentTime(new Date());
-    //     }, 1000); // 1초마다 남은 시간 업데이트
+    //     // count_2가 0이 되면 자동으로 초기값으로 리셋
+    //     if (count_2 === 0) {
+    //         handleResetClick();
+    //     }
+    // }, [count_2]);
 
-    //     return () => clearInterval(intervalId);
-    // }, []);
-
-    // useEffect(() => {
-    //     const intervalId = setInterval(() => {
-    //       const newRandomNumber = Math.floor(Math.random() * 1000000);
-    //       setRandomNumber(newRandomNumber);
-    //     }, 80); // 랜덤 숫자 업데이트
-    
-    //     setTimeout(() => {
-    //       clearInterval(intervalId);
-    //       setIsRunning(false);
-    
-    //       setRandomNumber(405000); // 마지막에 나올 숫자
-    //     }, 3000); // 2초동안 랜덤 숫자 나오도록
-    
-    //     return () => clearInterval(intervalId);
-    // }, []);
+    useEffect(() => {
+        // count_2가 0이 되면 정지
+        if (count_1 <= 200000) {
+            
+            clearInterval(intervalIdRef.current);
+            clearInterval(timerRef.current);
+        }
+    }, [count_1]);
 
     const productData = async () => {
         const { data } = await axios.get(
@@ -109,7 +101,7 @@ const Premium1_1 = () => {
     return(
         <div className='premium1_1_Container'>
             <div className="premium1_1_Wrapper">
-                <CiClock2 className="premium1_1_CiClock2" color="white" size="30"/>
+                {/* <CiClock2 className="premium1_1_CiClock2" color="white" size="30"/> */}
                 <div className='premium1_1_originalPrice'>{pdData.pdMaxPrice}</div>
                 <div className="premium1_1_currentPrice">{count_1?.toLocaleString()}</div>
                 {/* <div className="premium1_1_Info_name">{pdData.pdName}</div> */}
@@ -141,7 +133,7 @@ const Premium1_1 = () => {
                             <div className="premium1_1_Info_3_2_prodStatus">{pdData.pdState}</div>
                         </div>
                         <div className="premium1_1_Info_3_3">
-                            <Link to='/payment1'className="premium1_1_BuyBtn">구입하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium1_1_buyIcon'/></Link>
+                            <Link to='/payment1'className="premium1_1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium1_1_buyIcon'/></Link>
                             <div className="premium1_1_BagAdd" onClick={handleButtonClick}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='premium1_1_basketIcon'/></div>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ import './drawer_page4.css'
 const Drawer_page4 = () => {
     const settings = {
         arrows: false,
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 3000,
         slidesToShow: 1,
@@ -17,8 +17,8 @@ const Drawer_page4 = () => {
         draggable: false,
         pauseOnFocus: false,
         pauseOnHover: false,  
-        autoplay: true,
-        autoplaySpeed: 5000,
+        autoplay: false,
+        autoplaySpeed: 3000,
       };
       
       const slickRef = useRef(null);

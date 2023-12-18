@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 body{
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: Pretendard;
     margin: 0;
     padding: 0;
     user-select: none; /* 텍스트 선택 방지 */
@@ -16,7 +16,7 @@ body{
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 3.3vw;
+    height: 2.7vw;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -44,11 +44,11 @@ body{
 }
 
 .myStory{
-    position: fixed;
-    top: 5%;
+    position: absolute;
+    top: 0%;
     right: 0;
     width: 40vw;
-    height: 85vh;
+    height: 94.7vh;
     display: flex;
     flex-direction: block;
     align-items: center;
@@ -57,7 +57,7 @@ body{
     color: rgb(0, 0, 0);
     border-radius: 10px;
     transform: translateX(0%);
-    transition: transform 2s ease-in-out;
+    transition: all 2s ease-in-out;
     z-index: 4;
     opacity: 1;
 }
@@ -79,7 +79,7 @@ body{
 
 .loginContainer{
     position: fixed;
-    top: 37%;
+    top: 43.1%;
     right: 0;
     width: 35%;
     height: 50%;
@@ -90,7 +90,7 @@ body{
     background-color: rgba(255, 255, 255, 0.9);    
     color: rgb(0, 0, 0);
     border-radius: 10px;
-    transform: translateX(-5%);
+    transform: translateX(-10%);
     transition: transform 1.5s ease-in-out;
     z-index: 4;
     text-align: center;
@@ -116,7 +116,7 @@ body{
     background-color: rgba(255, 255, 255, 0.9);    
     color: rgb(0, 0, 0);
     border-radius: 10px;
-    transform: translateY(-16%);
+    transform: translateY(-8.62%);
     transition: transform 1.5s ease-in-out;
     z-index: 3;
     text-align: center;
@@ -180,10 +180,10 @@ body{
 
 .drawerApply{
     position: fixed;
-    bottom: 0;
+    bottom: -5.88%;
     left: 35%;
     width: 35%;
-    height: 80%;
+    height: 85%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,7 +191,7 @@ body{
     background-color: rgba(255, 255, 255, 0.9);    
     color: rgb(0, 0, 0);
     border-radius: 10px;
-    transform: translateY(-15%);
+    transform: translateY(-15.12%);
     transition: transform 1.5s ease-in-out;
     z-index: 3;
     text-align: center;
