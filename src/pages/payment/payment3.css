@@ -1,9 +1,13 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 .loadingContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
+    font-family: Pretendard;
 }
+
 .payment_container_3{
     width: 100vw;
     height: 100vh;

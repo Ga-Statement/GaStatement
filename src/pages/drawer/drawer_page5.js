@@ -1,8 +1,10 @@
+import './drawer_page5.css';
+
 const Drawer_page5 = () => {
     
     return(
-        <div className="DrawerPage5" style={{width: "100%"}}>
-            <img src="/pic/drawer_pic/drawer_footer.webp" alt="" />
+        <div className="DrawerPage5">
+            <img src="/pic/drawer_pic/drawer_footer.webp" alt="" className="DrawerPage5_img"/>
         </div>
     );
 };

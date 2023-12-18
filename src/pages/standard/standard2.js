@@ -117,21 +117,21 @@ const Standard2 = () => {
                 <div className="standard2_Info">
                     <div className="standard2_Info_1">
                         <div className="standard2_Info_1_1">
-                            <div className="standard2_Info_1_1_brand">Brand</div>
-                            <div className="standard2_Info_1_1_brands">{pdData.pdBrand}</div>
+                            <div className="standard2_Info_1_1_brand">Time</div>
+                            <div className="standard2_Info_1_1_brands">{`${days}일 ${hours}시간 ${minutes}분 ${seconds}초`}</div>
                         </div>
                         <div className="standard2_Info_1_2">
-                            <div className="standard2_Info_1_2_year">Year</div>
-                            <div className="standard2_Info_1_2_years">{pdData.pdYears}</div>
+                            <div className="standard2_Info_1_2_year"> Brand</div>
+                            <div className="standard2_Info_1_2_years">{pdData.pdBrand}</div>
                         </div>
                         <div className="standard2_Info_1_3">
-                            <div className="standard2_Info_1_3_time">Time</div>
-                            <div className="standard2_Info_1_3_times">{`${days}일 ${hours}시간 ${minutes}분 ${seconds}초`}</div>
+                            <div className="standard2_Info_1_3_time">Year</div>
+                            <div className="standard2_Info_1_3_times">{pdData.pdYears}</div>
                         </div>
                     </div>
                     <div className="standard2_Info_2">
                         <img src={pdData.pdImage} alt="" className='standard2_Info_2_img'/>
-                        <img src="/pic/shop_pic/lp_logo.webp" alt="" className='standard2_Info_2_logo'/>
+                        {/* <img src="/pic/shop_pic/lp_logo.webp" alt="" className='standard2_Info_2_logo'/> */}
                     </div>
                     <div className="standard2_Info_3">
                         <div className="standard2_Info_3_1">

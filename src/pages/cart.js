@@ -54,30 +54,30 @@ const Cart = () => {
                     <div className="payment_wrapper_left_box">
                         <div className="payment_prod_list_1">
                             <div className="payment_prod_1">
-                                <img src="/pic/shop_pic/teacup2.webp" alt="" className='payment_prod_1_img' onClick={() => handleImageClick(setIsChecked1)}/>
-                                <input type="checkbox" className='payment_prod_1_check' checked={isChecked1}/>
+                                <img src="/pic/shop_pic/teacup2.webp" alt="" className='payment_prod_1_img' onClick={() => handleImageClick(setIsChecked1, isChecked1)}/>
+                                <input type="checkbox" style={{zoom:'1.5'}} className='payment_prod_1_check' checked={isChecked1} onChange={() => handleImageClick(setIsChecked1, isChecked1)}/>
                             </div>
                             <div className="payment_prod_2">
-                                <img src="/pic/shop_pic/book2.webp" alt="" className='payment_prod_2_img' onClick={() => handleImageClick(setIsChecked2)}/>
-                                <input type="checkbox" className='payment_prod_2_check' checked={isChecked2}/>
+                                <img src="/pic/shop_pic/book2.webp" alt="" className='payment_prod_2_img' onClick={() => handleImageClick(setIsChecked2, isChecked2)}/>
+                                <input type="checkbox" style={{zoom:'1.5'}} className='payment_prod_2_check' checked={isChecked2} onChange={() => handleImageClick(setIsChecked2, isChecked2)}/>
                             </div>
                             <div className="payment_prod_3">
-                                <img src="/pic/shop_pic/LP3.webp" alt="" className='payment_prod_3_img' onClick={() => handleImageClick(setIsChecked3)}/>
-                                <input type="checkbox" className='payment_prod_3_check' checked={isChecked2}/>
+                                <img src="/pic/shop_pic/LP3.webp" alt="" className='payment_prod_3_img' onClick={() => handleImageClick(setIsChecked3, isChecked3)}/>
+                                <input type="checkbox" style={{zoom:'1.4'}} className='payment_prod_3_check' checked={isChecked3} onChange={() => handleImageClick(setIsChecked3, isChecked3)}/>
                             </div>
                         </div>
                         <div className="payment_prod_list_2">
                             <div className="payment_prod_4">
-                                <img src="/pic/shop_pic/teacup2.webp" alt="" className='payment_prod_4_img' onClick={() => handleImageClick(setIsChecked4)}/>
-                                <input type="checkbox" className='payment_prod_4_check' checked={isChecked4}/>
+                                <img src="/pic/shop_pic/teacup2.webp" alt="" className='payment_prod_4_img' onClick={() => handleImageClick(setIsChecked4, isChecked4)}/>
+                                <input type="checkbox" style={{zoom:'1.4'}} className='payment_prod_4_check' checked={isChecked4} onChange={() => handleImageClick(setIsChecked4, isChecked4)}/>
                             </div>
                             <div className="payment_prod_5">
-                                <img src="/pic/shop_pic/book2.webp" alt="" className='payment_prod_5_img' onClick={() => handleImageClick(setIsChecked5)}/>
-                                <input type="checkbox" className='payment_prod_5_check' checked={isChecked5}/>
+                                <img src="/pic/shop_pic/book2.webp" alt="" className='payment_prod_5_img'onClick={() => handleImageClick(setIsChecked5, isChecked5)}/>
+                                <input type="checkbox" style={{zoom:'1.4'}} className='payment_prod_5_check' checked={isChecked5} onChange={() => handleImageClick(setIsChecked5, isChecked5)}/>
                             </div>
                             <div className="payment_prod_6">
-                                <img src="/pic/shop_pic/LP3.webp" alt="" className='payment_prod_6_img' onClick={() => handleImageClick(setIsChecked6)}/>
-                                <input type="checkbox" className='payment_prod_6_check' checked={isChecked6}/>
+                                <img src="/pic/shop_pic/LP3.webp" alt="" className='payment_prod_6_img' onClick={() => handleImageClick(setIsChecked6, isChecked6)}/>
+                                <input type="checkbox" style={{zoom:'1.4'}} className='payment_prod_6_check' checked={isChecked6} onChange={() => handleImageClick(setIsChecked6, isChecked6)}/>
                             </div>
                         </div>
                     </div>

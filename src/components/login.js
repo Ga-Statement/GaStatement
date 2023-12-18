@@ -10,6 +10,7 @@
 import { useState, useEffect } from 'react';
 import { useCookies } from "react-cookie";
 import axios from "axios";
+import Swal from "sweetalert2";
 import './login.css';
 
 const Login = ({goToSignUp, closeLogin}) => {
@@ -51,10 +52,21 @@ const Login = ({goToSignUp, closeLogin}) => {
           });
           if (data.result) {
             closeLoginBtn();
-            alert("로그인이 완료되었습니다");
+            // alert("로그인이 완료되었습니다");
+            // Swal.fire('로그인이 완료되었습니다');
+            Swal.fire({
+              icon: "success",
+              title: '로그인이 완료되었습니다',
+              showConfirmButton: false,
+              timer: 1500
+            });
             setCookie("token", {userData: data.userData});
           } else {
-            alert("아이디 / 비밀번호가 틀렸습니다.");
+            // alert("아이디 / 비밀번호가 틀렸습니다.");
+            Swal.fire({
+              icon: "error",
+              title: "아이디 / 비밀번호가 틀렸습니다.",
+            });
           }
         } catch (error) {
           console.error("요청 실패: ", error);
@@ -77,7 +89,7 @@ const Login = ({goToSignUp, closeLogin}) => {
         <div>
             <div className='login_1'>
                 <div className='loginTitle'>로그인</div>
-                <div className='goToSignUp' onClick={goSignUp}>회원가입하기&gt;</div>
+                <div className='goToSignUp' onClick={goSignUp}>회원가입&gt;</div>
                 <div className='closeIcon' onClick={closeLoginBtn}><img src="/pic/icon_pic/closeBtn.png" alt="" /></div>
             </div>
             <div className="login_2">
