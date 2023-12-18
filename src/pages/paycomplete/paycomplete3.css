@@ -1,9 +1,12 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 .pay_complete_container_3{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     background-color: #FFEEE9;
+    font-family: Pretendard;
 }
 
 .payment_complete_wrapper_left{

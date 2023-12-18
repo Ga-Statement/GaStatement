@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 .payment_container{
     width: 100vw;
     height: 100vh;
@@ -5,6 +7,7 @@
     flex-direction: row;
     background: #0E1E2A;
     position: relative;
+    font-family: Pretendard;
 }
 
 .payment_wrapper_left_2{
@@ -26,6 +29,14 @@
     position: absolute;
     top: 15vh;
     left: 3vw;
+}
+
+.payment_prod_1_img:hover, .payment_prod_2_img:hover, .payment_prod_3_img:hover, .payment_prod_4_img:hover, .payment_prod_5_img:hover, .payment_prod_6_img:hover{
+    cursor: pointer;
+}
+
+.payment_prod_1_check, .payment_prod_2_check, .payment_prod_3_check, .payment_prod_4_check, .payment_prod_5_check, .payment_prod_6_check{
+    accent-color: rgb(129, 129, 129);
 }
 
 .payment_prod_1_img{
@@ -68,7 +79,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50vh;
+    top: 53vh;
     left: 3vw;
 }
 
@@ -81,7 +92,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50vh;
+    top: 53vh;
     left: 20vw;
 }
 
@@ -94,7 +105,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 51vh;
+    top: 54vh;
     left: 37vw;
 }
 

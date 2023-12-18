@@ -131,7 +131,7 @@ const Standard1 = () => {
                     </div>
                     <div className="standard1_Info_2">
                         <img src={pdData.pdImage} alt="" className='standard1_Info_2_img'/>
-                        <img src="/pic/shop_pic/book_logo.webp" alt="" className='standard1_Info_2_logo'/>
+                        {/* <img src="/pic/shop_pic/book_logo.webp" alt="" className='standard1_Info_2_logo'/> */}
                     </div>
                     <div className="standard1_Info_3">
                         <div className="standard1_Info_3_1">

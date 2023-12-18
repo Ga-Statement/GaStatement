@@ -122,7 +122,7 @@ const Premium2_1 = () => {
                     </div>
                     <div className="premium2_1_Info_2">
                         <img src={pdData.pdImage} alt="" className='premium2_1_Info_2_img'/>
-                        <img src="/pic/shop_pic/teacup_logo.webp" alt="" className='premium2_1_Info_2_logo'/>
+                        {/* <img src="/pic/shop_pic/teacup_logo.webp" alt="" className='premium2_1_Info_2_logo'/> */}
                     </div>
                     <div className="premium2_1_Info_3">
                         <div className="premium2_1_Info_3_1">

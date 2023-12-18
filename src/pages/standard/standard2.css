@@ -127,13 +127,13 @@
 
 .standard2_Info_2{
     margin: 0 auto;
-    width: 300px;
+    width: 30vw;
     display: flex;
     flex-direction: column;
 }
 
 .standard2_Info_2_img{
-    width: 280px;
+    width: 30vw;
 }
 
 .standard2_Info_3{

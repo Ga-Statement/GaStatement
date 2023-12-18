@@ -37,7 +37,7 @@ const ShopPage = () => {
   const [dragging, setDragging] = useState(false);
 
   const handleMouseDown = (e) => {
-    const isImage = e.target.classList.contains('product_img') || e.target.classList.contains('product_img_2') || e.target.classList.contains('product_img_3') || e.target.classList.contains('product_img_4') ;
+    const isImage = e.target.classList.contains('product_img') || e.target.classList.contains('product_img_2') || e.target.classList.contains('product_img_3') || e.target.classList.contains('product_img_4') || e.target.classList.contains('product_img_5') || e.target.classList.contains('product_img_6') || e.target.classList.contains('product_img_7') || e.target.classList.contains('product_img_8');
 
     if (!isImage) {
       setDragging(true);
