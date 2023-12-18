@@ -80,6 +80,22 @@ const Standard1 = () => {
     setCount_3(initialValue);
     };
 
+    // useEffect(() => {
+    //     // count_3이 0이 되면 자동으로 초기값으로 리셋
+    //     if (count_3 === 0) {
+    //         handleResetClick();
+    //     }
+    // }, [count_3]);
+
+    useEffect(() => {
+        // count_3이 0이 되면 정지
+        if (count_3 <= 40000) {
+            
+            clearInterval(intervalIdRef.current);
+            clearInterval(timerRef.current);
+        }
+    }, [count_3]);
+
     const productData = async () => {
         const { data } = await axios.get(
             `http://localhost:3000/product/3`
@@ -94,7 +110,7 @@ const Standard1 = () => {
     return(
         <div className='standard1_Container'>
             <div className="standard1_Wrapper">
-                <CiClock2 className="standard1_CiClock2" color="gray" size="50"/>
+                {/* <CiClock2 className="standard1_CiClock2" color="gray" size="50"/> */}
                 <div className='standard1_originalPrice'>{pdData.pdMaxPrice}</div>
                 <div className="standard1_currentPrice">{count_3?.toLocaleString()}</div>
                 {/* <div className="standard1_Info_name">{pdData.pdName}</div> */}
@@ -132,7 +148,7 @@ const Standard1 = () => {
                             <div className="standard1_Info_3_2_prodStatus">제품상태</div>
                         </div>
                         <div className="standard1_Info_3_3">
-                            <Link to='/payment3'className="standard1_BuyBtn">구입하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='standard1_buyIcon'/></Link>
+                            <Link to='/payment3'className="standard1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='standard1_buyIcon'/></Link>
                             <div className="standard1_BagAdd" onClick={handleButtonClick}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='standard1_basketIcon'/></div>
                         </div>
                     </div>

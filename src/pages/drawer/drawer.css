@@ -1,0 +1,19 @@
+.premium1_combine{
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.drawer_scrollBtn{
+    width: 3%;
+    position: fixed;
+    bottom: 15%;
+    right: 3%;
+    z-index: 1;
+}
+
+.drawer_scrollBtn:hover{
+    cursor: pointer;
+}

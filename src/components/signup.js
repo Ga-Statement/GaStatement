@@ -253,15 +253,15 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
                 <div className='close' onClick={onCloseSignUp}><img src="/pic/icon_pic/closeBtn.png" alt="" /></div>
             </div>
             <div className="email">
-                <input type="text" id="email" className='emailInput' value={email} onChange={handleEmailChange} placeholder='E-mail'/>
+                <input type="text" id="email" className='emailInput' value={email} onChange={handleEmailChange} placeholder='이메일'/>
                 {isEmailChecked && emailValidate && <div className='pass'>사용 가능한 이메일입니다.</div>}
                 {isEmailChecked && !emailValidate && <div className='warning'>이미 존재하는 이메일입니다.</div>}
                 {email && !isEmailValid && <div className='warning'>올바른 이메일 양식을 입력해주세요.</div>}
             </div>
-            <button className={`signUpBtn ${isFormValid ? '' : 'invalid'}`} onClick={isCheck}>중복 체크</button>
+            <button className={`validBtn ${isFormValid ? '' : 'invalid'}`} onClick={isCheck}>중복 체크</button>
             <div className="password">
                 <div>
-                    <input type="password" id="password" className='passwordInput' value={password} onChange={handlePasswordChange} placeholder='Password'/>
+                    <input type="password" id="password" className='passwordInput' value={password} onChange={handlePasswordChange} placeholder='비밀번호'/>
                     {password && !isPasswordValid && (<div className='warning'>비밀번호는 최소 6자 이상이어야 합니다.</div>)}
                 </div>
                 {/* <div>
@@ -271,21 +271,21 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
                 </div> */}
             </div>
             <div className="nickname">
-                <input type="text" id="nickname" className='nicknameInput' value={nickname} onChange={handleNicknameChange} placeholder='Nickname'/>
+                <input type="text" id="nickname" className='nicknameInput' value={nickname} onChange={handleNicknameChange} placeholder='이름'/>
                 {nickname && isNicknameValid && !isNicknameDuplicate && (<div className='pass'>사용 가능한 닉네임입니다.</div>)}
                 {nickname && !isNicknameValid && (<div className='warning'>올바른 형식으로 입력해주세요.</div>)}
                 {nickname && isNicknameDuplicate && isNicknameValid && (<div className='warning'>이미 존재하는 닉네임입니다.</div>)}
             </div>
             <div className="phoneNum">
                 <input type="tel" id="phoneNum" className='phoneNumInput' value={phoneNum}
-                onChange={handlePhoneNumberChange} placeholder='PhoneNumber'/>
+                onChange={handlePhoneNumberChange} placeholder='휴대전화'/>
                 {phoneNum && !isPhoneNumberValid && (
                 <div className='warning'>최소 10자, 최대 11자로 숫자만 입력해주세요.</div>)}
             </div>
             <div className="address">
-                <input className="addressInput" type="text" id="address" value={selectedAddress} placeholder='Address' readOnly/><br/>
+                <input className="addressInput" type="text" id="address" value={selectedAddress} placeholder='주소' readOnly/><br/>
                 <Address setAddress={handleAddressChange}/><br/>
-                <input className="detailedAddressInput" type="text" id="detailedAddress" value={subaddress} onChange={handleSubAddressChange} placeholder='Address'/>
+                <input className="detailedAddressInput" type="text" id="detailedAddress" value={subaddress} onChange={handleSubAddressChange} placeholder='상세주소'/>
             </div>
             <div className="terms">
                 <button className={`termsBtn ${isTermsChecked && isPrivacyChecked ? '' : 'invalid'}`} onClick={openPopup}>이용약관</button>
@@ -303,7 +303,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
                     </div>
                 </div>)}
             </div>
-            <button className={`signUpBtn ${isEmailChecked && emailValidate && isFormValid ? '' : 'invalid'}`} disabled={!isFormValid} onClick={isEmailChecked && emailValidate && isFormValid ? handleSignUp : null}>가입하기</button>
+            <button className={`signUpBtn ${isEmailChecked && emailValidate && isFormValid ? '' : 'invalid'}`} disabled={!isFormValid} onClick={isEmailChecked && emailValidate && isFormValid ? handleSignUp : null}>회원가입</button>
             {isFormValid ? null : (
             <div className='totalWarning'>
                 모든 필수 항목을 작성해주세요.

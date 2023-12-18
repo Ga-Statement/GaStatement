@@ -71,6 +71,21 @@ const Premium2_1 = () => {
         setCount_2(initialValue);
         };
 
+    // useEffect(() => {
+    //     // count_2가 0이 되면 자동으로 초기값으로 리셋
+    //     if (count_2 === 0) {
+    //         handleResetClick();
+    //     }
+    // }, [count_2]);
+
+    useEffect(() => {
+        // count_2가 0이 되면 정지
+        if (count_2 <= 100000) {
+            
+            clearInterval(intervalIdRef.current);
+            clearInterval(timerRef.current);
+        }
+    }, [count_2]);
  
     const productData = async () => {
         const { data } = await axios.get(
@@ -86,7 +101,7 @@ const Premium2_1 = () => {
     return(
         <div className='premium2_1_Container'>
             <div className="premium2_1_Wrapper">
-                <CiClock2 className="CiClock2" color="gray" size="50"/>
+                {/* <CiClock2 className="CiClock2" color="gray" size="50"/> */}
                 <div className='premium2_1_originalPrice'>{pdData.pdMaxPrice}</div>
                 <div className="premium2_1_currentPrice">{count_2?.toLocaleString()}</div>
                 {/* <div className="premium2_1_Info_name">{pdData.pdName}</div> */}
@@ -119,7 +134,7 @@ const Premium2_1 = () => {
                             <div className="premium2_1_Info_3_2_prodStatus">제품상태</div>
                         </div>
                         <div className="premium2_1_Info_3_3">
-                            <Link to='/payment2'className="premium2_1_BuyBtn">구입하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium2_1_buyIcon'/></Link>
+                            <Link to='/payment2'className="premium2_1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium2_1_buyIcon'/></Link>
                             <div className="premium2_1_BagAdd" onClick={handleButtonClick}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='premium2_1_basketIcon'/></div>
                         </div>
                     </div>

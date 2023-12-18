@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Lora&family=Noto+Sans+KR:wght@100;200;300&display=swap');
+@import url(https://db.onlinewebfonts.com/c/203ca707d5875159f71d2aff42401749?family=Athelas+Regular);
 
 .DrawerPage1{
     width: 100vw;
@@ -19,20 +19,20 @@
 
 .DrawerPage1_1{
     font-size: 5vh;
-    margin-bottom: -3vh;
-    font-family: 'Kalnia', serif;
+    margin-bottom: -1vh;
+    font-family: "Athelas Italic";
     font-style: oblique;
 }
 
 .DrawerPage1_2{
     font-size: 18vh;
-    margin-bottom: -2vh;
+    margin-bottom: 0vh;
 }
 
 .DrawerPage1_3{
     font-size: 5vh;
     margin-bottom: 5vh;
-    font-family: 'Kalnia', serif;
+    font-family: "Athelas Italic";
     font-style: oblique;
 }
 

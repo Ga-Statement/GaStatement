@@ -19,6 +19,14 @@ import { PiNoteBold } from "react-icons/pi";
 const Cart = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
+    
+    const [isChecked1, setIsChecked1] = useState(false);
+    const [isChecked2, setIsChecked2] = useState(false);
+    const [isChecked3, setIsChecked3] = useState(false);
+    const [isChecked4, setIsChecked4] = useState(false);
+    const [isChecked5, setIsChecked5] = useState(false);
+    const [isChecked6, setIsChecked6] = useState(false);
+
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -32,6 +40,10 @@ const Cart = () => {
         setSelectedPaymentMethod(value);
     };
 
+    const handleImageClick = (checkboxSetter) => {
+        checkboxSetter((prev) => !prev);
+    };
+
     return(
         <>
         {isLoading ? (<div className="loadingContainer"><Loading /></div>) : 
@@ -40,33 +52,32 @@ const Cart = () => {
             <div className="payment_wrapper">
                 <div className="payment_wrapper_left_2">
                     <div className="payment_wrapper_left_box">
-                        <div className="payment_wrapper_title">주문 상품 정보</div>
-                        <div className='payment_wrapper_list'>
-                            <div className="prodBuyList_1">
-                                <div className="prodBuyList_1_img"><img src="/pic/shop_pic/canon4.png" alt="" /></div>
-                                <div className="prodBuyList_1_desc">
-                                    <div className="prodBuyList_1_desc_1">CANON-OG Camera.</div>
-                                    <div className="prodLine3"/>
-                                    <div className="prodBuyList_1_desc_2">468,000 원</div>
-                                </div>
+                        <div className="payment_prod_list_1">
+                            <div className="payment_prod_1">
+                                <img src="/pic/shop_pic/teacup2.webp" alt="" className='payment_prod_1_img' onClick={() => handleImageClick(setIsChecked1)}/>
+                                <input type="checkbox" className='payment_prod_1_check' checked={isChecked1}/>
                             </div>
-                            <div className="prodLine1"/>
-                            <div className="prodBuyList_2">
-                                <div className="prodBuyList_2_img"><img src="/pic/shop_pic/book2.webp" alt="" /></div>
-                                <div className="prodBuyList_2_desc">
-                                    <div className="prodBuyList_1_desc_1">THE Passion within</div>
-                                    <div className="prodLine4"/>
-                                    <div className="prodBuyList_1_desc_2">1,900,000 원</div>
-                                </div>
+                            <div className="payment_prod_2">
+                                <img src="/pic/shop_pic/book2.webp" alt="" className='payment_prod_2_img' onClick={() => handleImageClick(setIsChecked2)}/>
+                                <input type="checkbox" className='payment_prod_2_check' checked={isChecked2}/>
                             </div>
-                            <div className="prodLine2"/>
-                            <div className="prodBuyList_3">
-                                <div className="prodBuyList_3_img"><img src="/pic/shop_pic/LP3.webp" alt="" /></div>
-                                <div className="prodBuyList_3_desc">
-                                    <div className="prodBuyList_3_desc_1">The Beatles 1st LP</div>
-                                    <div className="prodLine5"/>
-                                    <div className="prodBuyList_3_desc_2">500,000 원</div>
-                                </div>
+                            <div className="payment_prod_3">
+                                <img src="/pic/shop_pic/LP3.webp" alt="" className='payment_prod_3_img' onClick={() => handleImageClick(setIsChecked3)}/>
+                                <input type="checkbox" className='payment_prod_3_check' checked={isChecked2}/>
+                            </div>
+                        </div>
+                        <div className="payment_prod_list_2">
+                            <div className="payment_prod_4">
+                                <img src="/pic/shop_pic/teacup2.webp" alt="" className='payment_prod_4_img' onClick={() => handleImageClick(setIsChecked4)}/>
+                                <input type="checkbox" className='payment_prod_4_check' checked={isChecked4}/>
+                            </div>
+                            <div className="payment_prod_5">
+                                <img src="/pic/shop_pic/book2.webp" alt="" className='payment_prod_5_img' onClick={() => handleImageClick(setIsChecked5)}/>
+                                <input type="checkbox" className='payment_prod_5_check' checked={isChecked5}/>
+                            </div>
+                            <div className="payment_prod_6">
+                                <img src="/pic/shop_pic/LP3.webp" alt="" className='payment_prod_6_img' onClick={() => handleImageClick(setIsChecked6)}/>
+                                <input type="checkbox" className='payment_prod_6_check' checked={isChecked6}/>
                             </div>
                         </div>
                     </div>
@@ -174,7 +185,7 @@ const Cart = () => {
                                     </>
                             )}
                         </div>
-                        <Link to='/payment_complete2' className='purchase_btn'>구매하기</Link>
+                        <Link to='/paycomplete1' className='purchase_btn'>구매하기</Link>
                     </div>
                 </div>
             </div>

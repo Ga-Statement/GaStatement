@@ -65,11 +65,7 @@ const ShopPage = () => {
   };
 
   return (
-    <div className='product_list' ref={containerRef}
-    onMouseDown={handleMouseDown}
-    onMouseUp={handleMouseUp}
-    onMouseLeave={handleMouseUp}
-    onMouseMove={handleMouseMove}>
+    <div className='product_list' ref={containerRef} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp} onMouseMove={handleMouseMove}>
         <div className="product_container_1">
           <Link to='/premium1' className='product_link'><img className="product_img" src="/pic/shop_pic/canon.webp" alt=""/></Link> 
           <div prod_title="CANON-OG Camera." className="product_name">
@@ -103,6 +99,42 @@ const ShopPage = () => {
             The Beatles 1st LP
           </div>
           <div className="product_sub_name_4">
+            The Beatles 1st LP
+          </div>
+        </div>
+        <div className="product_container_5">
+          <Link to='#' className='product_link'><img className="product_img_5" src="/pic/shop_pic/bottle.webp" alt="" /></Link> 
+          <div prod_title="The Beatles 1st LP" className="product_name_5">
+            The Beatles 1st LP
+          </div>
+          <div className="product_sub_name_5">
+            The Beatles 1st LP
+          </div>
+        </div>
+        <div className="product_container_6">
+          <Link to='#' className='product_link'><img className="product_img_6" src="/pic/shop_pic/lamp.webp" alt="" /></Link> 
+          <div prod_title="The Beatles 1st LP" className="product_name_6">
+            The Beatles 1st LP
+          </div>
+          <div className="product_sub_name_6">
+            The Beatles 1st LP
+          </div>
+        </div>
+        <div className="product_container_7">
+          <Link to='#' className='product_link'><img className="product_img_7" src="/pic/shop_pic/perfume.webp" alt="" /></Link> 
+          <div prod_title="The Beatles 1st LP" className="product_name_7">
+            The Beatles 1st LP
+          </div>
+          <div className="product_sub_name_7">
+            The Beatles 1st LP
+          </div>
+        </div>
+        <div className="product_container_8">
+          <Link to='#' className='product_link'><img className="product_img_8" src="/pic/shop_pic/wardrobe.webp" alt="" /></Link> 
+          <div prod_title="The Beatles 1st LP" className="product_name_8">
+            The Beatles 1st LP
+          </div>
+          <div className="product_sub_name_8">
             The Beatles 1st LP
           </div>
         </div>
