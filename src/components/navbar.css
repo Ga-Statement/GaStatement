@@ -48,7 +48,7 @@ body{
     top: 0%;
     right: 0;
     width: 40vw;
-    height: 95.65vh;
+    height: 95.612vh;
     display: flex;
     flex-direction: block;
     align-items: center;
@@ -66,6 +66,7 @@ body{
     opacity: 0;
     transform: translateX(150%);
     transition: all 2s ease-in-out;
+    display: none;
 }
 
 .loginPage{
@@ -79,7 +80,7 @@ body{
 
 .loginContainer{
     position: fixed;
-    top: 45.615%;
+    top: 45.612%;
     right: 0;
     width: 35%;
     height: 50%;
@@ -202,6 +203,18 @@ body{
     transform: translateY(100%); 
     transition: all 1.5s ease-in-out;
 }
+
+.custom-swal-title{
+    font-size: 2.5vh;
+}
+
+.custom-swal-icon{
+    /* width: 10%; */
+}
+
+.custom-swal-popup{
+    width: 30vw;
+}
   
 @media only screen and (max-width: 850px) {
     *{
@@ -222,6 +235,10 @@ body{
         padding: 0 2rem;
         background-color: transparent;
         height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0%;
+        z-index: 1;
     }
 
     .sidebar .sideOpenBtn, .sideCloseBtn{

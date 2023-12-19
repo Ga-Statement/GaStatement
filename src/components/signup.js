@@ -230,9 +230,14 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
                         icon: "success",
                         title: '회원가입이 완료되었습니다.',
                         showConfirmButton: false,
-                        timer: 1500
+                        timer: 1500,
+                        confirmButtonText: '확인',
+                        customClass: {
+                            popup: 'custom-swal-popup', // 팝업 창
+                            title: 'custom-swal-title', // 제목
+                            icon: 'custom-swal-icon' // 아이콘
+                        }
                       });
-
                 } catch (error) {
                     console.error("요청 실패: ", error);
                 }

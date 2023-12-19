@@ -50,7 +50,7 @@
 
 .product_container_5{
     position: absolute;
-    top: 45vh;
+    top: 50vh;
     left: 8vw;
     width: 15vw;
     height: 35vh;
@@ -59,7 +59,7 @@
 
 .product_container_6{
     position: absolute;
-    top: 45vh;
+    top: 50vh;
     left: 33vw;
     width: 15vw;
     height: 35vh;
@@ -68,7 +68,7 @@
 
 .product_container_7{
     position: absolute;
-    top: 45vh;
+    top: 50vh;
     left: 58vw;
     width: 15vw;
     height: 35vh;
@@ -77,7 +77,7 @@
 
 .product_container_8{
     position: absolute;
-    top: 45vh;
+    top: 50vh;
     left: 83vw;
     width: 15vw;
     height: 35vh;
@@ -172,9 +172,9 @@
 
 .product_name_2 {
     position: absolute;
-    top: 11vh;
-    left: 1vw;
-    font-size: 3.5vw;
+    top: 12.5vh;
+    left: 0.3vw;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
@@ -212,7 +212,7 @@
 .product_name_5{
     position: absolute;
     top: 12vh;
-    left: -0.5vw;
+    left: 1vw;
     font-size: 2vw;
     font-weight: bold;
     text-align: center;
@@ -225,7 +225,7 @@
 .product_name_6{
     position: absolute;
     top: 14vh;
-    left: -0.8vw;
+    left: 1vw;
     font-size: 2vw;
     font-weight: bold;
     text-align: center;
@@ -238,7 +238,7 @@
 .product_name_7{
     position: absolute;
     top: 14vh;
-    left: -0.8vw;
+    left: 1vw;
     font-size: 2vw;
     font-weight: bold;
     text-align: center;
@@ -251,7 +251,7 @@
 .product_name_8{
     position: absolute;
     top: 14vh;
-    left: -0.8vw;
+    left: 0.5vw;
     font-size: 2vw;
     font-weight: bold;
     text-align: center;
@@ -387,7 +387,7 @@
 .product_sub_name_2{
     position: absolute;
     top: 28vh;
-    left: 4.8vw;
+    left: 2.2vw;
     font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
@@ -426,7 +426,7 @@
 .product_sub_name_5{
     position: absolute;
     top: 28vh;
-    left: 2vw;
+    left: 2.5vw;
     font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
@@ -439,7 +439,7 @@
 .product_sub_name_6{
     position: absolute;
     top: 28vh;
-    left: 1.5vw;
+    left: 2.7vw;
     font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
@@ -452,7 +452,7 @@
 .product_sub_name_7{
     position: absolute;
     top: 28vh;
-    left: 1.5vw;
+    left: 2.7vw;
     font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
@@ -465,7 +465,7 @@
 .product_sub_name_8{
     position: absolute;
     top: 28vh;
-    left: 1.5vw;
+    left: 2.7vw;
     font-size: 1.5vw;
     font-weight: bold;
     text-align: center;

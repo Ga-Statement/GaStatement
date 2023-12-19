@@ -12,6 +12,7 @@ const Drawer_page2 = () => {
             <svg width="100" height="1500" className="svg_2">
                 <line className="line" x1="50" y1="7" x2="50" y2="1500" stroke="black" strokeWidth="1"/>
             </svg>
+            <img className='openDrawerImg' src="/pic/drawer_pic/opendrawer.png" alt="" />
             <div className="DrawerPage2_1">
                 <div className="DrawerPage2_1_1" data-aos="fade-down" data-aos-duration="2000">각 분야 전문가들이 모여</div>
                 <div className="DrawerPage2_1_2">

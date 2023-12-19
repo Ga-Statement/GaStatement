@@ -10,6 +10,7 @@ import Open from './pages/open/open';
 import Mainpage from './pages/main';
 import ShopPage from './pages/shop';
 import Navbar from './components/navbar';
+import Navbar2 from './components/navbar2.js';
 import Payment1 from './pages/payment/payment1';
 import Payment2 from './pages/payment/payment2';
 import Payment3 from './pages/payment/payment3';
@@ -49,8 +50,9 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Routes>
+          <Route element={<Navbar />}>
           <Route path='/' element={<AnimatedRoute animationType="fade"><Open /></AnimatedRoute>} />
           <Route path='/main' element={<AnimatedRoute animationType="fade"><Mainpage /></AnimatedRoute>} />
           <Route path='/shop' element={<AnimatedRoute animationType="fade"><ShopPage /></AnimatedRoute>} />
@@ -67,9 +69,12 @@ function App() {
           <Route path="/premium2" element={<AnimatedRoute animationType="fade"><Premium2/></AnimatedRoute>} />
           <Route path="/standard1" element={<AnimatedRoute animationType="fade"><Standard1/></AnimatedRoute>} />
           <Route path="/standard2" element={<AnimatedRoute animationType="fade"><Standard2/></AnimatedRoute>} />
-          <Route path="/drawer" element={<AnimatedRoute animationType="fade"><Drawer/></AnimatedRoute>} />
           <Route path="/cart" element={<AnimatedRoute animationType="fade"><Cart/></AnimatedRoute>} />
           <Route path="/admin" element={<AnimatedRoute animationType="fade"><Admin/></AnimatedRoute>} />
+          </Route>
+          <Route element={<Navbar2 />}>
+          <Route path="/drawer" element={<AnimatedRoute animationType="fade"><Drawer/></AnimatedRoute>} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>

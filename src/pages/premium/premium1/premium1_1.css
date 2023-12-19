@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 10%;
+    top: 22%;
 }
 
 .premium1_1_originalPrice{
@@ -62,8 +62,8 @@
 .premium1_1_Info_1_1{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
@@ -86,8 +86,8 @@
 .premium1_1_Info_1_2{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
@@ -110,8 +110,8 @@
 .premium1_1_Info_1_3{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
@@ -143,29 +143,29 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0 150px;
+    margin: -1.5vh 150px;
 }
 
 .premium1_1_Info_3_1{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
     width: 300px;
-    justify-content: left;
+    justify-content: right;
 }
 
 .premium1_1_Info_3_1_specialist{
-    margin-left: 15px;
+    margin-right: 15px;
     color: rgb(255, 255, 255);
     font-size: 20px;
 }
 
 .premium1_1_Info_3_1_name{
-    margin-right: 15px;
+    margin-left: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
 }
@@ -173,22 +173,23 @@
 .premium1_1_Info_3_2{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
     width: 300px;
+    justify-content: right;
 }
 
 .premium1_1_Info_3_2_status{
-    margin-right: 15px;
+    margin-left: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
 }
 
 .premium1_1_Info_3_2_prodStatus{
-    margin-left: 15px;
+    margin-right: 15px;
     color: rgb(255, 255, 255);
     font-size: 20px;
 }
@@ -196,7 +197,7 @@
 .premium1_1_Info_3_3{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
+    margin: 3vh 0;
     /* border: 1px solid black; */
     padding: 15px;
     border-radius: 10px;
@@ -226,7 +227,7 @@
 .premium1_1_BuyBtn{
     color: rgb(255, 255, 255);
     text-align: center;
-    margin: 0 15px;
+    margin: 0 25px;
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
