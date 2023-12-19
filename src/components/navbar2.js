@@ -24,7 +24,7 @@ import Knob from './knob';
 
 //npm install react-icons
 
-const Navbar = () => {
+const Navbar2 = () => {
     // useRef 사용하여 mystory 컴포넌트 함수에 접근
     const myInfoRef = useRef();
 
@@ -193,6 +193,39 @@ const Navbar = () => {
         // remove 하는 이유 : 메모리 누수를 방지하기 위해?
     }, []);
 
+    // 메뉴 스크롤따라 올라오도록 설정
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const stopScrollPercent = 100; // 멈추길 원하는 퍼센트
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        console.log('Scroll Percent:', stopScrollPercent);
+        setScrollPosition(window.scrollY);
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    // window.scrollY : 수직으로 몇 픽셀만큼 스크롤 되었는지 나타냄
+    // window.innerHeight : 지금 보고있는 화면의 높이
+    // document.body.scrollHeight : 전체 화면의 높이
+  
+    // 스크롤 위치를 퍼센트로 변환
+    const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
+    // https://doishalf.tistory.com/25 참고
+  
+    const headStyle = {
+      transform: `translateY(-${Math.min(scrollPosition, (stopScrollPercent / 100) * (documentHeight - windowHeight))}px)`,
+      transition: 'transform 0.0001s ease-in-out',
+    };
+
     // 뒤로가기 눌렀을 때 메뉴 닫히도록
     useEffect(() => {
         const handlePopstate = () => {
@@ -242,7 +275,7 @@ const Navbar = () => {
         <Outlet />
         <header>
             <div className="navbar">
-                <div div className="head">
+                <div div className="head" style={headStyle}>
                     <nav>
                         <div className='category'>
                             <Link to="/drawer" className="category_1" onClick={() => handleCategoryClick(null)}>About</Link>
@@ -353,4 +386,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar2;

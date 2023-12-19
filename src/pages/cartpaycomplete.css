@@ -12,9 +12,6 @@
 .cart_pay_complete_wrapper_left{
     flex: 1.2;
     text-align: center;
-}
-
-.cart_pay_complete_wrapper_left{
     position: relative;
     top: 17%;
     left: 1%;

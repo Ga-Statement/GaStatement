@@ -152,7 +152,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     margin: 1.5vh auto;
 }
 
@@ -164,7 +164,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     margin: 1.5vh auto;
 }
 
@@ -172,7 +172,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     margin: 1.5vh auto;
 }
 
@@ -180,7 +180,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     margin: 1.5vh auto;
 }
 
@@ -188,7 +188,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
     margin: 1vh auto;
     white-space : nowrap;
 }
@@ -207,8 +207,9 @@
 }
 
 .delivery_memo_select{
-    margin-bottom: 1vh;
-    margin-left: 30px;
+    margin-bottom: 5px;
+    margin-left: 18px;
+    margin-top: 2px;
 }
 
 .payment_amount{
@@ -249,14 +250,14 @@
 .bottomLine{
     margin: 1.3vh auto;
     width: 23vw;
-    height: 0.2vh;
+    height: 0.1vh;
     background-color: rgb(189, 189, 189);
 }
 
-.bottomLine2{
+.bottomLine_2{
     margin: 2vh auto;
     width: 18vw;
-    height: 0.2vh;
+    height: 0.1vh;
     background-color: rgb(189, 189, 189);
 }
 
@@ -325,7 +326,7 @@
 .drawer_pay_method_3{
     display: flex;
     flex-direction: column;
-    font-size: 1.5vh;
+    font-size: 1.3vh;
     color: rgb(158, 158, 158);
 }
 

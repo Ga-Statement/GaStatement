@@ -147,7 +147,7 @@ const Cart = () => {
                                 <div className="payment_amount_2_1">배송비</div>
                                 <div className="payment_amount_2_2">3,000원</div>
                             </div>
-                            <div className="bottomLine2"/>
+                            <div className="bottomLine_2"/>
                             <div className="payment_amount_3">
                                 <div className="payment_amount_3_1">총 결제금액</div>
                                 <div className="payment_amount_3_2">503,000원</div>
@@ -183,7 +183,7 @@ const Cart = () => {
                                                     <div className='drawer_pay_method_2_2'>0원</div>
                                                 </div>
                                                 <div className='drawer_pay_method_3'>
-                                                    <div className='drawer_pay_method_3_1'>국민 123***-**-******</div>
+                                                    <div className='drawer_pay_method_3_1'><img src="/pic/icon_pic/kb_logo.png" alt="" className='kb_logo'/>국민 123***-**-******</div>
                                                     <div className='drawer_pay_method_3_2'>부족한 금액 자동 충전(최소 충전 1만원 이상)</div>
                                                 </div>
                                             </div>

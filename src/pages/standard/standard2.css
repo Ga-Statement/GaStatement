@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 5%;
+    top: 18%;
 }
 
 .standard2_originalPrice{
@@ -60,7 +60,7 @@
 .standard2_Info_1_1{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
+    margin: 3vh 0;
     color: white;
     padding: 15px;
     border-radius: 10px;
@@ -83,7 +83,7 @@
 .standard2_Info_1_2{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
+    margin: 3vh 0;
     color: white;
     padding: 15px;
     border-radius: 10px;
@@ -106,7 +106,7 @@
 .standard2_Info_1_3{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
+    margin: 3vh 0;
     padding: 15px;
     border-radius: 10px;
     width: 300px;
@@ -140,13 +140,13 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0 150px;
+    margin: -1.5vh 150px;
 }
 
 .standard2_Info_3_1{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
+    margin: 3vh 0;
     padding: 15px;
     border-radius: 10px;
     width: 300px;
@@ -168,7 +168,7 @@
 .standard2_Info_3_2{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
+    margin: 3vh 0;
     padding: 15px;
     border-radius: 10px;
     width: 300px;
@@ -190,7 +190,7 @@
 .standard2_Info_3_3{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
+    margin: 3vh 0;
     padding: 15px;
     border-radius: 10px;
     width: 300px;

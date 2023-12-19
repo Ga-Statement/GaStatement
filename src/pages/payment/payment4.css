@@ -5,157 +5,183 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    font-family: Pretendard;
 }
 
-.payment_container_4{
+.payment4_container_4{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     background-color: #EDCFAB;
+    position: relative;
+    font-family: Pretendard;
 }
 
-.payment_wrapper_left{
+.payment4_wrapper_left{
     flex: 1.2;
     text-align: center;
-    margin-top: 100px;
+    position: relative;
+    top: 30%;
+    left: 0%;
 }
 
-.payment_product_img{
-    width: 60%;
+.payment4_product_img{
+    width: 50%;
 }
 
-.payment_wrapper_right{
+.payment4_wrapper_right{
     flex: 1;
 }
 
-.payment_wrapper_right_box{
-    width: 80%;
-    height: 93.1%;
+.payment4_wrapper_right_box{
+    width: 40vw;
+    height: 95.65vh;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
     margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 6vw;
 }
 
-.payment_user_info_title{
+.payment4_user_info_title{
     text-align: center;
     margin-bottom: 5px;
+    position: relative;
+    top: 3%;
 }
 
-.payment_user_info{
+.payment4_user_info{
     border: 3px solid rgb(189, 189, 189);
     margin: 0 auto;
     padding: 15px;
     border-radius: 15px;
     margin-bottom: 10px;
-    width: 80%;
-    height: 30%;
-    font-size: 2vh;
+    width: 70%;
+    height: 36%;
+    font-size: 1.5vh;
     background-color: white;
+    position: relative;
+    top: 3%;
 }
 
-.payment_user_info_1{
+.bottomLine4{
+    margin: 1.3vh auto;
+    width: 23vw;
+    height: 0.1vh;
+    background-color: rgb(189, 189, 189);
+}
+
+.bottomLine4_1{
+    margin: 1.3vh auto;
+    width: 18vw;
+    height: 0.1vh;
+    background-color: rgb(189, 189, 189);
+}
+
+.payment4_user_info_1{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 90%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
 }
 
-.payment_user_info_1_icon, .payment_user_info_2_icon, .payment_user_info_3_icon, .payment_user_info_4_icon, .payment_user_info_5_icon{
+.payment4_user_info_1_icon, .payment4_user_info_2_icon, .payment4_user_info_3_icon, .payment4_user_info_4_icon, .payment4_user_info_5_icon{
     margin-right: 10px;
 }
 
-.payment_user_info_2{
+.payment4_user_info_2{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 90%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
 }
 
-.payment_user_info_3{
+.payment4_user_info_1_icon, .payment4_user_info_2_icon, .payment4_user_info_3_icon, .payment4_user_info_4_icon{
+    width: 20px;
+}
+
+.payment4_user_info_3{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 90%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
 }
 
-.payment_user_info_4{
+.payment4_user_info_4{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 90%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
 }
 
-.payment_user_info_5{
+.payment4_user_info_5{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 90%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
+    white-space : nowrap;
 }
 
-.payment_user_info_5_memo{
+.payment4_user_info_5_memo{
     display: flex;
     flex-direction: row;
 }
 
-.delivery_memo_select{
+.delivery4_memo_select{
     margin-bottom: 5px;
     margin-left: 18px;
     margin-top: 2px;
 }
 
-.payment_amount{
+.payment4_amount{
     border: 3px solid rgb(189, 189, 189);
     background-color: white;
     margin: 0 auto;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 10px;
-    width: 80%;
-    height: 20%;
+    width: 70%;
+    height: 15%;
     text-align: center;
-    font-size: 2vh;
+    font-size: 1.5vh;
+    position: relative;
+    top: 7%;
 }
 
-.payment_amount_title{
+.payment4_amount_title{
     text-align: center;
     margin-bottom: 5px;
+    position: relative;
+    top: 7%;
 }
 
-.payment_amount_1{
+.payment4_amount_1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 3px;
 }
 
-.payment_amount_2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-bottom: 3px solid rgb(165, 165, 165);
-    margin-bottom: 3px;
-}
-
-.payment_amount_3{
+.payment4_amount_2{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.payment_method{
+.payment4_amount_3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.payment4_method{
     border: 3px solid rgb(189, 189, 189);
     background-color: white;
     display: flex;
@@ -164,17 +190,21 @@
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 10px;
-    width: 80%;
-    height: 27%;
-    font-size: 2vh;
+    width: 70%;
+    height: 18%;
+    font-size: 1.5vh;
+    position: relative;
+    top: 10%;
 }
 
-.payment_method_title{
+.payment4_method_title{
     text-align: center;
     margin-bottom: 5px;
+    position: relative;
+    top: 10%;
 }
 
-.payment_method_list{
+.payment4_method_list{
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -187,36 +217,35 @@
     margin: 10px;
 }
 
-.drawer_pay_method{
+.drawer4_pay_method{
     flex: 1;
     /* background-color: rgb(238, 238, 238); */
     padding: 10px;
     border-radius: 10px;
-    height: 100%;
+    height: 90%;
 }
 
-.drawer_pay_method_title{
+.drawer4_pay_method_title{
     font-size: 1.6vh;
 }
 
-.drawer_pay_method_1{
+.drawer4_pay_method_1{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.6vh;
+    font-size: 1.5vh;
 }
 
-.drawer_pay_method_2{
+.drawer4_pay_method_2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.6vh;
 }
 
-.drawer_pay_method_3{
+.drawer4_pay_method_3{
     display: flex;
     flex-direction: column;
-    font-size: 1.4vh;
+    font-size: 1.3vh;
     color: rgb(158, 158, 158);
 }
 
@@ -226,18 +255,18 @@
     margin-top: 3px;
 }
 
-.purchase_btn{
-    background-color: rgb(73, 73, 73);
+.purchase_btn4{
+    background-color: #909090;
     text-align: center;
     border-radius: 10px;
     padding: 10px;
     text-decoration: none;
     color: white;
     position: relative;
-    top: 1%;
+    top: 15%;
     left: 45%;
 }
 
-.purchase_btn:hover{
+.purchase_btn4:hover{
     cursor: pointer;
 }

@@ -59,7 +59,13 @@ const Login = ({goToSignUp, closeLogin}) => {
               icon: "success",
               title: '로그인 되었습니다',
               showConfirmButton: true,
-              timer: 2500
+              timer: 2500,
+              confirmButtonText: '확인',
+              customClass: {
+                popup: 'custom-swal-popup', // 팝업 창
+                title: 'custom-swal-title', // 제목
+                icon: 'custom-swal-icon' // 아이콘
+              }
             });
             setCookie("token", {userData: data.userData});
           } else {
@@ -67,6 +73,12 @@ const Login = ({goToSignUp, closeLogin}) => {
             Swal.fire({
               icon: "error",
               title: "아이디 / 비밀번호가 틀렸습니다.",
+              confirmButtonText: '확인',
+              customClass: {
+                popup: 'custom-swal-popup', // 팝업 창
+                title: 'custom-swal-title', // 제목
+                icon: 'custom-swal-icon' // 아이콘
+              }
             });
           }
         } catch (error) {

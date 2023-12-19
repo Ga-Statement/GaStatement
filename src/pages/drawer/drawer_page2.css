@@ -75,3 +75,10 @@
     font-size: 5vh;
     margin-top: 58vh;
 }
+
+.openDrawerImg{
+    width: 12%;
+    position: absolute;
+    top: 4%;
+    left: 45%;
+}

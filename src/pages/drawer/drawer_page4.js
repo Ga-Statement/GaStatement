@@ -50,6 +50,7 @@ const Drawer_page4 = () => {
                 <div onClick={next}>
                     <MdArrowForwardIos className='slick-next'/>
                 </div>
+                <img className='closeDrawerImg' src="/pic/drawer_pic/closedrawer.png" alt="" />
         </div>
     );
 };

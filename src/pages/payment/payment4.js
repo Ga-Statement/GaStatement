@@ -11,9 +11,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './payment4.css';
 import Loading from '../../components/loading';
-import { FaRegUser } from "react-icons/fa";
-import { MdOutlinePhoneAndroid, MdOutlineLocalPostOffice } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
 import { PiNoteBold } from "react-icons/pi";
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
@@ -63,48 +60,52 @@ const Payment3 = () => {
         <>
         {isLoading ? (<div className="loadingContainer"><Loading /></div>) : 
         (
-        <div className='payment_container_4'>
-            <div className="payment_wrapper_left">
-                <img src="/pic/shop_pic/LP3.webp" alt="상품 이미지" className='payment_product_img'/>
+        <div className='payment4_container_4'>
+            <div className="payment4_wrapper_left">
+                <img src="/pic/shop_pic/LP3.webp" alt="상품 이미지" className='payment4_product_img'/>
             </div>
-            <div className="payment_wrapper_right">
-                <div className="payment_wrapper_right_box">
-                    <div className="payment_user_info_title">주문자 정보</div>
-                    <div className="payment_user_info">
-                        <div className="payment_user_info_1">
-                            <div className="payment_user_info_1_name">
-                                <FaRegUser className='payment_user_info_1_icon'/>
+            <div className="payment4_wrapper_right">
+                <div className="payment4_wrapper_right_box">
+                    <div className="payment4_user_info_title">주문자 정보</div>
+                    <div className="payment4_user_info">
+                        <div className="payment4_user_info_1">
+                            <div className="payment4_user_info_1_name">
+                                <img src='/pic/icon_pic/name.webp' className='payment4_user_info_1_icon'/>
                                 {userInfo ? <span>{userInfo.userName}</span> : <span>이름</span>}
                             </div>
-                            <div className="payment_user_info_1_edit">수정</div>
+                            {/* <div className="payment_user_info_1_edit">수정</div> */}
                         </div>
-                        <div className="payment_user_info_2">
-                            <div className="payment_user_info_2_phone">
-                                <MdOutlinePhoneAndroid className='payment_user_info_2_icon'/>
+                        <div className="bottomLine4"/>
+                        <div className="payment4_user_info_2">
+                            <div className="payment4_user_info_2_phone">
+                                <img src='/pic/icon_pic/phone.webp' className='payment4_user_info_2_icon'/>
                                 {userInfo ? <span>{userInfo.userPhone}</span> : <span>01012345678</span>}
                             </div>
-                            <div className="payment_user_info_2_edit">수정</div>
+                            {/* <div className="payment_user_info_2_edit">수정</div> */}
                         </div>
-                        <div className="payment_user_info_3">
-                            <div className="payment_user_info_3_email">
-                                <MdOutlineLocalPostOffice className='payment_user_info_3_icon'/>
+                        <div className="bottomLine4"/>
+                        <div className="payment4_user_info_3">
+                            <div className="payment4_user_info_3_email">
+                                <img src='/pic/icon_pic/mail.webp' className='payment4_user_info_3_icon'/>
                                 {userInfo ? <span>{userInfo.userID}</span> : <span>abc123@naver.com</span>}
                             </div>
-                            <div className="payment_user_info_3_edit">수정</div>
+                            {/* <div className="payment_user_info_3_edit">수정</div> */}
                         </div>
-                        <div className="payment_user_info_4">
-                            <div className="payment_user_info_4_address">
-                                <FaLocationDot className='payment_user_info_4_icon'/>
+                        <div className="bottomLine4"/>
+                        <div className="payment4_user_info_4">
+                            <div className="payment4_user_info_4_address">
+                                <img src='/pic/icon_pic/address.webp' className='payment4_user_info_4_icon'/>
                                 {userInfo ? <span>{userInfo.userAdd}, {userInfo.userSubAdd}</span> : <span>배송지 주소</span>}
                             </div>
-                            <div className="payment_user_info_4_edit">수정</div>
+                            {/* <div className="payment_user_info_4_edit">수정</div> */}
                         </div>
-                        <div className="payment_user_info_5">
-                            <div className="payment_user_info_5_memo">
-                                <PiNoteBold className='payment_user_info_5_icon'/>
-                                <div className="delivery_memo_title">배송 메모</div>
+                        <div className="bottomLine4"/>
+                        <div className="payment4_user_info_5">
+                            <div className="payment4_user_info_5_memo">
+                                <PiNoteBold size='20' className='payment4_user_info_5_icon'/>
+                                <div className="delivery4_memo_title">배송 메모</div>
                                 <form action="#">
-                                    <select name="deliveryMemo" id="deliveryMemo" className='delivery_memo_select'>
+                                    <select name="deliveryMemo" id="deliveryMemo" className='delivery4_memo_select'>
                                         <option value="0">배송 메모를 선택해주세요.</option>
                                         <option value="1">선택 안 함</option>
                                         <option value="2">문 앞에 놓아주세요</option>
@@ -114,27 +115,29 @@ const Payment3 = () => {
                                     </select>
                                 </form>
                             </div>
-                            <div className="payment_user_info_5_edit">수정</div>
+                            {/* <div className="payment_user_info_5_edit">수정</div> */}
+                        </div>
+                        <div className="bottomLine4"/>
+                    </div>
+                    <div className="payment4_amount_title">최종 결제 금액</div>
+                    <div className="payment4_amount">
+                        <div className="payment4_amount_1">
+                            <div className="payment4_amount_1_1">상품 가격</div>
+                            <div className="payment4_amount_1_2">500,000원</div>
+                        </div>
+                        <div className="payment4_amount_2">
+                            <div className="payment4_amount_2_1">배송비</div>
+                            <div className="payment4_amount_2_2">3,000원</div>
+                        </div>
+                        <div className="bottomLine4_1"/>
+                        <div className="payment4_amount_3">
+                            <div className="payment4_amount_3_1">총 결제금액</div>
+                            <div className="payment4_amount_3_2">503,000원</div>
                         </div>
                     </div>
-                    <div className="payment_amount_title">최종 결제 금액</div>
-                    <div className="payment_amount">
-                        <div className="payment_amount_1">
-                            <div className="payment_amount_1_1">상품 가격</div>
-                            <div className="payment_amount_1_2">500,000원</div>
-                        </div>
-                        <div className="payment_amount_2">
-                            <div className="payment_amount_2_1">배송비</div>
-                            <div className="payment_amount_2_2">3,000원</div>
-                        </div>
-                        <div className="payment_amount_3">
-                            <div className="payment_amount_3_1">총 결제금액</div>
-                            <div className="payment_amount_3_2">503,000원</div>
-                        </div>
-                    </div>
-                    <div className="payment_method_title">결제 방법</div>
-                    <div className="payment_method">
-                        <form action="paymentMethod" className='payment_method_list'>
+                    <div className="payment4_method_title">결제 방법</div>
+                    <div className="payment4_method">
+                        <form action="paymentMethod" className='payment4_method_list'>
                             <label><input type="radio" value='1' name='paymentMethod' checked={selectedPaymentMethod === '1'}
                             onChange={() => handlePaymentMethodChange('1')}/>서랍페이</label>
                             <label><input type="radio" value='2' name='paymentMethod' checked={selectedPaymentMethod === '2'}
@@ -149,27 +152,27 @@ const Payment3 = () => {
                         {selectedPaymentMethod === '1' && (
                                 <>
                                     <div className="vertical_line"/>
-                                    <div className="drawer_pay_method">
-                                        <div className="drawer_pay_container">
-                                            <div className='drawer_pay_method_title'>서랍페이</div>
-                                            <div className='drawer_pay_method_1'>
-                                                <div className='drawer_pay_method_1_1'>현재잔액</div>
-                                                <div className='drawer_pay_method_1_2'>2,600,000원</div>
+                                    <div className="drawer4_pay_method">
+                                        <div className="drawer4_pay_container">
+                                            <div className='drawer4_pay_method_title'>서랍페이</div>
+                                            <div className='drawer4_pay_method_1'>
+                                                <div className='drawer4_pay_method_1_1'>현재잔액</div>
+                                                <div className='drawer4_pay_method_1_2'>2,600,000원</div>
                                             </div>
-                                            <div className='drawer_pay_method_2'>
-                                                <div className='drawer_pay_method_2_1'>충전머니</div>
-                                                <div className='drawer_pay_method_2_2'>0원</div>
+                                            <div className='drawer4_pay_method_2'>
+                                                <div className='drawer4_pay_method_2_1'>충전머니</div>
+                                                <div className='drawer4_pay_method_2_2'>0원</div>
                                             </div>
-                                            <div className='drawer_pay_method_3'>
-                                                <div className='drawer_pay_method_3_1'><img src="/pic/icon_pic/kb_logo.png" alt="" className='kb_logo'/>국민 123***-**-******</div>
-                                                <div className='drawer_pay_method_3_2'>부족한 금액 자동 충전(최소 충전 1만원 이상)</div>
+                                            <div className='drawer4_pay_method_3'>
+                                                <div className='drawer4_pay_method_3_1'><img src="/pic/icon_pic/kb_logo.png" alt="" className='kb_logo'/>국민 123***-**-******</div>
+                                                <div className='drawer4_pay_method_3_2'>부족한 금액 자동 충전(최소 충전 1만원 이상)</div>
                                             </div>
                                         </div>
                                     </div>
                                 </>
                         )}
                     </div>
-                    <Link to='/paycomplete4' className='purchase_btn'>구매하기</Link>
+                    <Link to='/paycomplete4' className='purchase_btn4'>구매하기</Link>
                 </div>
             </div>
         </div>

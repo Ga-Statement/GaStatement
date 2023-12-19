@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-.pay_complete_container_3{
+.pay3_complete_container_3{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -9,54 +9,64 @@
     font-family: Pretendard;
 }
 
-.payment_complete_wrapper_left{
+.payment3_complete_wrapper_left{
     flex: 1.2;
     text-align: center;
-    margin-top: 100px;
+    position: relative;
+    top: 14%;
+    left: 0%;
 }
 
-.payment_complete_product_img{
-    width: 60%;
+.payment3_complete_product_img{
+    width: 50%;
 }
 
-.pay_complete_wrapper_right{
+.pay3_complete_wrapper_right{
     flex: 1;
 }
 
-.pay_complete_wrapper_right_box{
-    width: 80%;
-    height: 93.1%;
+.pay3_complete_wrapper_right_box{
+    width: 40vw;
+    height: 95.65vh;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 6vw;
 }
 
-.pay_complete_wrapper{
+.pay3_complete_wrapper{
     flex: 0.5;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    top: 5%;
 }
 
-.pay_complete_title{
-    font-size: 4vh;
+.pay3_complete_title{
+    text-align: center;
+    margin-bottom: 5px;
+    position: relative;
+    top: 3%;
+    font-size: 2.5vh;
+}
+
+.pay3_complete_number{
+    font-size: 2vh;
     margin: 10px;
 }
 
-.pay_complete_number{
-    font-size: 2.3vh;
-    margin: 10px;
-}
-
-.pay_complete_desc{
+.pay3_complete_desc{
     font-size: 2vh;
     margin: 10px;
     color: gray;
 }
 
-.pay_account_info{
+.pay3_account_info{
     flex: 1.5;
     margin: 50px auto;
     text-align: center;
@@ -67,30 +77,39 @@
     margin-bottom: 10px;
     width: 90%;
     height: 23%;
-    font-size: 2.1vh;
+    font-size: 1.8vh;
     background-color: white;
+    position: relative;
+    top: 7%;
 }
 
-.pay_account_info_2{
+.pay3_account_info_2{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 20px;
+    position: relative;
+    top: 30%;
 }
 
-.pay_account_info_2_1{
+.pay3_account_info_1{
+    position: relative;
+    top: 20%;
+}
+
+.pay3_account_info_2_1{
     margin: 10px;
 }
 
-.pay_account_info_2_1_1, .pay_account_info_2_1_2, .pay_account_info_2_1_3{
+.pay3_account_info_2_1_1, .pay3_account_info_2_1_2, .pay3_account_info_2_1_3{
     margin: 10px;
 }
 
-.pay_account_info_2_2_1, .pay_account_info_2_2_2, .pay_account_info_2_2_3{
+.pay3_account_info_2_2_1, .pay3_account_info_2_2_2, .pay3_account_info_2_2_3{
     margin: 10px;
 }
 
-.pay_account_info_2_2{
+.pay3_account_info_2_2{
     margin: 10px;
     text-align: left;
 }
@@ -100,19 +119,20 @@
     background-color:#b3b3b3;
 }
 
-.pay_complete_desc2{
+.pay3_complete_desc2{
     flex: 0.5;
     margin: 50px auto;
     text-align: center;
-    font-size: 2vh;
+    font-size: 1.7vh;
     color: rgb(107, 107, 107);
+    position: relative;
+    top: 10%;
 }
 
-.pay_gotoMain{
+.pay3_gotoMain{
     flex: 0.5;
     margin: 0 auto;
-
+    z-index: 1;
+    position: relative;
+    left: 0%;
 }
-
-
-

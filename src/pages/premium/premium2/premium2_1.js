@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { CiClock2 } from "react-icons/ci";
+import Swal from "sweetalert2";
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
 import './premium2_1.css';
@@ -61,8 +61,19 @@ const Premium2_1 = () => {
     const handleButtonClick = () => {
         clearInterval(intervalIdRef.current);
         clearInterval(timerRef.current);
-        alert('상품이 장바구니에 담겼습니다.');
-
+        // alert('상품이 장바구니에 담겼습니다.');
+        Swal.fire({
+            icon: "success",
+            title: '상품이 장바구니에 담겼습니다.',
+            showConfirmButton: false,
+            timer: 1500,
+            confirmButtonText: '확인',
+            customClass: {
+                popup: 'custom-swal-popup', // 팝업 창
+                title: 'custom-swal-title', // 제목
+                icon: 'custom-swal-icon' // 아이콘
+            }
+          });
         setTimeout(() => {
             intervalIdRef.current = setInterval(() => {
                 setCurrentTime(new Date());
@@ -139,16 +150,40 @@ const Premium2_1 = () => {
                     <div className="premium2_1_Info_3">
                         <div className="premium2_1_Info_3_1">
                             <div className="premium2_1_Info_3_1_name">{pdData.pdMaster}</div>
-                            <div className="premium2_1_Info_3_1_specialist">담당전문가</div>
+                            <div className="premium2_1_Info_3_1_specialist">Expert</div>
                         </div>
                         <div className="premium2_1_Info_3_2">
                             <div className="premium2_1_Info_3_2_status">{pdData.pdState}</div>
-                            <div className="premium2_1_Info_3_2_prodStatus">제품상태</div>
+                            <div className="premium2_1_Info_3_2_prodStatus">Condition</div>
                         </div>
                         <div className="premium2_1_Info_3_3">
-                            {!isLogin ? <div className="premium2_1_BuyBtn" onClick={() => alert("로그인을 해주세요")}>구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium2_1_buyIcon'/></div>
+                            {!isLogin ? <div className="premium2_1_BuyBtn" onClick={() => 
+                            // alert("로그인을 해주세요")
+                            Swal.fire({
+                                title: "로그인 해주세요!",
+                                icon: "info",
+                                confirmButtonText: '확인',
+                                customClass: {
+                                    popup: 'custom-swal-popup', // 팝업 창
+                                    title: 'custom-swal-title', // 제목
+                                    icon: 'custom-swal-icon' // 아이콘
+                                }
+                              })
+                        }>구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium2_1_buyIcon'/></div>
                             : <Link to='/payment2'className="premium2_1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium2_1_buyIcon'/></Link>}
-                            <div className="premium2_1_BagAdd" onClick={() => (!isLogin ? alert("로그인을 해주세요") : handleButtonClick())}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='premium2_1_basketIcon'/></div>
+                            <div className="premium2_1_BagAdd" onClick={() => (!isLogin ? 
+                                // alert("로그인을 해주세요") 
+                                Swal.fire({
+                                    title: "로그인 해주세요!",
+                                    icon: "info",
+                                    confirmButtonText: '확인',
+                                    customClass: {
+                                        popup: 'custom-swal-popup', // 팝업 창
+                                        title: 'custom-swal-title', // 제목
+                                        icon: 'custom-swal-icon' // 아이콘
+                                    }
+                                  })
+                                : handleButtonClick())}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='premium2_1_basketIcon'/></div>
                         </div>
                     </div>
                 </div>

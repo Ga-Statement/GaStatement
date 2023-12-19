@@ -61,37 +61,37 @@ const PaymentComplete1 = () => {
         <>
         {isLoading ? (<div className="loadingContainer"><LoadingPayComplete /></div>) : 
         (
-            <div className='pay_complete_container'>
-            <div className="payment_complete_wrapper_left">
-                <div className="payment_complete_wrapper_left">
-                    <img src="/pic/shop_pic/canon3.webp" alt="상품 이미지" className='payment_complete_product_img'/>
+            <div className='pay1_complete_container'>
+            <div className="payment1_complete_wrapper_left">
+                <div className="payment1_complete_wrapper_left">
+                    <img src="/pic/shop_pic/canon3.webp" alt="상품 이미지" className='payment1_complete_product_img'/>
                 </div>
             </div>
-            <div className="pay_complete_wrapper_right">
-                <div className="pay_complete_wrapper_right_box">
-                    <div className="pay_complete_wrapper">
-                        <div className="pay_complete_title">주문완료</div>
-                        <div className="pay_complete_number">주문번호 : "{formattedDate}"</div>
-                        <div className="pay_complete_desc">결제가 완료되었습니다.</div>
+            <div className="pay1_complete_wrapper_right">
+                <div className="pay1_complete_wrapper_right_box">
+                    <div className="pay1_complete_wrapper">
+                        <div className="pay1_complete_title">주문완료</div>
+                        <div className="pay1_complete_number">주문번호 : "{formattedDate}"</div>
+                        <div className="pay1_complete_desc">결제가 완료되었습니다.</div>
                     </div>
-                    <div className="pay_account_info">
-                        <div className="pay_account_info_1">기억명세서를 이용해주셔서 감사합니다.</div>
-                            <div className='pay_account_info_2'>
-                                <div className="pay_account_info_2_1">
-                                    <div className="pay_account_info_2_1_1">결제수단</div>
-                                    <div className="pay_account_info_2_1_2">결제금액</div>
-                                    <div className="pay_account_info_2_1_3">결제일시</div>
+                    <div className="pay1_account_info">
+                        <div className="pay1_account_info_1">기억명세서를 이용해주셔서 감사합니다.</div>
+                            <div className='pay1_account_info_2'>
+                                <div className="pay1_account_info_2_1">
+                                    <div className="pay1_account_info_2_1_1">결제수단</div>
+                                    <div className="pay1_account_info_2_1_2">결제금액</div>
+                                    <div className="pay1_account_info_2_1_3">결제일시</div>
                                 </div>
                                 <div className="vr"/>
-                                <div className="pay_account_info_2_2">
-                                    <div className="pay_account_info_2_2_1">서랍페이</div>
-                                    <div className="pay_account_info_2_2_2">100,000원</div>
-                                    <div className="pay_account_info_2_2_3">{formattedDateTime}</div>
+                                <div className="pay1_account_info_2_2">
+                                    <div className="pay1_account_info_2_2_1">서랍페이</div>
+                                    <div className="pay1_account_info_2_2_2">100,000원</div>
+                                    <div className="pay1_account_info_2_2_3">{formattedDateTime}</div>
                                 </div>
                             </div>
                     </div>
-                    <div className="pay_complete_desc2">주문내역은 나의 이야기 - 나의 명세서에서 확인하실 수 있습니다.</div>
-                    <Link to='/main' className="pay_gotoMain"><IoMdCloseCircle color="gray" size='30px'/></Link>
+                    <div className="pay1_complete_desc2">주문내역은 나의 이야기 - 나의 명세서에서 확인하실 수 있습니다.</div>
+                    <Link to='/main' className='pay1_gotoMain'><IoMdCloseCircle color="gray" size='30px'/></Link>
                 </div>
             </div>                
             </div>
