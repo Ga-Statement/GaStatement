@@ -8,10 +8,9 @@
 */
 
 import React, { forwardRef, useImperativeHandle, useState, useEffect } from 'react';
-import { MdOutlinePhoneAndroid } from "react-icons/md";
-import { MdOutlineEmail } from "react-icons/md";
 import { LiaToggleOffSolid } from "react-icons/lia";
 import { LiaToggleOnSolid } from "react-icons/lia";
+import { IoMdCloseCircle } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
@@ -88,7 +87,7 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className={`shoppingBag ${activeTab === 'addToBag' ? '' : 'none'}`}  onClick={() => setActiveTab('addToBag')}>
                     장바구니
                 </div>
-                <div className='closeMystoryBtn' onClick={closeInfo}><img src="/pic/icon_pic/closeBtn.png" alt="" /></div>
+                <div className='closeMystoryBtn' onClick={closeInfo}><IoMdCloseCircle size='35' color='gray'/></div>
             </div>
             {/* 내 정보 */}
             <div className={`myInfo ${activeTab === 'myInfo' ? '' : 'close'}`}>
@@ -100,28 +99,28 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                                 <img src='/pic/icon_pic/name.webp' className="profileIcon"/>
                                 {userInfo ? <div className="name">{userInfo.userName}</div> : <div className="name">이름</div>}        
                             </div>                  
-                            <div className='editInfo'>수정</div>
+                            {/* <div className='editInfo'>수정</div> */}
                         </div>
                         <div className="emailInfo">
                             <div className='profile_list'>
                                 <img src='/pic/icon_pic/mail.webp' className="emailIcon"/>
                                 {userInfo ? <div className="emailInfo_address">{userInfo.userID}</div> : <div className="emailInfo_address">이메일</div>  }                         
                             </div>
-                            <div className='editInfo'>수정</div>
+                            {/* <div className='editInfo'>수정</div> */}
                         </div>
                         <div className="phoneInfo">
                             <div className='profile_list'>
                                 <img src='/pic/icon_pic/phone.webp' className="phoneIcon"/>
                                 {userInfo ? <div className="phoneNum">{userInfo.userPhone}</div> : <div className="phoneNum">핸드폰번호</div>}
                             </div>
-                            <div className='editInfo'>수정</div>
+                            {/* <div className='editInfo'>수정</div> */}
                         </div>
                         <div className="addressInfo">
                             <div className='profile_list'>
                                 <img src='/pic/icon_pic/address.webp' className="addressIcon"/>
-                                {userInfo ? <div className="addresshome">{userInfo.userAdd}</div> : <div className="addresshome">배송지 관리</div>}  
+                                {userInfo ? <div className="addresshome">{userInfo.userAdd}, {userInfo.userSubAdd}</div> : <div className="addresshome">배송지 관리</div>}  
                             </div>
-                            <div className='editInfo'>수정</div>
+                            {/* <div className='editInfo'>수정</div> */}
                         </div>
                     </div>
                 </div>
@@ -167,6 +166,7 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                         : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                 </div>
+                <div className='editInfoBtn'>회원정보 수정 &gt;</div>
                 <div className='withdrawal'>회원탈퇴 &gt;</div>
                 {userInfo ? <Link to='/admin' className={`admin ${userInfo.userRole === 0 ? '' : 'hidden'}`} onClick={closeInfo}>관리자 페이지</Link> : 
                 <Link to='/admin' className="admin hidden" onClick={closeInfo}>관리자 페이지</Link>}
@@ -222,14 +222,18 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className='shoppingProduct'>
                     <div className='shoppingProductInfo'>
                         <img src='/pic/shop_pic/LP.webp' className='shoppingImg_1'/>
-                        <div className='shoppingProdName'>상품명 : The Beatles 1st LP</div>
-                        <div className='shoppingPrice'>가격 : 124,000원</div>
+                        <div>
+                            <div className='shoppingProdName'>상품명 : The Beatles 1st LP</div>
+                            <div className='shoppingPrice'>가격 : 124,000원</div>
+                        </div>
                         <input type="checkbox" className='shoppingCheck'/>
                     </div>
                     <div className='shoppingProductInfo'>
                         <img src='/pic/shop_pic/cup.webp' className='shoppingImg_2'/>
-                        <div className='shoppingProdName'>상품명 : Noritake</div>
-                        <div className='shoppingPrice_2'>가격 : 280,000원</div>
+                        <div>
+                            <div className='shoppingProdName'>상품명 : Noritake</div>
+                            <div className='shoppingPrice_2'>가격 : 280,000원</div>
+                        </div>
                         <input type="checkbox" className='shoppingCheck2'/>
                     </div>
                 </div>

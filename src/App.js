@@ -18,6 +18,7 @@ import PaymentComplete1 from './pages/paycomplete/paycomplete1.js';
 import PaymentComplete2 from './pages/paycomplete/paycomplete2.js';
 import PaymentComplete3 from './pages/paycomplete/paycomplete3.js';
 import PaymentComplete4 from './pages/paycomplete/paycomplete4.js';
+import CartPayComplete from './pages/cartpaycomplete.js';
 import Premium1 from './pages/premium/premium1/premium1';
 import Premium2 from './pages/premium/premium2/premium2';
 import Standard1 from './pages/standard/standard1';
@@ -61,6 +62,7 @@ function App() {
           <Route path='/paycomplete2' element={<AnimatedRoute animationType="fade"><PaymentComplete2 /></AnimatedRoute>} />
           <Route path='/paycomplete3' element={<AnimatedRoute animationType="fade"><PaymentComplete3 /></AnimatedRoute>} />
           <Route path='/paycomplete4' element={<AnimatedRoute animationType="fade"><PaymentComplete4 /></AnimatedRoute>} />
+          <Route path='/cartpaycomplete' element={<AnimatedRoute animationType="fade"><CartPayComplete /></AnimatedRoute>} />
           <Route path="/premium1" element={<AnimatedRoute animationType="fade"><Premium1/></AnimatedRoute>} />
           <Route path="/premium2" element={<AnimatedRoute animationType="fade"><Premium2/></AnimatedRoute>} />
           <Route path="/standard1" element={<AnimatedRoute animationType="fade"><Standard1/></AnimatedRoute>} />

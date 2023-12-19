@@ -27,8 +27,8 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 15vh;
-    left: 3vw;
+    top: 35vh;
+    left: 10vw;
 }
 
 .payment_prod_1_img:hover, .payment_prod_2_img:hover, .payment_prod_3_img:hover, .payment_prod_4_img:hover, .payment_prod_5_img:hover, .payment_prod_6_img:hover{
@@ -42,14 +42,15 @@
 .payment_prod_1_img{
     width: 15vw;
     margin-bottom: 2vh;
+    margin-right: 3vw;
 }
 
 .payment_prod_2{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 15vh;
-    left: 20vw;
+    top: 34vh;
+    left: 30vw;
 }
 
 .payment_prod_2_img{
@@ -57,7 +58,7 @@
     margin-bottom: 2vh;
 }
 
-.payment_prod_3{
+/* .payment_prod_3{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -68,9 +69,9 @@
 .payment_prod_3_img{
     width: 15vw;
     margin-bottom: 2vh;
-}
+} */
 
-.payment_prod_list_2{
+/* .payment_prod_list_2{
     display: flex;
     flex-direction: row;
 }
@@ -112,11 +113,11 @@
 .payment_prod_6_img{
     width: 15vw;
     margin-bottom: 2vh;
-}
+} */
 
 .payment_wrapper_right_box{
     width: 40vw;
-    height: 93.1vh;
+    height: 95.65vh;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
@@ -129,6 +130,8 @@
 .payment_user_info_title{
     text-align: center;
     margin-bottom: 5px;
+    position: relative;
+    top: 3%;
 }
 
 .payment_user_info{
@@ -138,58 +141,55 @@
     border-radius: 15px;
     margin-bottom: 10px;
     width: 70%;
-    height: 32%;
-    font-size: 2vh;
+    height: 36%;
+    font-size: 1.5vh;
     background-color: white;
+    position: relative;
+    top: 3%;
 }
 
-.payment_user_info_1{
+.payment_user_info__1{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 95%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
 }
 
 .payment_user_info_1_icon, .payment_user_info_2_icon, .payment_user_info_3_icon, .payment_user_info_4_icon, .payment_user_info_5_icon{
-    margin-right: 10px;
+    width: 20px;
 }
 
-.payment_user_info_2{
+.payment_user_info__2{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 95%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
 }
 
-.payment_user_info_3{
+.payment_user_info__3{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 95%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
 }
 
-.payment_user_info_4{
+.payment_user_info__4{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 95%;
-    margin: 5px auto;
+    margin: 1.5vh auto;
 }
 
-.payment_user_info_5{
+.payment_user_info__5{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(175, 175, 175);
     justify-content: space-between;
     width: 95%;
-    margin: 5px auto;
+    margin: 1vh auto;
     white-space : nowrap;
 }
 
@@ -198,8 +198,16 @@
     flex-direction: row;
 }
 
+.delivery_memo_title{
+    margin-top: 1vh;
+}
+
+.delivery_memo_select_form{
+    margin-top: 1vh;
+}
+
 .delivery_memo_select{
-    margin-bottom: 5px;
+    margin-bottom: 1vh;
     margin-left: 30px;
 }
 
@@ -211,14 +219,18 @@
     border-radius: 15px;
     margin-bottom: 10px;
     width: 70%;
-    height: 17%;
+    height: 15%;
     text-align: center;
-    font-size: 2vh;
+    font-size: 1.5vh;
+    position: relative;
+    top: 7%;
 }
 
 .payment_amount_title{
     text-align: center;
     margin-bottom: 5px;
+    position: relative;
+    top: 7%;
 }
 
 .payment_amount_1{
@@ -228,12 +240,24 @@
     margin-bottom: 3px;
 }
 
-.payment_amount_2{
+.payment_amount__2{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-bottom: 3px solid rgb(165, 165, 165);
-    margin-bottom: 3px;
+}
+
+.bottomLine{
+    margin: 1.3vh auto;
+    width: 23vw;
+    height: 0.2vh;
+    background-color: rgb(189, 189, 189);
+}
+
+.bottomLine2{
+    margin: 2vh auto;
+    width: 18vw;
+    height: 0.2vh;
+    background-color: rgb(189, 189, 189);
 }
 
 .payment_amount_3{
@@ -252,13 +276,17 @@
     border-radius: 15px;
     margin-bottom: 10px;
     width: 70%;
-    height: 25%;
-    font-size: 2vh;
+    height: 18%;
+    font-size: 1.5vh;
+    position: relative;
+    top: 10%;
 }
 
 .payment_method_title{
     text-align: center;
     margin-bottom: 5px;
+    position: relative;
+    top: 10%;
 }
 
 .payment_method_list{
@@ -315,7 +343,7 @@
     text-decoration: none;
     color: white;
     position: relative;
-    top: 3%;
+    top: 15%;
     left: 45%;
 }
 

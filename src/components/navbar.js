@@ -12,6 +12,7 @@ import { FaBars, FaTimes, FaPlus } from 'react-icons/fa';
 import { FiMinus } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import Swal from "sweetalert2";
 import './navbar.css';
 import SignUp from './signup';
 import SignUpComplete from './sjgnupcomplete';
@@ -44,8 +45,13 @@ const Navbar = () => {
     const Logout = () => {
         removeCookie('token');
         setIsLogin(false);
-        alert("로그아웃 되었습니다");
-
+        // alert("로그아웃 되었습니다");
+        Swal.fire({
+            icon: "success",
+            title: '로그아웃 되었습니다',
+            showConfirmButton: true,
+            timer: 2500
+          });
         setNav_1(false);
         setNav_2(false);
         setNav_3(false);
@@ -230,10 +236,16 @@ const Navbar = () => {
                 <div div className="head">
                     <nav>
                         <div className='category'>
-                            <Link to="/drawer" className="category_1" onClick={() => handleCategoryClick(null)}>서랍</Link>
-                            <Link to="/shop" className="category_2" onClick={() => handleCategoryClick(null)}>SHOP</Link>
+                            <Link to="/drawer" className="category_1" onClick={() => handleCategoryClick(null)}>About</Link>
+                            <Link to="/shop" className="category_2" onClick={() => handleCategoryClick(null)}>Shop</Link>
                             <Link to="/main" className="home" onClick={() => handleCategoryClick(null)}><img src="/pic/icon_pic/logo.png" className="home_logo"/></Link>
-                            <div className={`category_3 ${activeCategory === 1 ? 'active' : ''}`} onClick={() => {!isLogin ? alert("로그인을 해주세요") : handleCategoryClick(1)}}>나의이야기</div>
+                            <div className={`category_3 ${activeCategory === 1 ? 'active' : ''}`} onClick={() => {!isLogin ? 
+                                // alert("로그인을 해주세요")
+                                Swal.fire({
+                                    title: "로그인 해주세요!",
+                                    icon: "info",
+                                  })
+                                 : handleCategoryClick(1)}}>나의이야기</div>
                         </div>        
                     </nav>
                     <div className='login'>
@@ -255,50 +267,58 @@ const Navbar = () => {
                     </div>
                 </div>
                 <ChannelTalk/>
-                <img src='/pic/icon_pic/drawerIcon.webp' className='drawerBtn' onClick={() => {!isLogin ? alert("로그인을 해주세요") : handleCategoryClick(4)}}/>
+                <img src='/pic/icon_pic/drawerIcon.webp' className='drawerBtn' onClick={() => {!isLogin ? 
+                    // alert("로그인을 해주세요")
+                    Swal.fire({
+                        title: "로그인 해주세요!",
+                        icon: "info",
+                      })
+                     : handleCategoryClick(4)}}/>
                 <div className="drawerApplyTxt">서랍 신청</div>
             </div>
             <div className="sidebar" subMenuOpen={false}>
                 <nav className={`openSidebar ${subMenuOpen ? '' : 'hide'}`}>
                     <div className="list">
                         <ul>
-                            <div className="borderTop"></div>
-                            <li><div><Link to='/' className='homeSideBar' onClick={showSidebar}>HOME</Link></div></li>
-                            <li><div onClick={()=>{sideMenuBtn(1)}}>서랍
-                                <FaPlus onClick={()=>{sideMenuBtn(1)}} className={`sellBuyBtnP ${sideMenu_1 ? 'hidden' : 'visible'}`}/>
-                                <FiMinus onClick={()=>{sideMenuBtn(1)}} className={`sellBuyBtnM ${sideMenu_1 ? 'visible' : 'hidden'}`}/></div>
-                                <ul className={`sellBuy ${sideMenu_1 ? '' : 'hide'}`}>
+                            <div className="borderTop"/>
+                            <li><div><Link to='/main' className='homeSideBar' onClick={showSidebar}>기억명세서</Link></div></li>
+                            <li className='aboutLinkLi'><Link to='/drawer' className='aboutLink' onClick={showSidebar}>About</Link>
+                                {/* <FaPlus onClick={()=>{sideMenuBtn(1)}} className={`sellBuyBtnP ${sideMenu_1 ? 'hidden' : 'visible'}`}/>
+                                <FiMinus onClick={()=>{sideMenuBtn(1)}} className={`sellBuyBtnM ${sideMenu_1 ? 'visible' : 'hidden'}`}/> */}
+                                {/* <ul className={`sellBuy ${sideMenu_1 ? '' : 'hide'}`}>
                                     <li><Link to='#' className='sellBuyLink' onClick={showSidebar}>서랍</Link></li>
                                     <li><Link to='#' className='sellBuyLink' onClick={showSidebar}>서랍</Link></li>
-                                </ul>
+                                </ul> */}
                             </li>
-                            <li><div onClick={()=>{sideMenuBtn(2)}}>메뉴1
-                                <FaPlus onClick={()=>{sideMenuBtn(2)}} className={`communityBtnP ${sideMenu_2 ? 'hidden' : 'visible'}`}/>
-                                <FiMinus onClick={()=>{sideMenuBtn(2)}} className={`communityBtnM ${sideMenu_2 ? 'visible' : 'hidden'}`}/></div>
+                            <li><Link to='/shop' className='shopLink' onClick={showSidebar}>Shop</Link>
+                                {/* <FaPlus onClick={()=>{sideMenuBtn(2)}} className={`communityBtnP ${sideMenu_2 ? 'hidden' : 'visible'}`}/>
+                                <FiMinus onClick={()=>{sideMenuBtn(2)}} className={`communityBtnM ${sideMenu_2 ? 'visible' : 'hidden'}`}/>
                                 <ul className={`community ${sideMenu_2 ? '' : 'hide'}`}>
                                     <li><Link to='#' className='communityLink' onClick={showSidebar}>메뉴1</Link></li>
                                     <li><Link to='#' className='communityLink' onClick={showSidebar}>메뉴1</Link></li>
-                                </ul>
+                                </ul> */}
                             </li>
-                            <li><div onClick={()=>{sideMenuBtn(3)}}>메뉴2
+                            <li><div onClick={()=>{sideMenuBtn(3)}}>나의명세서
                                 <FaPlus onClick={()=>{sideMenuBtn(3)}} className={`introBtnP ${sideMenu_3 ? 'hidden' : 'visible'}`}/>
                                 <FiMinus onClick={()=>{sideMenuBtn(3)}} className={`introBtnM ${sideMenu_3 ? 'visible' : 'hidden'}`}/></div>
                                 <ul className={`intro ${sideMenu_3 ? '' : 'hide'}`}>
-                                    <li><Link to='#' className='drawerLink' onClick={showSidebar}>메뉴2</Link></li>
-                                    <li><Link to='#' className='drawerLink' onClick={showSidebar}>메뉴2</Link></li>
+                                    <li className='drawerLinkLi_1'><Link to='#' className='drawerLink_1' onClick={showSidebar}>내정보</Link></li>
+                                    <li className='drawerLinkLi_2'><Link to='#' className='drawerLink_2' onClick={showSidebar}>나의명세서</Link></li>
+                                    <li className='drawerLinkLi_3'><Link to='#' className='drawerLink_3' onClick={showSidebar}>장바구니</Link></li>
                                 </ul>
                             </li>
-                            <li><div onClick={()=>{sideMenuBtn(4)}}>메뉴3
+                            {/* <li><div onClick={()=>{sideMenuBtn(4)}}>메뉴3
                                 <FaPlus onClick={()=>{sideMenuBtn(4)}} className={`infoBtnP ${sideMenu_4 ? 'hidden' : 'visible'}`}/>
                                 <FiMinus onClick={()=>{sideMenuBtn(4)}} className={`infoBtnM ${sideMenu_4 ? 'visible' : 'hidden'}`}/></div>
                                 <ul className={`info ${sideMenu_4 ? '' : 'hide'}`}>
                                     <li><Link to='#' className='myStoryLink' onClick={showSidebar}>메뉴3</Link></li>
                                     <li><Link to='#' className='myStoryLink' onClick={showSidebar}>메뉴3</Link></li>
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <Link to="/login" className='sideLoginBtn' onClick={showSidebar}>로그인</Link>
+                    {/* {!isLogin ? <div className='sideLoginBtn' onClick={() => handleCategoryClick(2)}>로그인</div> : <div onClick={Logout}>로그아웃</div>} */}
                     <button className={`sideCloseBtn ${subMenuOpen ? '' : 'visible'}`} onClick={showSidebar}>
                         <FaTimes/> {/* 닫기 아이콘 */}
                     </button>

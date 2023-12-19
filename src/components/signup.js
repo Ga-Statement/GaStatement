@@ -8,7 +8,9 @@
 */
 
 import { useState, useEffect } from 'react';
+import { IoMdCloseCircle } from "react-icons/io";
 import axios from 'axios';
+import Swal from "sweetalert2";
 import Address from './address';
 import './signup.css';
 
@@ -223,7 +225,14 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
                         'http://localhost:3000/user/signup', userData
                     );
                     console.log("요청 성공 : ", res);
-                    alert("회원가입이 완료되었습니다.");
+                    // alert("회원가입이 완료되었습니다.");
+                    Swal.fire({
+                        icon: "success",
+                        title: '회원가입이 완료되었습니다.',
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+
                 } catch (error) {
                     console.error("요청 실패: ", error);
                 }
@@ -250,7 +259,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
         <div className="join" isFormValid={false}>
             <div className='joinTitle'>
                 <div className='join_title'>회원가입</div>
-                <div className='close' onClick={onCloseSignUp}><img src="/pic/icon_pic/closeBtn.png" alt="" /></div>
+                <div className='close' onClick={onCloseSignUp}><IoMdCloseCircle size='35' color='gray'/></div>
             </div>
             <div className="email">
                 <input type="text" id="email" className='emailInput' value={email} onChange={handleEmailChange} placeholder='이메일'/>

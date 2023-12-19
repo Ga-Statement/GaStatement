@@ -6,11 +6,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 20vw;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 5px;
+    width: 30vw;
+    height: 80vh;
+    margin: 0px auto;
     font-family: Pretendard;
+    overflow: auto;
 }
 
 .joinTitle{
@@ -19,17 +19,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin: 10px;
+    margin: 5vh;
 }
 
 .join_title{
     font-size: 1.7vw;
     font-weight: bold;
-    margin-right: 60px;
-}
-
-.close img{
-    width: 5vh;
+    margin-right: 16vw;
+    white-space: nowrap;
 }
 
 .close:hover{
@@ -37,8 +34,8 @@
 }
 
 .emailInput, .passwordInput, .passwordCheck, .nicknameInput, .phoneNumInput{
-    width: 300px;
-    height: 20px;
+    width: 25vw;
+    height: 5vh;
     font-size: 0.9vw;
     margin: 10px;
     padding: 4px;
@@ -70,8 +67,8 @@
 }
 
 .addressInput, .detailedAddressInput{
-    width: 300px;
-    height: 20px;
+    width: 25vw;
+    height: 5vh;
     font-size: 0.9vw;
     margin: 10px;
     padding: 4px;
