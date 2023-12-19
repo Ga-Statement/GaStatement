@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CiClock2 } from "react-icons/ci";
+import { useCookies } from 'react-cookie';
 import axios from 'axios';
 import './premium1_1.css';
 
@@ -29,6 +30,17 @@ const Premium1_1 = () => {
 
     const intervalIdRef = React.useRef(null);
     const timerRef = React.useRef(null);
+
+    const myInfoRef = useRef();
+    const [cookies, setCookie] = useCookies(["token"]);
+    const [isLogin, setIsLogin] = useState(false);
+
+    useEffect(() => {
+        const getToken = cookies.token;
+        if (getToken) {
+            setIsLogin(true);
+        }
+    }, [cookies]);
 
     useEffect(() => {
         intervalIdRef.current = setInterval(() => {
@@ -133,8 +145,9 @@ const Premium1_1 = () => {
                             <div className="premium1_1_Info_3_2_prodStatus">{pdData.pdState}</div>
                         </div>
                         <div className="premium1_1_Info_3_3">
-                            <Link to='/payment1'className="premium1_1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium1_1_buyIcon'/></Link>
-                            <div className="premium1_1_BagAdd" onClick={handleButtonClick}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='premium1_1_basketIcon'/></div>
+                            {!isLogin ? <div className="premium1_1_BuyBtn" onClick={() => alert("로그인을 해주세요")}>구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium1_1_buyIcon'/></div>
+                            : <Link to='/payment1' className="premium1_1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium1_1_buyIcon'/></Link>}
+                            <div className="premium1_1_BagAdd" onClick={() => (!isLogin ? alert("로그인을 해주세요") : handleButtonClick())}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='premium1_1_basketIcon'/></div>
                         </div>
                     </div>
                 </div>

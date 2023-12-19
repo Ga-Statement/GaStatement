@@ -236,6 +236,10 @@
     margin-left: 5px;
 }
 
+.premium2_1_BuyBtn:hover{
+    cursor: pointer;
+}
+
 .premium2_1_BagAdd:hover{
     cursor: pointer;
 }
