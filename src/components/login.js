@@ -9,6 +9,7 @@
 
 import { useState, useEffect } from 'react';
 import { useCookies } from "react-cookie";
+import { IoMdCloseCircle } from "react-icons/io";
 import axios from "axios";
 import Swal from "sweetalert2";
 import './login.css';
@@ -56,9 +57,9 @@ const Login = ({goToSignUp, closeLogin}) => {
             // Swal.fire('로그인이 완료되었습니다');
             Swal.fire({
               icon: "success",
-              title: '로그인이 완료되었습니다',
-              showConfirmButton: false,
-              timer: 1500
+              title: '로그인 되었습니다',
+              showConfirmButton: true,
+              timer: 2500
             });
             setCookie("token", {userData: data.userData});
           } else {
@@ -90,7 +91,7 @@ const Login = ({goToSignUp, closeLogin}) => {
             <div className='login_1'>
                 <div className='loginTitle'>로그인</div>
                 <div className='goToSignUp' onClick={goSignUp}>회원가입&gt;</div>
-                <div className='closeIcon' onClick={closeLoginBtn}><img src="/pic/icon_pic/closeBtn.png" alt="" /></div>
+                <div className='closeIcon' onClick={closeLoginBtn}><IoMdCloseCircle size='35' color='gray'/></div>
             </div>
             <div className="login_2">
                 <input type="text" id='id' value={emailId} onChange={idChange} className='idInput' placeholder='아이디를 입력하세요'/>

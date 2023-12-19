@@ -9,8 +9,10 @@
 
 import { useState, useEffect, useRef  } from 'react';
 import { useCookies } from 'react-cookie';
+import { IoMdCloseCircle } from "react-icons/io";
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
+import Swal from "sweetalert2";
 import Address from './address';
 import './knob.css';
 
@@ -23,10 +25,20 @@ const Knob = ({closeKnobBtn}) => {
         emailjs.sendForm("service_kjs", "template_qxrwnmk", form.current, "dhigA1EAdSIMx2fze")
         .then((result) => {
             console.log(result.text);
-            alert("성공적으로 이메일이 전송되었습니다.");
+            // alert("성공적으로 이메일이 전송되었습니다.");
+            Swal.fire({
+                icon: "success",
+                title: '성공적으로 이메일이 전송되었습니다.',
+                showConfirmButton: true,
+                timer: 2500
+              });
         }, (error) => {
             console.log(error.text);
-            alert("이메일 전송이 실패되었습니다.")
+            // alert("이메일 전송이 실패되었습니다.")
+            Swal.fire({
+                icon: "error",
+                title: "이메일 전송이 실패되었습니다.",
+              });
         });
     };
 
@@ -149,10 +161,10 @@ const Knob = ({closeKnobBtn}) => {
 
     return(
         <div className="knob_container">
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail} className='knob_container_form'>
                 <div className='knob_title_container'>
                     <div className='knob_title'>추억의 물품 마케팅 신청</div>
-                    <div className='knobCloseBtn' onClick={closeKnob}><img src="/pic/icon_pic/closeBtn.png" alt="" /></div>
+                    <div className='knobCloseBtn' onClick={closeKnob}><IoMdCloseCircle color='gray' size='35'/></div>
                 </div>
                 <div className="check">
                     <div className='check_p'><label>프리미엄 마케팅<input type="radio" name="user_package" value="프리미엄 마케팅"/></label></div>
@@ -190,7 +202,7 @@ const Knob = ({closeKnobBtn}) => {
                     6. 판매가 시작되는 상품은 취소 할 수 없습니다.
                     7. 판매금액은 반드시 희망가격으로 설정되지 않을수 있습니다.
                 ' readOnly/>
-                <div><label>동의<input type="checkbox" name="" value=""/></label></div>
+                <div className='notice_agree_list'><div className='notice_agree_txt'>동의</div><input type="checkbox" name="" value="" className='notice_agree'/></div>
                 <input className='go_knob' type='submit' value="신청하기" />
             </form>
         </div>

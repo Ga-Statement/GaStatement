@@ -37,16 +37,17 @@
 .borderR{
     border-right: 1px solid black;
     margin: 0 1vw;
-    height: 4vh;
+    height: 3vh;
 }
 
-.closeMystoryBtn img{
+.closeMystoryBtn{
     width: 2vw;
     position: absolute;
+    top: -1vh;
     right: -6vw;
 }
 
-.closeMystoryBtn img:hover{
+.closeMystoryBtn:hover{
     cursor: pointer;
 }
 
@@ -92,7 +93,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 1vh;
     font-size: 1.6vh;
     padding: 0.5vh;
@@ -107,7 +108,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 1vh;
     font-size: 1.6vh;
     padding: 0.5vh;
@@ -145,7 +146,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 1vh;
     font-size: 1.6vh;
     padding: 0.5vh;
@@ -155,7 +156,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 1vh;
     font-size: 1.6vh;
     padding: 0.5vh;
@@ -171,51 +172,55 @@
 
 .promotion{
     width: 30vw;
-    height: 13vh;
+    height: 15vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
     border-radius: 1vw;
     background-color: white;
     position: absolute;
     top: 15vh;
     left: 5vw;
+    padding: 0.5vh;
 }
 
 .phoneAgree{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 2vh;
     font-size: 1.6vh;
+    padding: 0.5vh;
 }
 
 .emailAgree{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 2vh;
     font-size: 1.6vh;
+    padding: 0.5vh;
 }
 
 .alarmTitle{
     margin: 1vh;
     position: absolute;
-    top: 29vh;
+    top: 31vh;
     left: 5.5vw;
     font-size: 1.6vh;
 }
 
 .alarm{
     width: 30vw;
-    height: 13vh;
+    height: 15vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
     border-radius: 1vw;
     margin: 0 auto;
     background-color: white;
     position: absolute;
-    top: 33vh;
+    top: 35vh;
     left: 5vw;
+    padding: 0.5vh;
 }
 
 .specsname{
@@ -262,7 +267,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 2vh;
 }
 
@@ -311,7 +316,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 2vh;
 }
 
@@ -346,11 +351,12 @@
 .shoppingProductInfo{
     display: flex;
     flex-direction: row;
-    border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 2vh;
+    border-bottom: 2px solid rgb(215, 215, 215);
+    margin: 1vh;
     width: 26vw;
     white-space: nowrap;
     padding: 1vh;
+    justify-content: space-around;
 }
 
 .shoppingImg_1{
@@ -376,16 +382,19 @@
 
 .shoppingPrice_2{
     margin: 1vh;
-    margin-left: 8vh;
 }
 
 .shoppingCheck{
     margin-left: 4vh;
+    accent-color: gray;
+    zoom: 1.5;
 }
 
 .shoppingCheck2{
-    margin-left: 4vh;
+    margin-left: 9vh;
     margin-bottom: 2vh;
+    accent-color: gray;
+    zoom: 1.5;
 }
 
 .buyButton{
@@ -399,10 +408,18 @@
     left: 18vw;
 }
 
-.withdrawal{
+.editInfoBtn{
     cursor: pointer;
     position: absolute;
     bottom: -25vh;
+    left: 6vw;
+    font-size: 1.8vh;
+}
+
+.withdrawal{
+    cursor: pointer;
+    position: absolute;
+    bottom: -30vh;
     left: 6vw;
     font-size: 1.8vh;
 

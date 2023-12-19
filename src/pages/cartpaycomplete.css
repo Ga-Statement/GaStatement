@@ -1,0 +1,143 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+.cart_pay_complete_container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: #221F20;
+    font-family: Pretendard;
+}
+
+.cart_pay_complete_wrapper_left{
+    flex: 1.2;
+    text-align: center;
+}
+
+.cart_pay_complete_wrapper_left{
+    position: relative;
+    top: 17%;
+    left: 1%;
+}
+
+.cart_pay_complete_product_img{
+    width: 15vw;
+    margin-right: 3vw;
+}
+
+.cart_pay_complete_product_img2{
+    width: 15vw;
+}
+
+.cart_pay_complete_wrapper_right{
+    flex: 1;
+}
+
+.cart_pay_complete_wrapper_right_box{
+    width: 80%;
+    height: 95.65%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.cart_pay_complete_wrapper{
+    flex: 0.5;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 5%;
+}
+
+.cart_pay_complete_title{
+    font-size: 2.5vh;
+    margin: 10px;
+}
+
+.cart_pay_complete_number{
+    font-size: 1.8vh;
+    margin: 10px;
+}
+
+.cart_pay_account_info_1{
+    position: relative;
+    top: 20%;   
+}
+
+.cart_pay_complete_desc{
+    font-size: 1.8vh;
+    margin: 10px;
+    color: gray;
+    position: relative;
+    top: 20%;    
+}
+
+.cart_pay_account_info{
+    flex: 1.5;
+    margin: 50px auto;
+    text-align: center;
+    border: 3px solid rgb(189, 189, 189);
+    padding-top: 30px;
+    padding-bottom: 80px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 23%;
+    font-size: 1.8vh;
+    background-color: white;
+    position: relative;
+    top: 5%;
+}
+
+.cart_pay_account_info_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    position: relative;
+    top: 30%;
+}
+
+.cart_pay_account_info_2_1{
+    margin: 10px;
+}
+
+.cart_pay_account_info_2_1_1, .cart_pay_account_info_2_1_2, .cart_pay_account_info_2_1_3{
+    margin: 10px;
+}
+
+.cart_pay_account_info_2_2_1, .cart_pay_account_info_2_2_2, .cart_pay_account_info_2_2_3{
+    margin: 10px;
+}
+
+.cart_pay_account_info_2_2{
+    margin: 10px;
+    text-align: left;
+}
+
+.vr{
+    width:3px;
+    background-color:#b3b3b3;
+}
+
+.cart_pay_complete_desc2{
+    flex: 0.5;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 1.7vh;
+    color: rgb(107, 107, 107);
+    position: relative;
+    top: 10%;
+}
+
+.cart_pay_gotoMain{
+    flex: 0.5;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+
+
