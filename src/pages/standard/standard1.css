@@ -239,6 +239,10 @@
     width: 30px;
 }
 
+.standard1_BuyBtn:hover{
+    cursor: pointer;
+}
+
 .standard1_BagAdd:hover{
     cursor: pointer;
 }

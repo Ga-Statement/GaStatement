@@ -229,6 +229,18 @@
     display: flex;
 }
 
+.standard2_buyIcon{
+    width: 30px;
+}
+
+.standard2_BuyBtn:hover{
+    cursor: pointer;
+}
+
+.standard2_BagAdd:hover{
+    cursor: pointer;
+}
+
 .standard2_buyIcon, .standard2_basketIcon{
     margin-left: 5px;
 }

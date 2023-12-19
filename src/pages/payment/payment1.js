@@ -15,10 +15,15 @@ import { FaRegUser } from "react-icons/fa";
 import { MdOutlinePhoneAndroid, MdOutlineLocalPostOffice } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { PiNoteBold } from "react-icons/pi";
+import { useCookies } from 'react-cookie';
+import axios from 'axios';
 
 const Payment1 = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
+
+    const [cookies, setCookie] = useCookies(['token']);
+    const [userInfo, setUserInfo] = useState(null);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -31,6 +36,28 @@ const Payment1 = () => {
     const handlePaymentMethodChange = (value) => {
         setSelectedPaymentMethod(value);
     };
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            if (cookies.token) {
+              const userNO = cookies.token.userData;
+    
+              const res = await axios.get(`http://localhost:3000/user/mypage?userNO=${userNO}`);
+              setUserInfo(res.data);
+              console.log("data: ", res.data);
+            }
+          } catch (error) {
+            console.error('Error fetching user data:', error);
+          }
+        };
+
+        if(!cookies.token) {
+            setUserInfo(null);
+        }
+    
+        fetchData();
+    }, [cookies.token]);
 
     return(
         <>
@@ -47,28 +74,28 @@ const Payment1 = () => {
                         <div className="payment_user_info_1">
                             <div className="payment_user_info_1_name">
                                 <FaRegUser className='payment_user_info_1_icon'/>
-                                이름
+                                {userInfo ? <span>{userInfo.userName}</span> : <span>이름</span>}
                             </div>
                             <div className="payment_user_info_1_edit">수정</div>
                         </div>
                         <div className="payment_user_info_2">
                             <div className="payment_user_info_2_phone">
                                 <MdOutlinePhoneAndroid className='payment_user_info_2_icon'/>
-                                010-1234-5678
+                                {userInfo ? <span>{userInfo.userPhone}</span> : <span>01012345678</span>}
                             </div>
                             <div className="payment_user_info_2_edit">수정</div>
                         </div>
                         <div className="payment_user_info_3">
                             <div className="payment_user_info_3_email">
                                 <MdOutlineLocalPostOffice className='payment_user_info_3_icon'/>
-                                abc123@naver.com
+                                {userInfo ? <span>{userInfo.userID}</span> : <span>abc123@naver.com</span>}
                             </div>
                             <div className="payment_user_info_3_edit">수정</div>
                         </div>
                         <div className="payment_user_info_4">
                             <div className="payment_user_info_4_address">
                                 <FaLocationDot className='payment_user_info_4_icon'/>
-                                배송지 주소
+                                {userInfo ? <span>{userInfo.userAdd}, {userInfo.userSubAdd}</span> : <span>배송지 주소</span>}
                             </div>
                             <div className="payment_user_info_4_edit">수정</div>
                         </div>

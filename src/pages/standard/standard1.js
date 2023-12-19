@@ -7,9 +7,10 @@
 -------------------------------------------------------------------------
 */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CiClock2 } from "react-icons/ci";
+import { useCookies } from 'react-cookie';
 import axios from 'axios';
 import './standard1.css';
 
@@ -38,6 +39,17 @@ const Standard1 = () => {
 
     const intervalIdRef = React.useRef(null);
     const timerRef = React.useRef(null);
+
+    const myInfoRef = useRef();
+    const [cookies, setCookie] = useCookies(["token"]);
+    const [isLogin, setIsLogin] = useState(false);
+
+    useEffect(() => {
+        const getToken = cookies.token;
+        if (getToken) {
+            setIsLogin(true);
+        }
+    }, [cookies]);
 
     useEffect(() => {
         intervalIdRef.current = setInterval(() => {
@@ -148,8 +160,9 @@ const Standard1 = () => {
                             <div className="standard1_Info_3_2_prodStatus">제품상태</div>
                         </div>
                         <div className="standard1_Info_3_3">
-                            <Link to='/payment3'className="standard1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='standard1_buyIcon'/></Link>
-                            <div className="standard1_BagAdd" onClick={handleButtonClick}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='standard1_basketIcon'/></div>
+                            {!isLogin ? <div className="standard1_BuyBtn" onClick={() => alert("로그인을 해주세요")}>구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='standard1_buyIcon'/></div>
+                            : <Link to='/payment3'className="standard1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='standard1_buyIcon'/></Link>}
+                            <div className="standard1_BagAdd" onClick={() => (!isLogin ? alert("로그인을 해주세요") : handleButtonClick())}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='standard1_basketIcon'/></div>
                         </div>
                     </div>
                 </div>
