@@ -4,128 +4,167 @@ import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveI
 // Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut
 import { TfiMouse } from "react-icons/tfi";
 import { Aos } from "aos";
+import { motion } from "framer-motion";
 
 const Open_page1 = () => {
     return (
-        <div className="margin-0">
-            <div id="img_box" className="open-wrap h-100vh margin-0">
-                <ScrollContainer>
-                    <ScrollPage>
-                        <div className="flex just-around">
-                            <div id="div1">
-                                <Animator animation={batch( MoveOut(-700, -700))}>
-                                    <img id="img1" style={{position:'fixed', left:-130, top:-90}} className="w-10vw h-40vh" src="/pic/open_pic/pic_6.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div>
-                                <Animator animation={batch( MoveOut(-150, -700))}>
-                                    <img id="img2" className="w-20vw h-40vh" style={{position:'fixed', top:20, left:-70}} src="/pic/open_pic/pic_7.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div>
-                                <Animator animation={batch( MoveOut(-20, -700))}>
-                                    <img id="img4" className="w-20vw h-30vh" style={{position:'fixed', top:-100}} src="/pic/open_pic/pic_0.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div>
-                                {/* Sticky() 기본값 50%, 50% */}
-                                <Animator animation={batch(Sticky(50, 10))}>
-                                    <img id="img3" className="open-Ldiv" src="/pic/open_pic/logo_1.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div>
-                                <Animator animation={batch( MoveOut(150, -700))}>
-                                    <img id="img5" className="w-20vw h-30vh" src="/pic/open_pic/pic_1.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div>
-                                <Animator animation={batch( MoveOut(700, -700))}>
-                                    <img id="img_camera" style={{position:'fixed', top: -100, right:-200}}src="/pic/open_pic/pic_8.png" alt="" />
-                                </Animator>
-                            </div>
-                        </div>
+        <div>
+        <div className='pageone_wrap'>
+        <ScrollContainer>
+          <ScrollPage>
+        <div className="gird_wrap">
+          <motion.div className="girdbox1"
+          animate={{x:[-90,-10, -20], y:[-80, -10, -40]}}
+          transition={{
+            duration: 1,
+            ease: "easeOut"
+          }}>
+                  <Animator animation={batch( MoveOut(-150, -700))}>
+                  <img className='box1_img' src="pic/open_pic/web_light.webp" alt="" />
+                  </Animator>
+          </motion.div>
+          <motion.div className="girdbox2"
+          initial={{x:-160}}
+          animate={{x:-160, y:[-90, -20, -30]}}
+          transition={{
+            duration: 1,
+            ease: "easeOut"}}>
+                    <Animator animation={batch( MoveOut(-150, -700))}>
+                  <img className='box2_img' src="pic/open_pic/web_book.webp" alt="" />
+                    </Animator>
+          </motion.div>
+          <motion.div className="girdbox3"
+                initial={{x:-80}}
+                animate={{x:-80, y:[-80, -30, -40]}}
+                transition={{
+                  duration: 1,
+                  ease:"easeOut"}}>
+                    <Animator animation={batch( MoveOut(-10, -300))}>
+                    <img className='box3_img' src="pic/open_pic/web_hang.webp" alt="" />
+                    </Animator>
+          </motion.div>
+          <motion.div className="girdbox4"
+          initial={{scale:1, x:120}}
+          animate={{x:120 ,y:[-80,110,100], scale:[2]}}
+          transition={{
+            duration:1,
+            ease: "easeOut"
+          }}>
+            <Animator animation={batch( MoveOut(150, -300))}>
+            <img className='box4_img' src="pic/open_pic/web_pic2.webp" alt="" />
+            </Animator>
+          </motion.div>
+          <motion.div className="girdbox5"
+                initial={{x:90, y:-80}}
+                animate={{x:[90,30,40]}}
+                transition={{
+                duration:1,
+                ease: "easeOut"}}
+                >
+                  <Animator animation={batch( MoveOut(400, -300))}>
+            <img className='box5_img' src="pic/open_pic/web_water_bottle.webp" alt="" />
+                  </Animator>
+          </motion.div>
+      {/* 상단박스 END ------------------------------------------------- */}
+          <motion.div className="girdbox6"
+                initial={{x:-80, y:40}}
+                animate={{x:[-80, -10, -20], y:40}}
+                transition={{
+                  duration:1,
+                  ease: "easeOut"
+                }}>
+            <Animator animation={batch( MoveOut(-750, 200))}>
+            <img className='box6_img' src="pic/open_pic/web_chair.webp" alt="" />
+            </Animator>
+          </motion.div>
 
-                        <div className="just-center w-100vw h-30vh">
-                            <div id="text_wrap"     
-                                data-aos="fade-up"
-                                data-aos-offset="350"
-                                data-aos-delay="50"
-                                data-aos-duration="700"
-                                data-aos-easing="ease-in-out"
-                                data-aos-mirror="true"
-                                data-aos-once="false"
-                                data-aos-anchor-placement="top-center"
->
-                                <Animator animation={(Sticky(50, 50))}>
-                                    <div style={{}}>
-                                        <h2 id="OPEN" className="font-size-70 font-normal margin-0">open.</h2>
-                                    </div>
-                                    <div>
-                                        <h1 style={{}} id="DRAWER" className="font-size-280 margin-0">DRAWER</h1>
-                                    </div>
-                                </Animator>
-                            </div>
-                        </div>
-                        
-                        <div className="flex just-around">
-                            <div style={{position: 'fixed', left: -150, bottom:200}}>
-                                <Animator animation={batch( MoveOut(-2500, 1200))}>
-                                    <img id="img6" className="w-20vw h-30vh" src="/pic/open_pic/pic_9.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div style={{position: 'fixed', left: -100, bottom:-100}}>
-                                <Animator animation={batch( MoveOut(-500, 800))}>
-                                    <img id="img7" className="w-20vw h-30vh" src="/pic/open_pic/pic.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div style={{position: 'fixed', left:500, bottom:-30}}>
-                                <Animator animation={batch( MoveOut(-150, 1200))}>
-                                    <img id="img8" className="w-20vw h-40vh" src="/pic/open_pic/jang.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div style={{position: 'fixed', left:180, bottom:10}}>
-                                <Animator animation={batch( MoveOut(-450, 1200))}>
-                                    <img id="img9" className="w-20vw h-30vh" src="/pic/open_pic/char.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div id="mouse_logo">
-                                {/* Sticky() 기본값 50%, 50% */}
-                                <Animator animation={batch(Sticky(50, 95))}>
-                                    <TfiMouse/>
-                                </Animator>
-                            </div>
-                            <div style={{position: 'fixed', right:300, bottom:-50}}>
-                                <Animator animation={batch( MoveOut(600, 1600))}>
-                                    <img id="img10" className="w-20vw h-30vh" src="/pic/open_pic/pic_10.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div style={{position: 'fixed', right: 500}}>
-                                <Animator animation={batch( MoveOut(150, 1800))}>
-                                    <img id="img11" className="w-20vw h-30vh" src="/pic/open_pic/pic_5.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div style={{position: 'fixed', right: 0}}>
-                                <Animator animation={batch( MoveOut(700, 1800))}>
-                                    <img id="img12" className="w-30vw h-30vh" src="/pic/open_pic/pic_4.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div style={{position: 'fixed', right: -130, bottom: -90}}>
-                                <Animator animation={batch( MoveOut(900, 1400))}>
-                                    <img id="img13" className="w-20vw h-30vh" src="/pic/open_pic/mir.png" alt="" />
-                                </Animator>
-                            </div>
-                            <div style={{position: 'fixed', right: -130, bottom: 230}}>
-                                <Animator animation={batch( MoveOut(900, 1400))}>
-                                    <img id="img14" className="w-20vw h-20vh" src="/pic/open_pic/pic_3.png" alt="" />
-                                </Animator>
-                            </div>
-                        </div>
-                    </ScrollPage>
-                </ScrollContainer>
+    <div className="Word">
+    </div>
+          <div className="girdbox7">
+            <div className='font_wrap'>
+<div className="text_open"> open. </div>
+<div className="text_drawer"> DRAWER </div>
             </div>
-            <div className="open-wrap h-100vh margin-0"></div>
+          </div>
+          <motion.div className="girdbox8"
+                        initial={{x:150}}
+                animate={{x:[300, 160, 170]}}
+                transition={{
+                  duration:1,
+                  ease: "easeOut"
+                }}>
+            <Animator animation={batch( MoveOut(500, 100))}>
+            <img className='box8_img' src="pic/open_pic/web_camera1.webp" alt="" />
+            </Animator>
+          </motion.div>
+          <motion.div className='gridbox8_1'
+                                  initial={{x:0}}
+                                  animate={{x:[0, -100, -80]}}
+                                  transition={{
+                                    duration:1,
+                                    ease: "easeOut"}}>
+          <Animator animation={batch( MoveOut(500, 900))}>
+            <img className="box8_1_img" src="pic/open_pic/web_table.webp" alt="" />
+            </Animator>
+          </motion.div>
         </div>
-    );
-}
+      {/* 중간박스 END -------------------------------------------------*/}
+      <div className="endbox_wrap">
+          <motion.div className="girdbox9"
+                      initial={{x:-20, y:0}}
+                      animate={{x:[-20, 20, -30], y:[0, -150, -140]}}>
+          <Animator animation={batch( MoveOut(-1000, -100))}>
+            < img className='box9_img' src="pic/open_pic/web_pic1.webp" alt="" />
+          </Animator>
+          </motion.div>
+          <motion.div className="girdbox10"
+              initial={{y:50}}
+              animate={{y:[50,-60,-50]}}
+              transition={{
+              duration:1,
+              ease: "easeOut"}}>
+          <Animator animation={batch( MoveOut(-500, 800))}>
+            <img className='box10_img' src="pic/open_pic/web_jang2.webp" alt="" />
+          </Animator>
+          </motion.div>
+          <motion.div className="girdbox11"
+          initial={{y:0}}
+          animate={{y:[0,-100,-90]}}
+          transition={{
+          duration:1,
+          ease: "easeOut"}}>
+                      <Animator animation={batch( MoveOut(-100, 500))}>
+            <img className='box11_img' src="pic/open_pic/web_chair3.webp" alt="" />
+            </Animator>
+          </motion.div>
+          <motion.div className="girdbox12"
+          initial={{y:-20, x:-80}}
+          animate={{y:[-40, -180, -160], x:-80}}>
+            <Animator animation={batch ( MoveOut(50, 800))}>
+            <img className='box12_img' src="pic/open_pic/web_pur.webp" alt="" />
+            </Animator>
+          </motion.div>
+          <motion.div className="girdbox13"
+          animate={{y:[70, -140, -120]}}>
+          <Animator animation={batch( MoveOut(360, 360))}>
+            <img className='box13_img' src="pic/open_pic/web_jang.webp" alt="" />
+          </Animator>
+          </motion.div>
+          <motion.div className="girdbox14"
+          initial={{x:20}}
+          animate={{x:[20,-30,-20],y:[70, -140, -120]}}>
+          <Animator animation={batch( MoveOut(360, 360))}>
+            <img className='box14_img' src="pic/open_pic/web_hang2.webp" alt="" />
+          </Animator>
+          </motion.div>
+        </div>
+        </ScrollPage>
+        </ScrollContainer>
+        </div>
+        <div className="black"></div>
+        </div>
+      );
+    }
+
 
 export default Open_page1;

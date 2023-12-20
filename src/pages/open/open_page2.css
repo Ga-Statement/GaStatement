@@ -1,0 +1,13 @@
+@import url(https://db.onlinewebfonts.com/c/203ca707d5875159f71d2aff42401749?family=Athelas+Regular);
+@import url(https://db.onlinewebfonts.com/c/4d7f27cfd708f4160690732603ab13a2?family=Athelas+Italic);
+@import url(https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap);
+/*font-family: "Athelas Italic", "Athelas Regular */
+/*font-family: "KoreaYMyungjo"; */
+
+.f_text{color:white; font-size:3em; font-family:'Noto Serif KR'; }
+.mid_text{color: white; font-size:15em; height: 30vh; font-family: "Nanum Myeongjo";}
+
+.last_wrap{display:flex;}
+.last_text_wrap_{width: 19em; padding-top:3em;}
+.last_text_{color:white; font-size:1.3em; font-family: 'Noto Serif KR';}

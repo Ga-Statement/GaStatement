@@ -1,0 +1,7 @@
+@import url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css);
+
+.page4_full{height: 100vh; background-color: black;
+            display: flex; justify-content: center;}
+
+.typelt{ color:white; font-size:15em; font-family: "Pretendard";
+        font-weight:bold; padding-top:25vh;}
