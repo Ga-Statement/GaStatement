@@ -9,8 +9,8 @@ const Open_page4 = () => {
             data-aos="fade-up"
             data-aos-offset="150"
             data-aos-delay="100"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out-back"
             data-aos-mirror="true"
             data-aos-once="false"
             data-aos-anchor-placement="top-center"
@@ -39,26 +39,6 @@ const Open_page4 = () => {
         </div>
     );
 }
-            {/* <div className="open-wrap h-100vh bg-black">
-                <div className="w-100vw h-20vh flex">
-                    <div><h1 className="font-white">오래된것들</h1></div>
-                    <div><h1 className="font-white">역경매</h1></div>
-                    <div><h1 className="font-white">중고</h1></div>
-                </div>
-                <div className="w-100vw h-20vh flex">
-                    <div><h1 className="font-white">추억</h1></div>
-                    <div><h1 className="font-white">헌것</h1></div>
-                    <div><h1 className="font-white">폐품</h1></div>
-                </div>
-                <div className="w-100vw h-20vh flex">
-                    <div><h1 className="font-white">쓸수없는</h1></div>
-                    <div><h1 className="font-white">사용할수없는</h1></div>
-                </div>
-                <div className="w-100vw h-20vh flex">
-                    <div><h1 className="font-white">고물</h1></div>
-                    <div><h1 className="font-white">마케팅</h1></div>
-                </div>
-            </div> */}
 
 export default Open_page4;
 

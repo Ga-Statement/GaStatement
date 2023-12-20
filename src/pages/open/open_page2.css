@@ -6,7 +6,11 @@
 /*font-family: "KoreaYMyungjo"; */
 
 .f_text{color:white; font-size:3em; font-family:'Noto Serif KR'; }
-.mid_text{color: white; font-size:15em; height: 30vh; font-family: "Nanum Myeongjo";}
+.mid_text{
+    background: linear-gradient(to top, #929292, #ffffff);
+    color: transparent;
+    -webkit-background-clip: text;
+     font-size:15em; height: 30vh; font-family: "Nanum Myeongjo";}
 
 .last_wrap{display:flex;}
 .last_text_wrap_{width: 19em; padding-top:3em;}

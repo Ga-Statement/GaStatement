@@ -1,8 +1,12 @@
 import  React from "react";
+import './open_page5.css';
+import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn } from "react-scroll-motion";
 
 const Open_page5 = () => {
+    
     return (
-        <div className="open-wrap open-title h-100vh bg-black">
+        <div className="page5">
             <div className="open-title w-100vw h-75vh bg-white">
                 <div>
                     <div>
@@ -16,6 +20,9 @@ const Open_page5 = () => {
                     </div>
                 </div>
             </div>
+            <div className="black_one"></div>
+
+                <div className="black_two"></div>
         </div>
     );
 }

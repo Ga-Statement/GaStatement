@@ -2,7 +2,6 @@ import  React from "react";
 import "./open_page1.css";
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn } from "react-scroll-motion";
 // Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut
-import { TfiMouse } from "react-icons/tfi";
 import { Aos } from "aos";
 import { motion } from "framer-motion";
 

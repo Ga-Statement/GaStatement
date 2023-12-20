@@ -2,5 +2,7 @@
 #f_text2{padding-bottom: 1em;}
 .last_wrap{display:flex; width: 100%; justify-content: center; }
 .last_text_wrap{ width: 25em; }
-.mid_text2{color: white; font-size:10em; height: 25vh; font-family: "Nanum Myeongjo";}
+.mid_text2{    background: linear-gradient(to top, #3f3f3f, #ffffff);
+    color: transparent;
+    -webkit-background-clip: text; font-size:10em; height: 25vh; font-family: "Nanum Myeongjo";}
 .last_text{color:white; font-size:1.3em; font-family: 'Noto Serif KR';}

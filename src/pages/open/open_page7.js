@@ -35,27 +35,27 @@ const Open_page7 = () => {
                 </div>
                 <div className="flex just-around w-80vw h-30vh">
                     <div className="font-gray text-left">
-                        <img src="/pic/open_pic/char_1.PNG" alt="" />
+                        <img src="/pic/open_pic/005png.png" alt="" />
                         <h5 className="font-size-20 margin-0 margin-top-10">가구 전문가</h5>
                         <h5 className="font-size-20 margin-0">이정윤</h5>
                     </div>
                     <div className="font-gray text-left">
-                        <img src="/pic/open_pic/char_2.PNG" alt="" />
+                        <img src="/pic/open_pic/004png.PNG" alt="" />
                         <h5 className="font-size-20 margin-0 margin-top-10">명품 전문가</h5>
                         <h5 className="font-size-20 margin-0">이주원</h5>
                     </div>
                     <div className="font-gray text-left">
-                        <img src="/pic/open_pic/char_3.PNG" alt="" />
+                        <img src="/pic/open_pic/002png.PNG" alt="" />
                         <h5 className="font-size-20 margin-0 margin-top-10">전자기기 전문가</h5>
                         <h5 className="font-size-20 margin-0">박현응</h5>
                     </div>
                     <div className="font-gray text-left">
-                        <img src="/pic/open_pic/char_4.PNG" alt="" />
+                        <img src="/pic/open_pic/003png.PNG" alt="" />
                         <h5 className="font-size-20 margin-0 margin-top-10">도서 전문가</h5>
                         <h5 className="font-size-20 margin-0">박효연</h5>
                     </div>
                     <div className="font-gray text-left">
-                        <img src="/pic/open_pic/char_5.PNG" alt="" />
+                        <img src="/pic/open_pic/001png.PNG" alt="" />
                         <h5 className="font-size-20 margin-0 margin-top-10">카메라 전문가</h5>
                         <h5 className="font-size-20 margin-0">김진수</h5>
                     </div>
