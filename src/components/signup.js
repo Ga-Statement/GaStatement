@@ -187,11 +187,11 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
         !isEmailDuplicate &&
         password &&
         isPasswordValid &&
-        // confirmPassword &&
-        // isConfirmPasswordMatch &&
-        nickname &&
-        isNicknameValid &&
-        !isNicknameDuplicate &&
+        confirmPassword &&
+        isConfirmPasswordMatch &&
+        // nickname &&
+        // isNicknameValid &&
+        // !isNicknameDuplicate &&
         phoneNum &&
         isPhoneNumberValid &&
         subaddress &&
@@ -212,6 +212,8 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
             setSelectedAddress('');
             setIsTermsChecked(false);
             setIsPrivacyChecked(false);
+            setIsEmailChecked(false);
+            setEmailValidate(false);
         };
 
         // 회원가입 완료시 실행될 함수
@@ -219,7 +221,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
             const onSignUpSuccess = true;
             if (onSignUpSuccess) {
                 signUpSuccess(); // 부모 항목으로 전달
-
+                onCloseSignUp();
                 try {
                     const res = await axios.post(
                         'http://localhost:3000/user/signup', userData
@@ -275,20 +277,21 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
             <button className={`validBtn ${isFormValid ? '' : 'invalid'}`} onClick={isCheck}>중복 체크</button>
             <div className="password">
                 <div>
-                    <input type="password" id="password" className='passwordInput' value={password} onChange={handlePasswordChange} placeholder='비밀번호'/>
+                    <input type="password" id="password" className='passwordInput' value={password} onChange={handlePasswordChange} 
+                    placeholder='비밀번호 (6자 이상)'/>
                     {password && !isPasswordValid && (<div className='warning'>비밀번호는 최소 6자 이상이어야 합니다.</div>)}
                 </div>
-                {/* <div>
+                <div>
                     <input type="password" id="passwordCheck" className='passwordCheck'value={confirmPassword} onChange={handleConfirmPasswordChange} placeholder='비밀번호 확인'/>
                     {password && confirmPassword && !isConfirmPasswordMatch && (
                     <div className='warning'>비밀번호가 일치하지 않습니다.</div>)}
-                </div> */}
+                </div>
             </div>
             <div className="nickname">
                 <input type="text" id="nickname" className='nicknameInput' value={nickname} onChange={handleNicknameChange} placeholder='이름'/>
-                {nickname && isNicknameValid && !isNicknameDuplicate && (<div className='pass'>사용 가능한 닉네임입니다.</div>)}
+                {/* {nickname && isNicknameValid && !isNicknameDuplicate && (<div className='pass'>사용 가능한 닉네임입니다.</div>)}
                 {nickname && !isNicknameValid && (<div className='warning'>올바른 형식으로 입력해주세요.</div>)}
-                {nickname && isNicknameDuplicate && isNicknameValid && (<div className='warning'>이미 존재하는 닉네임입니다.</div>)}
+                {nickname && isNicknameDuplicate && isNicknameValid && (<div className='warning'>이미 존재하는 닉네임입니다.</div>)} */}
             </div>
             <div className="phoneNum">
                 <input type="tel" id="phoneNum" className='phoneNumInput' value={phoneNum}
@@ -320,7 +323,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
             <button className={`signUpBtn ${isEmailChecked && emailValidate && isFormValid ? '' : 'invalid'}`} disabled={!isFormValid} onClick={isEmailChecked && emailValidate && isFormValid ? handleSignUp : null}>회원가입</button>
             {isFormValid ? null : (
             <div className='totalWarning'>
-                모든 필수 항목을 작성해주세요.
+                모든 항목을 작성해주세요.
             </div>)}
         </div>
     )

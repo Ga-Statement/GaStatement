@@ -16,7 +16,6 @@ import { useCookies } from 'react-cookie';
 import Swal from "sweetalert2";
 import './navbar.css';
 import SignUp from './signup';
-import SignUpComplete from './sjgnupcomplete';
 import Login from './login';
 import MyStory from './mystory';
 import ChannelTalk from './channeltalk';
@@ -150,7 +149,7 @@ const Navbar = () => {
     const handleOutsideClick = (e) => {
         if (e.target.closest(".head, .navbar") === null) {
             setNav_1(false);
-            setNav_2(false);
+            // setNav_2(false);
             // setNav_3(false);
             setActiveCategory(null);
             myInfoRef.current.setMyInfo();
@@ -222,6 +221,7 @@ const Navbar = () => {
 
     const handleSignUpSuccess = () => {
     setSignUpSuccess(true);
+    setNav_3(false);
     };
 
     // 회원가입 완료창 닫기
@@ -272,10 +272,10 @@ const Navbar = () => {
                         <MyStory closeMyStory={()=>{handleCategoryClick(null)}} ref={myInfoRef}/>
                     </div>
                     <div className={`loginContainer ${nav_2 ? '' : 'close'}`}>
-                        <Login goToSignUp={()=>{handleCategoryClick(3)}} closeLogin={()=>{handleCategoryClick(null)}}/>
+                        <Login goToSignUp={()=>{handleCategoryClick(3)}} closeLogin={()=>{handleCategoryClick(null)}} />
                     </div>
                     <div className={`signUp ${nav_3 ? '' : 'close'}`} > 
-                        {signUpSuccess ? <SignUpComplete closeSignUpBtn={closeSignUpComplete}/> : <SignUp signUpSuccess={handleSignUpSuccess} closeSignUp={() => { handleCategoryClick(null) }} />}
+                        <SignUp closeSignUpBtn={closeSignUpComplete} signUpSuccess={handleSignUpSuccess} closeSignUp={() => { handleCategoryClick(null) }} />
                     </div>
                     <div className={`drawerApply ${nav_4 ? '' : 'close'}`} > 
                         <Knob closeKnobBtn={()=>{handleCategoryClick(null)}} />
@@ -295,7 +295,7 @@ const Navbar = () => {
                           }
                       })
                      : handleCategoryClick(4)}}/>
-                <div className="drawerApplyTxt">서랍 신청</div>
+                <div className="drawerApplyTxt">신청</div>
             </div>
             <div className="sidebar" subMenuOpen={false}>
                 <nav className={`openSidebar ${subMenuOpen ? '' : 'hide'}`}>

@@ -15,7 +15,7 @@
 .premium1_1_originalPrice{
     font-size: 20px;
     color: white;
-    text-decoration: line-through solid rgb(255, 255, 255);
+    text-decoration: line-through solid rgb(247, 98, 98);
 }
 
 .premium1_1_currentPrice{
@@ -27,7 +27,7 @@
     padding: 15px;
     border-radius: 10px;
     white-space: nowrap;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -75,12 +75,15 @@
     margin-right: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_1_1_brands{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_1_2{
@@ -99,12 +102,15 @@
     margin-right: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_1_2_years{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_1_3{
@@ -123,12 +129,15 @@
     margin-right: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_1_3_times{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_2{
@@ -160,14 +169,17 @@
 
 .premium1_1_Info_3_1_specialist{
     margin-right: 15px;
+    margin-top: -3.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_3_1_name{
     margin-left: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_3_2{
@@ -186,12 +198,15 @@
     margin-left: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_3_2_prodStatus{
     margin-right: 15px;
+    margin-top: -3.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_3_3{
@@ -238,11 +253,17 @@
 }
 
 .premium1_1_buyIcon{
-    width: 30px;
+    width: 20px;
+    height: 23px;
+}
+
+.premium1_1_basketIcon{
+    width: 20px;
+    height: 23px;
 }
 
 .premium1_1_buyIcon, .premium1_1_basketIcon{
-    margin-left: 5px;
+    margin-right: 10px;
 }
 
 .premium1_1_BuyBtn:hover{

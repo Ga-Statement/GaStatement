@@ -168,8 +168,8 @@ const Premium1_1 = () => {
                                     icon: 'custom-swal-icon' // 아이콘
                                 }
                               })
-                        }>구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium1_1_buyIcon'/></div>
-                            : <Link to='/payment1' className="premium1_1_BuyBtn">구매하기<img src="/pic/icon_pic/buyIcon.webp" alt="" className='premium1_1_buyIcon'/></Link>}
+                        }><img src="/pic/icon_pic/buyIcon.png" alt="" className='premium1_1_buyIcon'/>구매하기</div>
+                            : <Link to='/payment1' className="premium1_1_BuyBtn"><img src="/pic/icon_pic/buyIcon.png" alt="" className='premium1_1_buyIcon'/>구매하기</Link>}
                             <div className="premium1_1_BagAdd" onClick={() => (!isLogin ? 
                                 // alert("로그인을 해주세요") 
                                 Swal.fire({
@@ -182,7 +182,7 @@ const Premium1_1 = () => {
                                         icon: 'custom-swal-icon' // 아이콘
                                     }
                                   })
-                                : handleButtonClick())}>장바구니<img src="/pic/icon_pic/basket.png" alt="" className='premium1_1_basketIcon'/></div>
+                                : handleButtonClick())}><img src="/pic/icon_pic/basket.png" alt="" className='premium1_1_basketIcon'/>장바구니</div>
                         </div>
                     </div>
                 </div>
