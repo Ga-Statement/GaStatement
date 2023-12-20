@@ -17,6 +17,11 @@ import Address from './address';
 import './knob.css';
 
 const Knob = ({closeKnobBtn}) => {
+    const [agreed, setAgreed] = useState(false);
+    const isCheckBoxClicked = () => {
+        setAgreed(!agreed);
+    }
+    
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -24,14 +29,21 @@ const Knob = ({closeKnobBtn}) => {
 
         emailjs.sendForm("service_kjs", "template_qxrwnmk", form.current, "dhigA1EAdSIMx2fze")
         .then((result) => {
-            console.log(result.text);
+            if (result && agreed == true) {
+                console.log(result.text);
             // alert("성공적으로 이메일이 전송되었습니다.");
-            Swal.fire({
-                icon: "success",
-                title: '성공적으로 이메일이 전송되었습니다.',
-                showConfirmButton: true,
-                timer: 2500
-              });
+                Swal.fire({
+                    icon: "success",
+                    title: '성공적으로 이메일이 전송되었습니다.',
+                    showConfirmButton: true,
+                    timer: 2500
+                });
+            } else if (result && agreed == false) {
+                Swal.fire({
+                    icon: "error",
+                    title: '동의 체크를 해주세요.',
+                });
+            }
         }, (error) => {
             console.log(error.text);
             // alert("이메일 전송이 실패되었습니다.")
@@ -202,7 +214,7 @@ const Knob = ({closeKnobBtn}) => {
                     6. 판매가 시작되는 상품은 취소 할 수 없습니다.
                     7. 판매금액은 반드시 희망가격으로 설정되지 않을수 있습니다.
                 ' readOnly/>
-                <div className='notice_agree_list'><div className='notice_agree_txt'>동의</div><input type="checkbox" name="" value="" className='notice_agree'/></div>
+                <div className='notice_agree_list'><div className='notice_agree_txt'>동의</div><input type="checkbox" name="" className='notice_agree' onClick={isCheckBoxClicked}/></div>
                 <input className='go_knob' type='submit' value="신청하기" />
             </form>
         </div>
