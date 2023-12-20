@@ -66,6 +66,15 @@ const ShopPage = () => {
 
   return (
     <div className='product_list' ref={containerRef} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp} onMouseMove={handleMouseMove}>
+        <div className="product_container_9">
+          <Link to='#' className='product_link'><img className="product_img_9" src="/pic/shop_pic/table.webp" alt="" /></Link> 
+          <div prod_title="Hansen Table" className="product_name_9">
+            Hansen Table
+          </div>
+          <div className="product_sub_name_9">
+            Hansen Table
+          </div>
+        </div>
         <div className="product_container_1">
           <Link to='/premium1' className='product_link'><img className="product_img" src="/pic/shop_pic/canon.webp" alt=""/></Link> 
           <div prod_title="CANON-OG Camera." className="product_name">
@@ -136,6 +145,15 @@ const ShopPage = () => {
           </div>
           <div className="product_sub_name_8">
             Antique Drawer
+          </div>
+        </div>
+        <div className="product_container_10">
+          <Link to='#' className='product_link'><img className="product_img_10" src="/pic/shop_pic/thebook.webp" alt="" /></Link> 
+          <div prod_title="This Immortal" className="product_name_10">
+            This Immortal
+          </div>
+          <div className="product_sub_name_10">
+            This Immortal
           </div>
         </div>
     </div>
