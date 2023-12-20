@@ -14,7 +14,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import './login.css';
 
-const Login = ({goToSignUp, closeLogin}) => {
+const Login = ({ goToSignUp, closeLogin }) => {
 
     // 회원가입창 실행 - navbar에서 불러옴
     const goSignUp = () => {  
@@ -78,7 +78,7 @@ const Login = ({goToSignUp, closeLogin}) => {
                 popup: 'custom-swal-popup', // 팝업 창
                 title: 'custom-swal-title', // 제목
                 icon: 'custom-swal-icon' // 아이콘
-              }
+              },
             });
           }
         } catch (error) {
@@ -98,6 +98,12 @@ const Login = ({goToSignUp, closeLogin}) => {
         setIdPwConfirm(idPwMatch);
     }, [emailId, password]);
 
+    const handleEnterKey = (e) => {
+      if (e.key === 'Enter' && idPwConfirm) {
+        handleLogin();
+      }
+    };
+
     return(
         <div>
             <div className='login_1'>
@@ -106,8 +112,8 @@ const Login = ({goToSignUp, closeLogin}) => {
                 <div className='closeIcon' onClick={closeLoginBtn}><IoMdCloseCircle size='35' color='gray'/></div>
             </div>
             <div className="login_2">
-                <input type="text" id='id' value={emailId} onChange={idChange} className='idInput' placeholder='아이디를 입력하세요'/>
-                <input type="password" id='pw' value={password} className='pwInput' onChange={pwChange} placeholder='비밀번호를 입력하세요'/>
+                <input type="text" id='id' value={emailId} onChange={idChange} className='idInput' onKeyDown={handleEnterKey} placeholder='아이디를 입력하세요'/>
+                <input type="password" id='pw' value={password} className='pwInput' onChange={pwChange} onKeyDown={handleEnterKey} placeholder='비밀번호를 입력하세요'/>
             </div>
             <div className="login_3">
                 <div className="id_pw_find">아이디 찾기 | 비밀번호 찾기</div>

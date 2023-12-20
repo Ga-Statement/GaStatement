@@ -72,12 +72,15 @@
     margin-right: 15px;
     color: gray;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .standard1_Info_1_1_brands{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(41, 41, 41);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .standard1_Info_1_2{
@@ -95,12 +98,15 @@
     margin-right: 15px;
     color: gray;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .standard1_Info_1_2_years{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(41, 41, 41);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .standard1_Info_1_3{
@@ -117,12 +123,15 @@
     margin-right: 15px;
     color: gray;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .standard1_Info_1_3_times{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(41, 41, 41);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .standard1_Info_2{
@@ -157,16 +166,19 @@
     margin-right: 15px;
     color: rgb(41, 41, 41);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .standard1_Info_3_1_specialist{
     margin-left: 15px;
     color: gray;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .standard1_Info_3_1_desc{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: gray;
     font-size: 12px;
 }
@@ -183,14 +195,17 @@
 
 .standard1_Info_3_2_status{
     margin-right: 15px;
+    margin-top: -4.5px;
     color: rgb(41, 41, 41);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .standard1_Info_3_2_prodStatus{
     margin-left: 15px;
     color: gray;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .standard1_Info_3_3{
@@ -236,7 +251,13 @@
 }
 
 .standard1_buyIcon{
-    width: 30px;
+    width: 20px;
+    height: 23px;
+}
+
+.standard1_basketIcon{
+    width: 20px;
+    height: 23px;
 }
 
 .standard1_BuyBtn:hover{
@@ -248,5 +269,5 @@
 }
 
 .standard1_buyIcon, .standard1_basketIcon{
-    margin-left: 5px;
+    margin-right: 10px;
 }
