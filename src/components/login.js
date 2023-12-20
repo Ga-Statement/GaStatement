@@ -102,7 +102,7 @@ const Login = ({goToSignUp, closeLogin}) => {
         <div>
             <div className='login_1'>
                 <div className='loginTitle'>로그인</div>
-                <div className='goToSignUp' onClick={goSignUp}>회원가입&gt;</div>
+                <div className='goToSignUp' onClick={goSignUp}>회원가입 &gt;</div>
                 <div className='closeIcon' onClick={closeLoginBtn}><IoMdCloseCircle size='35' color='gray'/></div>
             </div>
             <div className="login_2">
