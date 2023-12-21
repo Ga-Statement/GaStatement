@@ -153,14 +153,14 @@
     text-align: center;
     font-size: 1.5vh;
     position: relative;
-    top: 7%;
+    top: 5%;
 }
 
 .payment1_amount_title{
     text-align: center;
     margin-bottom: 5px;
     position: relative;
-    top: 7%;
+    top: 5%;
 }
 
 .payment1_amount_1{
@@ -195,14 +195,14 @@
     height: 18%;
     font-size: 1.5vh;
     position: relative;
-    top: 10%;
+    top: 7%;
 }
 
 .payment1_method_title{
     text-align: center;
     margin-bottom: 5px;
     position: relative;
-    top: 10%;
+    top: 7%;
 }
 
 .payment1_method_list{
@@ -270,4 +270,15 @@
 
 .purchase_btn1:hover{
     cursor: pointer;
+}
+
+.payAgree1{
+    position: absolute;
+    bottom: 10vh;
+    left: 8.7vw;
+    font-size: 1.6vh;
+}
+
+.payAgree1 input{
+    accent-color: gray;
 }

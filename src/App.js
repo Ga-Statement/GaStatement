@@ -53,7 +53,6 @@ function App() {
         {/* <Navbar/> */}
         <Routes>
           <Route element={<Navbar />}>
-          <Route path='/' element={<AnimatedRoute animationType="fade"><Open /></AnimatedRoute>} />
           <Route path='/main' element={<AnimatedRoute animationType="fade"><Mainpage /></AnimatedRoute>} />
           <Route path='/shop' element={<AnimatedRoute animationType="fade"><ShopPage /></AnimatedRoute>} />
           <Route path='/payment1' element={<AnimatedRoute animationType="fade"><Payment1 /></AnimatedRoute>} />
@@ -75,6 +74,7 @@ function App() {
           <Route element={<Navbar2 />}>
           <Route path="/drawer" element={<AnimatedRoute animationType="fade"><Drawer/></AnimatedRoute>} />
           </Route>
+          <Route path='/' element={<AnimatedRoute animationType="fade"><Open /></AnimatedRoute>} />
         </Routes>
       </div>
     </BrowserRouter>

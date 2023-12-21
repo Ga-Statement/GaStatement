@@ -123,7 +123,7 @@ const Payment3 = () => {
                     <div className="payment3_amount">
                         <div className="payment3_amount_1">
                             <div className="payment3_amount_1_1">상품 가격</div>
-                            <div className="payment3_amount_1_2">500,000원</div>
+                            <div className="payment3_amount_1_2">68,400원</div>
                         </div>
                         <div className="payment3_amount_2">
                             <div className="payment3_amount_2_1">배송비</div>
@@ -132,7 +132,7 @@ const Payment3 = () => {
                         <div className="bottomLine3_1"/>
                         <div className="payment3_amount_3">
                             <div className="payment3_amount_3_1">총 결제금액</div>
-                            <div className="payment3_amount_3_2">503,000원</div>
+                            <div className="payment3_amount_3_2">71,400원</div>
                         </div>
                     </div>
                     <div className="payment3_method_title">결제 방법</div>
@@ -172,6 +172,7 @@ const Payment3 = () => {
                                 </>
                         )}
                     </div>
+                    <div className='payAgree3'><input type="checkbox"/> 주문 내용을 확인하였으며, 정보 제공 등에 동의합니다.</div>
                     <Link to='/paycomplete3' className='purchase_btn3'>구매하기</Link>
                 </div>
             </div>

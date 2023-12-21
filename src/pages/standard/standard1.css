@@ -28,6 +28,7 @@
     border-radius: 10px;
     white-space: nowrap;
     font-size: 30px;
+    font-weight: bold;
 }
 
 .standard1_Info_name {
@@ -164,6 +165,7 @@
 
 .standard1_Info_3_1_name{
     margin-right: 15px;
+    margin-top: -3px;
     color: rgb(41, 41, 41);
     font-size: 20px;
     font-weight: lighter;
@@ -251,12 +253,12 @@
 }
 
 .standard1_buyIcon{
-    width: 20px;
+    width: 25px;
     height: 23px;
 }
 
 .standard1_basketIcon{
-    width: 20px;
+    width: 25px;
     height: 23px;
 }
 

@@ -145,7 +145,7 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                         : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                 </div>
-                <div className="alarmTitle">게시물 조치 알림 수신 동의</div>
+                <div className="alarmTitle">게시물 알림 수신 동의</div>
                 <div className="alarm">
                     <div className="phoneAgree">
                         <div className='profile_list'>
@@ -173,18 +173,18 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
             </div>
             {/* 나의 명세서 */}
             <div className={`specs ${activeTab === 'specs' ? '' : 'close'}`}>
-                <div className='specsname'>추억의 물품 판매 신청 내역</div>
+                <div className='specsname'>마케팅 서비스 신청 내역</div>
                 <div className='sales'>
                     <div className='salesList'>
                         <div className='salesInfo'>
                             <img src="/pic/shop_pic/chair.webp" alt="" className='salesInfoImg'/>
                             <div>
-                                <div>영국 황실 의자</div>
-                                <div>희망가격 : 3,500,000원</div>
+                                <div className='salesInfo_1'>영국 황실 의자</div>
+                                <div className='salesInfo_2'>희망가격 : 3,500,000원</div>
                             </div>
                             <div>
-                                <div>신청 날짜 : 2023.12.17 신청</div>
-                                <div>전문가 검수 확인중</div>
+                                <div className='salesInfo_3'>2023.12.17 신청</div>
+                                <div className='salesInfo_4'>전문가 검수 확인중</div>
                             </div>
                             <div className='purchaseConfirmList'>
                                 <div><img src="/pic/icon_pic/check.webp" alt="" className='checkProd'/></div>
@@ -200,12 +200,12 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                         <div className='purchaseInfo'>
                             <img src="/pic/shop_pic/lamp.webp" alt="" className="purchaseInfoImg" />
                             <div>
-                                <div>조명</div>
-                                <div>결제금액 : 3,500,000원</div>
+                                <div className='purchaseInfo_1'>조명</div>
+                                <div className='purchaseInfo_2'>결제금액 : 3,500,000원</div>
                             </div>
                             <div>
-                                <div>2023.12.17 구매</div>
-                                <div>전문가 검수 진행중</div>
+                                <div className='purchaseInfo_3'>2023.12.17 구매</div>
+                                <div className='purchaseInfo_4'>전문가 검수 진행중</div>
                             </div>
                             <div className='purchaseConfirmList'>
                                 <div><img src="/pic/icon_pic/purchaseConfirm.webp" alt="" className='purchaseConfirm'/></div>
@@ -218,13 +218,13 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
             </div>
             {/* 장바구니 */}
             <div className={`addToBag ${activeTab === 'addToBag' ? '' : 'close'}`}>
-                <div className='shoppingBagList'>장바구니 내역</div>
+                <div className='shoppingBagList'>장바구니</div>
                 <div className='shoppingProduct'>
                     <div className='shoppingProductInfo'>
                         <img src='/pic/shop_pic/LP.webp' className='shoppingImg_1'/>
                         <div>
                             <div className='shoppingProdName'>상품명 : The Beatles 1st LP</div>
-                            <div className='shoppingPrice'>가격 : 124,000원</div>
+                            <div className='shoppingPrice'>가격 : 99,200원</div>
                         </div>
                         <input type="checkbox" className='shoppingCheck'/>
                     </div>
@@ -232,7 +232,7 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                         <img src='/pic/shop_pic/cup.webp' className='shoppingImg_2'/>
                         <div>
                             <div className='shoppingProdName'>상품명 : Noritake</div>
-                            <div className='shoppingPrice_2'>가격 : 280,000원</div>
+                            <div className='shoppingPrice_2'>가격 : 148,400원</div>
                         </div>
                         <input type="checkbox" className='shoppingCheck2'/>
                     </div>

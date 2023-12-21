@@ -16,7 +16,7 @@ import './standard2.css';
 
 const Standard2 = () => {
     const [currentTime, setCurrentTime] = useState(new Date());
-    const [endTime, setEndTime] = useState(new Date('2023-12-20T23:59:59'));
+    const [endTime, setEndTime] = useState(new Date('2023-12-27T23:59:59'));
 
     const timeDiff = endTime.getTime() - currentTime.getTime();
     const secondsRemaining = Math.floor(timeDiff / 1000);
@@ -111,7 +111,7 @@ const Standard2 = () => {
     // }, [count_4]);
 
     useEffect(() => {
-        // count_4가 0이 되면 정지
+        // count_4가 100000 이하가 되면 정지
         if (count_4 <= 100000) {
             
             clearInterval(intervalIdRef.current);

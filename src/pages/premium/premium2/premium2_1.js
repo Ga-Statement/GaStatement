@@ -7,7 +7,7 @@ import './premium2_1.css';
 
 const Premium2_1 = () => {
     const [currentTime, setCurrentTime] = useState(new Date());
-    const [endTime, setEndTime] = useState(new Date('2023-12-20T23:59:59'));
+    const [endTime, setEndTime] = useState(new Date('2023-12-28T23:59:59'));
 
     const timeDiff = endTime.getTime() - currentTime.getTime();
     const secondsRemaining = Math.floor(timeDiff / 1000);
@@ -102,8 +102,8 @@ const Premium2_1 = () => {
     // }, [count_2]);
 
     useEffect(() => {
-        // count_2가 0이 되면 정지
-        if (count_2 <= 100000) {
+        // count_2가 100000 이하가 되면 정지
+        if (count_2 <= 150000) {
             
             clearInterval(intervalIdRef.current);
             clearInterval(timerRef.current);

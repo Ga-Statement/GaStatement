@@ -120,6 +120,11 @@ const Login = ({ goToSignUp, closeLogin }) => {
                 <button className='loginBtn' disabled={!idPwConfirm} onClick={handleLogin}>로그인</button>
                 {/* {(!isIdEmpty || !isPwEmpty) && (<div className='idPwNotMatch'>아이디와 비밀번호를 입력해주세요.</div>)} */}
                 {isIdEmpty && isPwEmpty && !idPwConfirm && (<div className='idPwNotMatch'>아이디와 비밀번호가 일치하지 않습니다.</div>)}
+                <div className='loginSNS'>
+                  <div className="loginNaver"><img src="/pic/icon_pic/naver_gray.webp" alt="" /></div>
+                  <div className="loginGoogle"><img src="/pic/icon_pic/google_gray.webp" alt="" /></div>
+                  <div className="loginKakao"><img src="/pic/icon_pic/kakao_gray.webp" alt="" /></div>
+                </div>
             </div>
         </div>
     );

@@ -88,3 +88,33 @@
     justify-content: center;
     align-items: center;
 }
+
+.loginSNS{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+}
+
+.loginNaver img{
+    width: 40%;
+}
+
+.loginGoogle img{
+    width: 40%;
+}
+
+.loginKakao img{
+    width: 40%;
+}
+
+.loginNaver:hover{
+    cursor: pointer;
+}
+
+.loginGoogle:hover{
+    cursor: pointer;
+}
+
+.loginKakao:hover{
+    cursor: pointer;
+}

@@ -14,7 +14,7 @@
     font-size: 3vh;
     font-weight: bold;
     text-align: left;
-    margin-left: 3.3vw;
+    margin-left: 4.8vw;
 }
 
 .knobCloseBtn{
@@ -90,6 +90,7 @@
     margin: 10px;
     border: 2px solid  rgba(161, 161, 161, 0.9);
     padding: 10px;
+    font-family: Pretendard;
 }
 
 .notice_agree_list{
@@ -119,6 +120,7 @@
     margin: 10px;
     border: 2px solid rgba(161, 161, 161, 0.9);
     padding: 10px;
+    font-family: Pretendard;
 }
 
 .knob_desc:focus, .knob_notice:focus{
@@ -138,4 +140,10 @@
 
 .go_knob:active{
     outline: none;
+}
+
+.knobInfo{
+    margin-top: 3vh;
+    margin-bottom: -3vh;
+    font-size: 1.7vh;
 }
