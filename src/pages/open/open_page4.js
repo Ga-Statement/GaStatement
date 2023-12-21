@@ -1,6 +1,7 @@
-import  React from "react";
+import  React, {useLayoutEffect, useRef} from "react";
 import TypeIt from "typeit-react";
 import './open_page4.css';
+import gsap from 'gsap';
 
 const Open_page4 = () => {
     return (
@@ -20,7 +21,7 @@ const Open_page4 = () => {
                 getBeforeInit={(instance) => {
                 instance.type("오래된 것들.").pause(1050)
                 .delete(7).pause(500).type("중고.").pause(1050)
-                .delete(3).pause(500).type("새것.").pause(3200)
+                .delete(3).pause(500).type("새것.").pause(3600)
                 .delete(3).pause(500).type("오래된 것들.").pause(2400)
                 .delete(7).pause(500).type("중고.").pause(750)
                 .delete(3).pause(500).type("불필요한.").pause(750)

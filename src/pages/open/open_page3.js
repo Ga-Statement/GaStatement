@@ -13,7 +13,7 @@ const Open_page3 = () => {
            const documentHeight = document.documentElement.scrollHeight;
            const newScrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
 
-           if (!animationExecuted && newScrollPercent > 14) {
+           if (!animationExecuted && newScrollPercent > 12.5) {
                const animation = anime({
                    targets: '.line3',
                    scaleY: [0, 1],

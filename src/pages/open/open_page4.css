@@ -3,5 +3,7 @@
 .page4_full{height: 100vh; background-color: black;
             display: flex; justify-content: center;}
 
-.typelt{ color:white; font-size:15em; font-family: "Pretendard";
+.typelt{ background: linear-gradient(to top, #cdcdcd, #ffffff);
+        color: transparent;
+        -webkit-background-clip: text; font-size:15em; font-family: "Pretendard";
         font-weight:bold; padding-top:25vh;}
