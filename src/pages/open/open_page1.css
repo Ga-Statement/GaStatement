@@ -5,8 +5,8 @@
 /*font-family: "KoreaYMyungjo"; */
 
 *{margin:0px; padding:0px;}
-body{margin:0px; padding:0px; height: 110vw;}
-.pageone_wrap{margin: 0px; display: flex; flex-direction: column; height: 140vh;}
+body{margin:0px; padding:0px;}
+.pageone_wrap{margin: 0px; display: flex; flex-direction: column; height: 100vh;}
     .gird_wrap{ position: relative; left: 0; top: 0; right: 0;display:grid;
         grid-template-columns: repeat(14, 1fr);
         grid-template-rows: repeat(6,14vh);}
@@ -30,6 +30,7 @@ body{margin:0px; padding:0px; height: 110vw;}
                 position: relative;justify-content: center;}
         .text_open{position: absolute; top:0.4em; font-size: 5vw; font-family: 'Athelas Italic';}
         .text_drawer{font-size: 16vw;font-family: "KoreaYMyungjo";font-weight: 900; position: absolute; top:0.3em;}
+        .text_putin{position: absolute; top:22em; left:28em; text-decoration: none; color:black;}
 .girdbox8{ grid-column: 12/15; grid-row: 3/4; position: relative;}
         .box8_img{object-fit: contain; position: absolute; width: 70%;}
 .girdbox8_1{ grid-column: 12/15; grid-row: 4/5; position: relative;}
@@ -52,3 +53,4 @@ body{margin:0px; padding:0px; height: 110vw;}
 .girdbox14{position: fixed; right:-25em; bottom:-10em}
         .box14_img{object-fit: contain;width: 40%;}
 
+.black{width: 100%; height: 30em;}
