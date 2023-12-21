@@ -60,6 +60,7 @@
     overflow: auto;
     width: 25vw;
     height: 10vh;
+    font-family: Pretendard;
 }
 
 .terms_contents:focus{
