@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 body{
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: Pretendard;
     margin: 0;
     padding: 0;
     user-select: none; /* 텍스트 선택 방지 */
@@ -16,8 +16,8 @@ body{
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 3.3vw;
-    width: 100%;
+    height: 2.7vw;
+    width: 100vw;
     align-items: center;
     justify-content: center;
     z-index: 5;
@@ -44,11 +44,11 @@ body{
 }
 
 .myStory{
-    position: fixed;
-    top: 5%;
+    position: absolute;
+    top: 0%;
     right: 0;
     width: 40vw;
-    height: 85vh;
+    height: 95.612vh;
     display: flex;
     flex-direction: block;
     align-items: center;
@@ -57,13 +57,15 @@ body{
     color: rgb(0, 0, 0);
     border-radius: 10px;
     transform: translateX(0%);
-    transition: transform 2s ease-in-out;
+    transition: all 2s ease-in-out;
     z-index: 4;
+    opacity: 1;
 }
 
 .myStory.close{
+    opacity: 0;
     transform: translateX(150%);
-    transition: transform 2s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 
 .loginPage{
@@ -77,7 +79,7 @@ body{
 
 .loginContainer{
     position: fixed;
-    top: 37%;
+    top: 45.612%;
     right: 0;
     width: 35%;
     height: 50%;
@@ -88,39 +90,42 @@ body{
     background-color: rgba(255, 255, 255, 0.9);    
     color: rgb(0, 0, 0);
     border-radius: 10px;
-    transform: translateX(-5%);
+    transform: translateX(-10%);
     transition: transform 1.5s ease-in-out;
     z-index: 4;
     text-align: center;
+    opacity: 1;
 }
 
 .loginContainer.close{
+    opacity: 0;
     transform: translateX(100%); 
-    transition: transform 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 .signUp{
     position: fixed;
     bottom: 0;
     left: 37%;
-    width: 30%;
-    height: 80%;
+    width: 35vw;
+    height: 83vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
     background-color: rgba(255, 255, 255, 0.9);    
     color: rgb(0, 0, 0);
-    border-radius: 10px;
-    transform: translateY(-16%);
+    border-radius: 2vh;
+    transform: translateY(-5.3%);
     transition: transform 1.5s ease-in-out;
     z-index: 3;
-    text-align: center;
+    opacity: 1;
 }
 
 .signUp.close{
-    transform: translateY(700%); 
-    transition: transform 1.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(100%); 
+    transition: all 1.5s ease-in-out;
 }
 
 .sidebar{
@@ -130,45 +135,80 @@ body{
 .loginPage.active, .category_3.active{
     color: rgb(177, 177, 177);  
 }
-/* 
-.drawerB {
-    position: relative;
-} */
 
 .drawerBtn{
-    background-color: rgba(215, 210, 210);
-    border-radius: 21px;
-    width: 54px;
-    height: 54px;
     position: fixed;
-    bottom: 105px;
-    left: 100px;
+    left: 6vw;
+    bottom: 9.5vh;
     z-index: 1;
     cursor: pointer;
+    width: 57px;
+    z-index: 1;
+}
+
+.drawerBtn:hover{
+    filter: drop-shadow(0 0 20px rgba(182, 182, 182, 0.7));
+    transition: drop-shadow 3s ease-in-out;
+}
+
+.drawerBtn:not(:hover){
+    filter: drop-shadow(0 0 20px transparent);
+    transition: drop-shadow 3s ease-in-out;
+}
+
+.drawerApplyTxt{
+    opacity: 0;
+    position: fixed;
+    bottom: 7vh;
+    left: 6.9vw;
+    white-space : nowrap;
+    font-size: 15px;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+}
+
+.drawerBtn:hover + .drawerApplyTxt{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.drawerBtn:not(:hover) + .drawerApplyTxt{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .drawerApply{
     position: fixed;
-    bottom: 0;
+    bottom: -5.88%;
     left: 35%;
-    width: 35%;
-    height: 80%;
+    width: 30%;
+    height: 73%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
     background-color: rgba(255, 255, 255, 0.9);    
     color: rgb(0, 0, 0);
-    border-radius: 10px;
-    transform: translateY(-15%);
+    border-radius: 2vw;
+    transform: translateY(-14.01%);
     transition: transform 1.5s ease-in-out;
     z-index: 3;
     text-align: center;
+    opacity: 1;
 }
 
 .drawerApply.close{
+    opacity: 0;
     transform: translateY(100%); 
-    transition: transform 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+
+.custom-swal-title{
+    font-size: 2.5vh;
+}
+
+.custom-swal-popup{
+    width: 30vw;
 }
   
 @media only screen and (max-width: 850px) {
@@ -190,6 +230,10 @@ body{
         padding: 0 2rem;
         background-color: transparent;
         height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0%;
+        z-index: 1;
     }
 
     .sidebar .sideOpenBtn, .sideCloseBtn{
@@ -229,17 +273,35 @@ body{
     }
 
     .sidebar nav div{
-        font-size: 1.5rem;
+        font-size: 3.5vh;
         color: white;
         text-decoration: none;
-        margin: 5px 20px;
+        margin: 3vh;
     }
 
     .homeSideBar{
-        font-size: 1.5rem;
+        font-size: 3.5vh;
         margin: 0 2rem;
         color: white;
         text-decoration: none;
+    }
+
+    .aboutLink{
+        color: white;
+        text-decoration: none;
+    }
+
+    .aboutLinkLi{
+        margin-bottom: 3vh;
+    }
+
+    .shopLink{
+        color: white;
+        text-decoration: none;
+    }
+
+    .myStoryLink{
+        font-size: 2.5vh;
     }
 
     .list{
@@ -260,27 +322,44 @@ body{
         align-items: center;
         justify-content: center;
         list-style-type: none;
-        margin: 5px;
     }
 
     .list div:hover{
         cursor: pointer;
     }
 
-    .sellBuyLink, .communityLink, .drawerLink, .myStoryLink, .yourStoryLink{
+    .sellBuyLink, .communityLink, .myStoryLink, .yourStoryLink{
         text-decoration: none;
         color: white;
         font-size: 1.3rem;
     }
 
+    .drawerLink_1, .drawerLink_2, .drawerLink_3{
+        text-decoration: none;
+        color: white;
+        font-size: 3vh;
+    }
+
+    .drawerLinkLi_1{
+        margin-bottom: 1vh;
+    }
+
+    .drawerLinkLi_2{
+        margin-bottom: 1vh;
+    }
+
+    .drawerLinkLi_3{
+        margin-bottom: 6vh;
+    }
+
     .sideLoginBtn{
-        font-size: 15px;
+        font-size: 3vh;
         padding-right: 100px;
         background-color: transparent;
         color: white;
         border: none;
         text-decoration: none;
-        margin: 10px;
+        margin-left: 14vw;
     }
 
     .sideOpenBtn.visible{

@@ -1,8 +1,8 @@
 const Premium2_2 = () => {
     
     return(
-        <div style={{height:"100vh", backgroundColor:'ivory', textAlign: "center", fontSize: "50px"}}>
-            페이지2 스크롤 테스트
+        <div>
+            <img src="/pic/shop_pic/premium2_desc.webp" alt="" style={{width: '100%',  height: '100%'}}/>
         </div>
     );
 };

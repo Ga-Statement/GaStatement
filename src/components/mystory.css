@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Lora&family=Noto+Sans+KR:wght@100;200;300&display=swap');
+
 .myInfo.close, .specs.close, .addToBag.close{
     display:none;
 }
 
 .my_story{
+    font-family: Pretendard;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,30 +37,40 @@
 .borderR{
     border-right: 1px solid black;
     margin: 0 1vw;
-    height: 4vh;
+    height: 3vh;
 }
 
-.closeMystoryBtn img{
+.closeMystoryBtn{
     width: 2vw;
     position: absolute;
+    top: -1vh;
     right: -6vw;
 }
 
-.closeMystoryBtn img:hover{
+.closeMystoryBtn:hover{
     cursor: pointer;
+}
+
+.editInfo{
+    background-color: rgb(103, 109, 114);
+    color: white;
+    padding: 0.5vh;
+    border-radius: 5vw;
+    width: 3vw;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .basicInfoTitle{
     position: absolute;
     top: -21vh;
     left: 6vw;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
 }
-
 
 .basicInfo{
     width: 30vw;
-    height: 24vh;
+    height: 28vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
     border-radius: 1vw;
     margin: 0 auto;
@@ -74,45 +87,55 @@
     top: 1vh;
     left: 1vw;
     width: 28vw;
-    font-size: 1.9vh;
 }
 
 .profile{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 1vh;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
+    padding: 0.5vh;
+}
+
+.profile_list{
+    display: flex;
+    flex-direction: row;
 }
 
 .emailInfo{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 1vh;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
+    padding: 0.5vh;
 }
 
 .profileIcon{
-    width: 2vw;
+    width: 1.5vw;
     height: 3vh;
+    margin-right: 1vw;
 }
 
 .phoneIcon{
-    width: 2vw;
+    width: 1.5vw;
     height: 3vh;
+    margin-right: 1vw;
 }
 
 .addressIcon{
-    width: 2vw;
+    width: 1.5vw;
     height: 3vh;
+    margin-right: 1vw;
 }
 
 .emailIcon{
-    width: 2vw;
-    height: 3vh;
+    width: 1.5vw;
+    height: 2.5vh;
+    margin-right: 1vw;
 }
 
 .onoffIcon:hover{
@@ -123,82 +146,102 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 1vh;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
+    padding: 0.5vh;
 }
 
 .addressInfo{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 1vh;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
+    padding: 0.5vh;
 }
 
 .promotionTitle{
     margin: 1vh;
     position: absolute;
-    top: 7vh;
-    right: 25vw;
-    font-size: 1.9vh;
+    top: 11vh;
+    left: 5.5vw;
+    font-size: 1.6vh;
 }
 
 .promotion{
     width: 30vw;
-    height: 13vh;
+    height: 15vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
     border-radius: 1vw;
     background-color: white;
     position: absolute;
-    top: 11vh;
+    top: 15vh;
     left: 5vw;
+    padding: 0.5vh;
 }
 
 .phoneAgree{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 2vh;
-    font-size: 2vh;
+    font-size: 1.6vh;
+    padding: 0.5vh;
 }
 
 .emailAgree{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 2vh;
-    font-size: 2vh;
+    font-size: 1.6vh;
+    padding: 0.5vh;
 }
 
 .alarmTitle{
     margin: 1vh;
     position: absolute;
-    top: 25vh;
-    right: 24vw;
-    font-size: 1.9vh;
+    top: 31vh;
+    left: 5.5vw;
+    font-size: 1.6vh;
 }
 
 .alarm{
     width: 30vw;
-    height: 13vh;
+    height: 15vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
     border-radius: 1vw;
     margin: 0 auto;
     background-color: white;
     position: absolute;
-    top: 30vh;
+    top: 35vh;
     left: 5vw;
+    padding: 0.5vh;
 }
 
 .specsname{
-    font-size: 1.9vh;
+    font-size: 1.6vh;
     position: absolute;
     top: -21vh;
     left: 6vw;
+}
+
+.checkProd{
+    width: 1.5vw;
+    height: 3.5vh;
+}
+
+.purchaseConfirmList{
+    text-align: center;
+}
+
+.purchaseConfirm{
+    width: 1.5vw;
+    height: 3.5vh;
 }
 
 .sales{
@@ -209,7 +252,7 @@
     margin: 0 auto;
     background-color: white;
     overflow: auto;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
     position: absolute;
     top: -18vh;
     left: 5vw;
@@ -224,21 +267,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 2vh;
 }
 
-.date{
-    padding-left: 1vw;
-    padding-top: 1vh;
+.salesInfoImg{
+    width: 2vw;
+    height: 5vh;
 }
 
 .plus{
     text-align: center;
+    border: 1px solid gray;
+    border-radius: 5vw;
+    width: 7vw;
+    margin: 0 auto;
+    padding: 1vh;
+    white-space: nowrap;
 }
 
 .specsname_2{
-    font-size: 1.9vh;
+    font-size: 1.6vh;
     position: absolute;
     top: 2vh;
     left: 6vw;
@@ -252,7 +301,7 @@
     margin: 0 auto;
     background-color: white;
     overflow: auto;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
     position: absolute;
     top: 6vh;
     left: 5vw;
@@ -267,15 +316,20 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
+    border-bottom: 2px solid rgb(215, 215, 215);
     margin: 2vh;
+}
+
+.purchaseInfoImg{
+    width: 1.2vw;
+    height: 5vh;
 }
 
 .shoppingBagList{
     position: absolute;
     top: -21vh;
     left: 6vw;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
 }
 
 .shoppingProduct{
@@ -283,12 +337,12 @@
     flex-direction: column;
     align-items: center;
     width: 30vw;
-    height: 20vh;
+    height: 24vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
     border-radius: 1vw;
     margin: 0 auto;
     background-color: white;
-    font-size: 1.9vh;
+    font-size: 1.6vh;
     position: absolute;
     top: -18vh;
     left: 5vw;
@@ -297,15 +351,25 @@
 .shoppingProductInfo{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 3px solid rgb(215, 215, 215);
-    margin: 2vh;
+    border-bottom: 2px solid rgb(215, 215, 215);
+    margin: 1vh;
     width: 26vw;
     white-space: nowrap;
+    padding: 1vh;
+    justify-content: space-around;
 }
 
-.shoppingImg{
-    margin: 1vh;
+.shoppingImg_1{
+    width: 4vw;
+    height: 5vh;
+    margin-right: 2vw;
+}
+
+.shoppingImg_2{
+    width: 4vw;
+    height: 5vh;
+    margin-right: 1.8vw;
+
 }
 
 .shoppingProdName{
@@ -316,10 +380,27 @@
     margin: 1vh;
 }
 
+.shoppingPrice_2{
+    margin: 1vh;
+}
+
+.shoppingCheck{
+    margin-left: 4vh;
+    accent-color: gray;
+    zoom: 1.5;
+}
+
+.shoppingCheck2{
+    margin-left: 9vh;
+    margin-bottom: 2vh;
+    accent-color: gray;
+    zoom: 1.5;
+}
+
 .buyButton{
     text-decoration: none;
-    color: black;
-    background-color: rgb(205, 205, 205);
+    color: white;
+    background-color:#909090;
     border-radius: 0.5vw;
     padding: 1vh;
     position: absolute;
@@ -327,17 +408,34 @@
     left: 18vw;
 }
 
-.withdrawal{
+.editInfoBtn{
     cursor: pointer;
     position: absolute;
     bottom: -25vh;
-    left: 18.5vw;
-    font-size: 2.1vh;
+    left: 6vw;
+    font-size: 1.8vh;
 }
 
-/* .admin{
+.withdrawal{
+    cursor: pointer;
+    position: absolute;
+    bottom: -30vh;
+    left: 6vw;
+    font-size: 1.8vh;
+
+}
+
+.admin{
     cursor: pointer;
     font-size: 20px;
     text-decoration: none;
     color: black;
-} */
+    position: absolute;
+    bottom: -25vh;
+    left: 30vw;
+    font-size: 2.1vh;
+}
+
+.hidden {
+    visibility: hidden;
+}

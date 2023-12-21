@@ -1,7 +1,7 @@
 .premium1_1_Container{
     width: 100vw;
     height: 100vh;
-    background: black;
+    background: #221F20;
 }
 
 .premium1_1_Wrapper{
@@ -9,13 +9,13 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 10%;
+    top: 22%;
 }
 
 .premium1_1_originalPrice{
     font-size: 20px;
     color: white;
-    text-decoration: line-through solid rgb(255, 255, 255);
+    text-decoration: line-through solid rgb(247, 98, 98);
 }
 
 .premium1_1_currentPrice{
@@ -27,7 +27,20 @@
     padding: 15px;
     border-radius: 10px;
     white-space: nowrap;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.premium1_1_Info_name {
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -49,8 +62,8 @@
 .premium1_1_Info_1_1{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
@@ -62,19 +75,22 @@
     margin-right: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
-.premium1_1_Info_1_1_name{
+.premium1_1_Info_1_1_brands{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_1_2{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
@@ -86,19 +102,22 @@
     margin-right: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_1_2_years{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_1_3{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
@@ -110,12 +129,15 @@
     margin-right: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_1_3_times{
     margin-left: 15px;
+    margin-top: -4.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_2{
@@ -123,67 +145,74 @@
 }
 
 .premium1_1_Info_2 img{
-    width: 300px;
+    width: 30vw;
 }
 
 .premium1_1_Info_3{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0 150px;
+    margin: -1.5vh 150px;
 }
 
 .premium1_1_Info_3_1{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
     width: 300px;
-    justify-content: left;
+    justify-content: right;
 }
 
 .premium1_1_Info_3_1_specialist{
-    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -3.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_3_1_name{
-    margin-right: 15px;
+    margin-left: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_3_2{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
-    border: 1px solid white;
+    margin: 3vh 0;
+    /* border: 1px solid white; */
     color: white;
     padding: 20px;
     border-radius: 35px;
     width: 300px;
+    justify-content: right;
 }
 
 .premium1_1_Info_3_2_status{
-    margin-right: 15px;
+    margin-left: 15px;
     color: rgb(255, 255, 255);
     font-size: 15px;
+    font-weight: bold;
 }
 
 .premium1_1_Info_3_2_prodStatus{
-    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -3.5px;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .premium1_1_Info_3_3{
     display: flex;
     flex-direction: row;
-    margin: 15px 0;
+    margin: 3vh 0;
     /* border: 1px solid black; */
     padding: 15px;
     border-radius: 10px;
@@ -211,10 +240,9 @@
 }
 
 .premium1_1_BuyBtn{
-    /* border: 1px solid black; */
     color: rgb(255, 255, 255);
     text-align: center;
-    margin: 0 15px;
+    margin: 0 25px;
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
@@ -224,6 +252,24 @@
     display: flex;
 }
 
+.premium1_1_buyIcon{
+    width: 20px;
+    height: 23px;
+}
+
+.premium1_1_basketIcon{
+    width: 20px;
+    height: 23px;
+}
+
 .premium1_1_buyIcon, .premium1_1_basketIcon{
-    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.premium1_1_BuyBtn:hover{
+    cursor: pointer;
+}
+
+.premium1_1_BagAdd:hover{
+    cursor: pointer;
 }

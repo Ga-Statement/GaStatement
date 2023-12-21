@@ -1,19 +1,22 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 .login_1{
     display: flex;
     flex-direction: block;
     align-items: flex-end;
     justify-content: space-around;
-    
     margin: 20px;
+    font-family: Pretendard;
 }
 
 .loginTitle{
-    font-size: 5vh;
+    font-size: 4vh;
+    font-weight: bold;
     margin-right: 10px;
 }
 
 .goToSignUp{
-    font-size: 2.5vh;
+    font-size: 2vh;
     margin-right: 10px;
     color: rgb(73, 73, 73);
 }
@@ -32,13 +35,14 @@
     align-items: center;
     justify-content:center;
     margin: 10px;
+    font-family: Pretendard;
 }
 
 .idInput, .pwInput{
     width: 30vw;
     border: none;
     border-bottom: 3px solid gray;
-    font-size: 20px;
+    font-size: 2vh;
     margin: 20px;
     background-color: transparent;
 }
@@ -66,14 +70,15 @@
     width: 28vw;
     height: 6vh;
     border-radius: 30px;
-    background-color: rgb(73, 73, 73);
+    border: none;
+    background-color: #909090;
     color: white;
     text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
     cursor: pointer;
-    font-size: 3vh;
+    font-size: 2vh;
 }
 
 .idPwNotMatch{

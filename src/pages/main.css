@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 .carouselContainer{
     background: url("/public/pic/main_pic/mainBackground.png");
     background-size: cover;
@@ -10,6 +12,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    font-family: Pretendard;
 }
 
 .contents_1, .contents_2, .contents_3, .contents_4{

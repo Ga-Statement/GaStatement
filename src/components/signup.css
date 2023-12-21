@@ -1,13 +1,16 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 .join{
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 20vw;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 5px;
+    width: 30vw;
+    height: 80vh;
+    margin: 0px auto;
+    font-family: Pretendard;
+    overflow: auto;
 }
 
 .joinTitle{
@@ -16,17 +19,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin: 10px;
+    margin: 5vh;
 }
 
 .join_title{
-    font-size: 2vw;
+    font-size: 1.7vw;
     font-weight: bold;
-    margin-right: 60px;
-}
-
-.close img{
-    width: 5vh;
+    margin-right: 16vw;
+    white-space: nowrap;
 }
 
 .close:hover{
@@ -34,9 +34,9 @@
 }
 
 .emailInput, .passwordInput, .passwordCheck, .nicknameInput, .phoneNumInput{
-    width: 200px;
-    height: 20px;
-    font-size: 15px;
+    width: 25vw;
+    height: 5vh;
+    font-size: 0.9vw;
     margin: 10px;
     padding: 4px;
     background-color: transparent;
@@ -47,8 +47,7 @@
 .emailInput:focus, .passwordInput:focus, .passwordCheck:focus, .nicknameInput:focus, .phoneNumInput:focus, 
 .addressInput:focus, .detailedAddressInput:focus{
     outline: none;
-    background-color: #b8b8b8;
-    border-radius: 10px;
+    border-bottom: 2px solid #202020;
 }
 
 .emailInput:focus::placeholder, .passwordInput:focus::placeholder, .passwordCheck:focus::placeholder{
@@ -68,9 +67,9 @@
 }
 
 .addressInput, .detailedAddressInput{
-    width: 200px;
-    height: 20px;
-    font-size: 15px;
+    width: 25vw;
+    height: 5vh;
+    font-size: 0.9vw;
     margin: 10px;
     padding: 4px;
     background-color: transparent;
@@ -80,7 +79,7 @@
 
 .warning{
     color: rgb(247, 22, 22);
-    font-size: 15px;
+    font-size: 0.9vw;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -88,7 +87,7 @@
 
 .totalWarning{
     color: rgb(247, 22, 22);
-    font-size: 15px;
+    font-size: 0.9vw;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -97,7 +96,7 @@
 
 .pass{
     color: rgb(59, 59, 255);
-    font-size: 15px;
+    font-size: 0.9vw;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -130,43 +129,62 @@
 }
 
 .signUpBtn{
-    background-color: #2b2b2b;
+    background-color: #c6c6c6;
+    color: #ffffff;
+    border: none;
+    border-radius: 10vw;
+    cursor: pointer;
+    font-size: 2vh;
+    padding: 1vh;
+    padding-left: 8vw;
+    width: 20vw;
+    margin-top: 2vh;
+}
+
+.signUpBtn.invalid{
+    background-color: #909090;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.validBtn{
+    background-color: #909090;
     color: #d7fff1;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 2vh;
 }
 
-.signUpBtn.invalid{
-    background-color: #a3a1a1;
+.validBtn.invalid{
+    background-color: #c6c6c6;
     color: #ffffff;
     cursor: pointer;
 }
 
 .termsBtn{
-    background-color: #a3a1a1;
+    background-color: #909090;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 2vh;
     margin: 5px;
 }
 
 .termsBtn.invalid{
-    background-color: #2b2b2b;
+    background-color: #909090;
     color: #ffffff;
     border: none;
     border-radius: 5px;
 }
 
 .termsConfirmBtn{
-    background-color: #2b2b2b;
+    background-color: #909090;
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 2vh;
 }
 
 .termsConfirmBtn.invalid{
@@ -175,6 +193,6 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 2vh;
     margin: 5px;
 }

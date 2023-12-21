@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.DrawerPage2{
+    width: 100vw;
+    height: 120vh;
+    background-color: #F0F0F0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.svg_2{
+    margin-left: 2vw;
+}
+
+.DrawerPage2_1{
+    width: 80%;
+    position: absolute;
+    background-color: #F0F0F0;
+    top: 45vh;
+    left: 11vw;
+    padding: 5vh;
+}
+
+.DrawerPage2_1_desc{
+    width: 50%;
+    height: 100%;
+}
+
+.openDrawerImg{
+    width: 12%;
+    position: absolute;
+    top: 12%;
+    left: 45%;
+}

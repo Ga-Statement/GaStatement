@@ -1,0 +1,141 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+.knob_container{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh auto;
+    padding: 5vh;
+    overflow-y: auto;
+    font-family: Pretendard;
+}
+
+.knob_title{
+    font-size: 3vh;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 3.3vw;
+}
+
+.knobCloseBtn{
+    cursor: pointer;
+    position: fixed;
+    top: 5.8vh;
+    right: 2.5vw;
+}
+
+.check{
+    margin: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    accent-color: gray;
+}
+
+.check_p{
+    margin: 1vw;
+}
+
+.check_b{
+    margin: 1vw;
+}
+
+.prod_brand, .when_buy, .knob_address, .knob_email, .knob_price, .applicant_name, .applicant_phone{
+    width: 20vw;
+    height: 5vh;
+    border: none;
+    font-size: 1.8vh;
+    border-bottom: 2px solid rgba(161, 161, 161, 0.9);
+    background-color: transparent;
+}
+
+.prod_name{
+    width: 20vw;
+    height: 5vh;
+    border: none;
+    font-size: 1.8vh;
+    margin: 10px;
+    margin-top: 5vh;
+    border-bottom: 2px solid rgba(161, 161, 161, 0.9);
+    background-color: transparent;
+}
+
+.prod_name:focus, .prod_brand:focus, .when_buy:focus, .applicant_name:focus, .applicant_phone:focus, .knob_address:focus, .knob_email:focus, .knob_price:focus, .knob_desc:focus{
+    outline: none;
+    border-bottom: 2px solid #202020;
+}
+
+.knob_file{
+    width: 20vw;
+    height: 5vh;
+    border: none;
+    font-size: 2vh;
+    margin: 10px;
+    border-bottom: 2px solid rgba(161, 161, 161, 0.9);
+    background-color: transparent;
+}
+
+.knob_file{
+    cursor: pointer;
+}
+
+.knob_desc{
+    resize: none;
+    width: 20vw;
+    height: 30vh;
+    overflow-y: auto;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.5vh;
+    margin: 10px;
+    border: 2px solid  rgba(161, 161, 161, 0.9);
+    padding: 10px;
+}
+
+.notice_agree_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.notice_agree_txt{
+    margin-top: 0.5vh;
+    margin-right: 0.5vw;
+}
+
+.notice_agree{
+    accent-color: gray;
+    zoom: 1.5;
+}
+
+.knob_notice{
+    resize: none;
+    width: 20vw;
+    height: 30vh;
+    overflow-y: auto;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.5vh;
+    margin: 10px;
+    border: 2px solid rgba(161, 161, 161, 0.9);
+    padding: 10px;
+}
+
+.knob_desc:focus, .knob_notice:focus{
+    outline: none;
+}
+
+.go_knob{
+    cursor: pointer;
+    margin: 3vh auto;
+    width: 20vw;
+    background-color: #909090;
+    color: white;
+    padding: 1vh;
+    border-radius: 3vw;
+    border: none;
+}
+
+.go_knob:active{
+    outline: none;
+}

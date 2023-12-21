@@ -1,0 +1,139 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+.pay4_complete_container_4{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #EDCFAB;
+    font-family: Pretendard;
+}
+
+.payment4_complete_wrapper_left{
+    flex: 1.2;
+    text-align: center;
+    position: relative;
+    top: 19%;
+    left: 0%;
+    height: 50%;
+}
+
+.payment4_complete_product_img{
+    width: 50%;
+}
+
+.pay4_complete_wrapper_right{
+    flex: 1;
+}
+
+.pay4_complete_wrapper_right_box{
+    width: 40vw;
+    height: 95.65vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 6vw;
+}
+
+.pay4_complete_wrapper{
+    flex: 0.5;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 5%;
+}
+
+.pay4_complete_title{
+    text-align: center;
+    margin-bottom: 5px;
+    position: relative;
+    top: 3%;
+    font-size: 2.5vh;
+}
+
+.pay4_complete_number{
+    font-size: 2vh;
+    margin: 10px;
+}
+
+.pay4_complete_desc{
+    font-size: 2vh;
+    margin: 10px;
+    color: gray;
+}
+
+.pay4_account_info{
+    flex: 1.5;
+    margin: 50px auto;
+    text-align: center;
+    border: 3px solid rgb(189, 189, 189);
+    padding-top: 30px;
+    padding-bottom: 80px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 23%;
+    font-size: 1.8vh;
+    background-color: white;
+    position: relative;
+    top: 7%;
+}
+
+.pay4_account_info_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    position: relative;
+    top: 30%;
+}
+
+.pay4_account_info_1{
+    position: relative;
+    top: 20%;
+}
+
+.pay4_account_info_2_1{
+    margin: 10px;
+}
+
+.pay4_account_info_2_1_1, .pay4_account_info_2_1_2, .pay4_account_info_2_1_3{
+    margin: 10px;
+}
+
+.pay4_account_info_2_2_1, .pay4_account_info_2_2_2, .pay4_account_info_2_2_3{
+    margin: 10px;
+}
+
+.pay4_account_info_2_2{
+    margin: 10px;
+    text-align: left;
+}
+
+.vr{
+    width:3px;
+    background-color:#b3b3b3;
+}
+
+.pay4_complete_desc2{
+    flex: 0.5;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 1.7vh;
+    color: rgb(107, 107, 107);
+    position: relative;
+    top: 10%;
+}
+
+.pay4_gotoMain{
+    flex: 0.5;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    left: 0%;
+}

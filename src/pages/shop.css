@@ -8,136 +8,318 @@
     height: 100vh;
     width: 100vw;
     cursor: grab;
-    background-color: rgb(59, 59, 59);
+    background-color: black;
     position: relative;
 }
 
 .product_container_1 {
     position: absolute;
-    top: 10vh;
-    left: 0vw;
-    width: 50vw;
-    height: 65vh;
-    /* background-color: rgb(214, 214, 214); */
+    top: 5vh;
+    left: 20vw;
+    width: 15vw;
+    height: 35vh;
     box-sizing: border-box;
 }
 
 .product_container_2 {
     position: absolute;
-    top: 10vh;
-    left: 60vw;
-    width: 50vw;
-    height: 65vh;
-    /* background-color: rgb(214, 214, 214); */
+    top: 5vh;
+    left: 45vw;
+    width: 15vw;
+    height: 35vh;
     box-sizing: border-box;
 }
 
 .product_container_3 {
     position: absolute;
-    top: 10vh;
-    left: 120vw;
-    width: 50vw;
-    height: 65vh;
-    background-color: rgb(214, 214, 214);
+    top: 5vh;
+    left: 70vw;
+    width: 15vw;
+    height: 35vh;
     box-sizing: border-box;
 }
 
 .product_container_4 {
     position: absolute;
-    top: 10vh;
-    left: 180vw;
-    width: 50vw;
-    height: 65vh;
-    background-color: rgb(214, 214, 214);
+    top: 5vh;
+    left: 95vw;
+    width: 25vw;
+    height: 35vh;
+    box-sizing: border-box;
+}
+
+.product_container_5{
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    width: 15vw;
+    height: 35vh;
+    box-sizing: border-box;
+}
+
+.product_container_6{
+    position: absolute;
+    top: 50vh;
+    left: 33vw;
+    width: 15vw;
+    height: 35vh;
+    box-sizing: border-box;
+}
+
+.product_container_7{
+    position: absolute;
+    top: 50vh;
+    left: 58vw;
+    width: 15vw;
+    height: 35vh;
+    box-sizing: border-box;
+}
+
+.product_container_8{
+    position: absolute;
+    top: 50vh;
+    left: 83vw;
+    width: 15vw;
+    height: 35vh;
+    box-sizing: border-box;
+}
+
+.product_container_9{
+    position: absolute;
+    top: 5vh;
+    left: -5vw;
+    width: 15vw;
+    height: 35vh;
+    box-sizing: border-box;
+}
+
+.product_container_10{
+    position: absolute;
+    top: 50vh;
+    left: 108vw;
+    width: 15vw;
+    height: 35vh;
     box-sizing: border-box;
 }
 
 .product_img{
     position: absolute;
-    top: 15vh;
-    left: 13vw;
-    width: 23vw;
-    height: 33vh;
+    top: 6vh;
+    left: -0.5vw;
+    width: 13vw;
+    height: 18vh;
     z-index: 1;
 }
 
 .product_img_2 {
     position: absolute;
-    top: 15vh;
-    left: 14vw;
-    width: 22vw;
-    height: 32vh;
+    top: 8vh;
+    left: 1.5vw;
+    width: 10vw;
+    height: 14vh;
     z-index: 1;
 }
 
 .product_img_3 {
     position: absolute;
-    top: 24%;
-    left: 30%;
-    width: 20vw;
-    height: 30vh;
+    top: 6vh;
+    left: 2.5vw;
+    width: 10vw;
+    height: 17vh;
     z-index: 1;
 }
 
 .product_img_4 {
     position: absolute;
-    top: 30%;
-    left: -15%;
-    width: 20vw;
-    height: 30vh;
+    top: 6vh;
+    left: 0.5vw;
+    width: 13vw;
+    height: 18vh;
+    z-index: 1;
+}
+
+.product_img_5 {
+    position: absolute;
+    top: 3vh;
+    left: 2.5vw;
+    width: 8vw;
+    height: 22vh;
+    z-index: 1;
+}
+
+.product_img_6 {
+    position: absolute;
+    top: 2vh;
+    left: 4vw;
+    width: 5.5vw;
+    height: 26vh;
+    z-index: 1;
+}
+
+.product_img_7 {
+    position: absolute;
+    top: 2vh;
+    left: 4vw;
+    width: 5vw;
+    height: 24vh;
+    z-index: 1;
+}
+
+.product_img_8 {
+    position: absolute;
+    top: 6vh;
+    left: 2vw;
+    width: 10vw;
+    height: 20vh;
+    z-index: 1;
+}
+
+.product_img_9 {
+    position: absolute;
+    top: 6vh;
+    left: 0.5vw;
+    width: 10vw;
+    height: 20vh;
+    z-index: 1;
+}
+
+.product_img_10 {
+    position: absolute;
+    top: 6vh;
+    left: 2.3vw;
+    width: 8vw;
+    height: 20vh;
     z-index: 1;
 }
 
 .product_name{
     position: absolute;
-    top: 28vh;
-    left: 2vw;
-    font-size: 4.5vw;
+    top: 12vh;
+    left: -2.5vw;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
     color: rgba(87, 87, 87, 0.3);
     overflow: hidden;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Athelas Italic', serif;
 }
 
 .product_name_2 {
     position: absolute;
-    top: 22vh;
-    left: 11vw;
-    font-size: 7vw;
+    top: 12.5vh;
+    left: 0.3vw;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
     color: rgba(87, 87, 87, 0.3);
     overflow: hidden;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Athelas Italic', serif;
 }
 
 .product_name_3 {
     position: absolute;
-    top: 33vh;
-    left: 25vw;
-    font-size: 4.5vw;
+    top: 12vh;
+    left: -0.8vw;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
     color: rgba(87, 87, 87, 0.3);
     overflow: hidden;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Athelas Italic', serif;
 }
 
 .product_name_4 {
     position: absolute;
-    top: 28vh;
-    left: 10vw;
-    font-size: 4.5vw;
+    top: 12vh;
+    left: -0.3vw;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
     color: rgba(87, 87, 87, 0.3);
     overflow: hidden;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_5{
+    position: absolute;
+    top: 12vh;
+    left: 1vw;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(87, 87, 87, 0.3);
+    overflow: hidden;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_6{
+    position: absolute;
+    top: 14vh;
+    left: 1vw;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(87, 87, 87, 0.3);
+    overflow: hidden;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_7{
+    position: absolute;
+    top: 14vh;
+    left: 1vw;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(87, 87, 87, 0.3);
+    overflow: hidden;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_8{
+    position: absolute;
+    top: 14vh;
+    left: 0.5vw;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(87, 87, 87, 0.3);
+    overflow: hidden;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_9{
+    position: absolute;
+    top: 12vh;
+    left: 0.5vw;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(87, 87, 87, 0.3);
+    overflow: hidden;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_10{
+    position: absolute;
+    top: 14vh;
+    left: 0.5vw;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(87, 87, 87, 0.3);
+    overflow: hidden;
+    font-family: 'Athelas Italic', serif;
 }
 
 .product_name::before{
@@ -147,8 +329,8 @@
     width: 0;
     white-space: nowrap;
     overflow: hidden;
-    color: rgb(31, 65, 255);
-    font-family: 'Nanum Myeongjo', serif;
+    color: rgb(255, 255, 255);
+    font-family: 'Athelas Italic', serif;
 }
 /* ::before	요소 내용 앞쪽에 새 컨텐츠를 추가 */
 
@@ -159,8 +341,8 @@
     width: 0px;
     white-space: nowrap;
     overflow: hidden;
-    color: rgb(255, 94, 94);
-    font-family: 'Nanum Myeongjo', serif;
+    color: #96E3D5 ;
+    font-family: 'Athelas Italic', serif;
 }
 
 .product_name_3::before{
@@ -170,8 +352,8 @@
     width: 0px;
     white-space: nowrap;
     overflow: hidden;
-    color: rgb(255, 255, 255);
-    font-family: 'Nanum Myeongjo', serif;
+    color: #FBC1BF;
+    font-family: 'Athelas Italic', serif;
 }
 /* ::before	요소 내용 앞쪽에 새 컨텐츠를 추가 */
 
@@ -182,88 +364,224 @@
     width: 0px;
     white-space: nowrap;
     overflow: hidden;
-    color: rgb(255, 255, 255);
-    font-family: 'Nanum Myeongjo', serif;
+    color: #6E6104;
+    font-family: 'Athelas Italic', serif;
 }
 
-.product_img:hover, .product_img_2:hover, .product_img_3:hover, .product_img_4:hover{
+.product_name_5::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #B7BAB4;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_6::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #FCD586;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_7::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #BD7F52;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_8::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #C59E49;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_9::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #A02F12;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_name_10::before{
+    content: attr(prod_title);
+    display: block;
+    position: absolute;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #0193DA;
+    font-family: 'Athelas Italic', serif;
+}
+
+.product_img:hover, .product_img_2:hover, 
+.product_img_3:hover, .product_img_4:hover, .product_img_5:hover, .product_img_6:hover, 
+.product_img_7:hover, .product_img_8:hover, .product_img_9:hover, .product_img_10:hover{
     cursor: pointer;
 }
 
 .product_link:hover + .product_name::before,
-.product_link:hover + .product_name_2::before, .product_link:hover + .product_name_3::before, .product_link:hover + .product_name_4::before{
+.product_link:hover + .product_name_2::before, .product_link:hover + .product_name_3::before, .product_link:hover + .product_name_4::before,
+.product_link:hover + .product_name_5::before, .product_link:hover + .product_name_6::before, .product_link:hover + .product_name_7::before,
+.product_link:hover + .product_name_8::before, .product_link:hover + .product_name_9::before, .product_link:hover + .product_name_10::before{
     transition: all 0.2s linear;
     width: 100%;
 }
 
 .product_link:not(:hover) + .product_name::before,
-.product_link:not(:hover) + .product_name_2::before, .product_link:not(:hover) + .product_name_3::before, .product_link:not(:hover) + .product_name_4::before{
+.product_link:not(:hover) + .product_name_2::before, .product_link:not(:hover) + .product_name_3::before, .product_link:not(:hover) + .product_name_4::before,
+.product_link:not(:hover) + .product_name_5::before, .product_link:not(:hover) + .product_name_6::before, .product_link:not(:hover) + .product_name_7::before,
+.product_link:not(:hover) + .product_name_8::before, .product_link:not(:hover) + .product_name_9::before, .product_link:not(:hover) + .product_name_10::before{
     transition: all 0.2s linear;
     width: 0;
 }
 
-.product_link:hover + .product_name,
-.product_link:hover + .product_name::before{
-    z-index: 2;
-}
-
-.product_link:hover + .product_name_2,
-.product_link:hover + .product_name_2::before{
-    z-index: 2;
-}
-
 .product_sub_name_1{
     position: absolute;
-    top: 53vh;
-    left: 11vw;
-    font-size: 2.5vw;
+    top: 28vh;
+    left: -1.5vw;
+    font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgb(255, 255, 255);
+    color: rgba(211, 211, 211, 0.3);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_sub_name_2{
     position: absolute;
-    top: 55vh;
-    left: 25vw;
-    transform: translate(-50%, -50%);
-    font-size: 2.5vw;
+    top: 28vh;
+    left: 1.2vw;
+    font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgb(255, 255, 255);
+    color: rgba(211, 211, 211, 0.3);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_sub_name_3{
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    top: 28vh;
+    left: 0.5vw;
+    font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgb(255, 255, 255);
+    color: rgba(211, 211, 211, 0.3);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
 .product_sub_name_4{
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    top: 28vh;
+    left: 1vw;
+    font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: rgb(255, 255, 255);
+    color: rgba(211, 211, 211, 0.3);
     overflow: hidden;
     font-family: 'Nanum Myeongjo', serif;
 }
 
+.product_sub_name_5{
+    position: absolute;
+    top: 28vh;
+    left: 2vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(211, 211, 211, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_6{
+    position: absolute;
+    top: 28vh;
+    left: 2vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(211, 211, 211, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_7{
+    position: absolute;
+    top: 28vh;
+    left: 2vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(211, 211, 211, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_8{
+    position: absolute;
+    top: 28vh;
+    left: 1.5vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(211, 211, 211, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_9{
+    position: absolute;
+    top: 28vh;
+    left: 1.5vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(211, 211, 211, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.product_sub_name_10{
+    position: absolute;
+    top: 28vh;
+    left: 1.5vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(211, 211, 211, 0.3);
+    overflow: hidden;
+    font-family: 'Nanum Myeongjo', serif;
+}

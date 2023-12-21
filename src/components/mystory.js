@@ -7,14 +7,13 @@
 -------------------------------------------------------------------------
 */
 
-import React, { forwardRef, useImperativeHandle, useState } from 'react';
-import { CgProfile } from "react-icons/cg";
-import { MdOutlinePhoneAndroid } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
-import { MdOutlineEmail } from "react-icons/md";
+import React, { forwardRef, useImperativeHandle, useState, useEffect } from 'react';
 import { LiaToggleOffSolid } from "react-icons/lia";
 import { LiaToggleOnSolid } from "react-icons/lia";
+import { IoMdCloseCircle } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+import axios from 'axios';
 import './mystory.css';
 
 const MyStory = forwardRef(({ closeMyStory }, ref) => {
@@ -23,6 +22,9 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
     const [isToggleOn_2, setIsToggleOn_2] = useState(false);
     const [isToggleOn_3, setIsToggleOn_3] = useState(false);
     const [isToggleOn_4, setIsToggleOn_4] = useState(false);
+
+    const [cookies, setCookie] = useCookies(['token']);
+    const [userInfo, setUserInfo] = useState(null);
 
     const toggleClick = (number) => {
         if (number=== 1) {
@@ -49,6 +51,28 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
         setMyInfo
     }));
 
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            if (cookies.token) {
+              const userNO = cookies.token.userData;
+    
+              const res = await axios.get(`http://localhost:3000/user/mypage?userNO=${userNO}`);
+              setUserInfo(res.data);
+              console.log("data: ", res.data);
+            }
+          } catch (error) {
+            console.error('Error fetching user data:', error);
+          }
+        };
+
+        if(!cookies.token) {
+            setUserInfo(null);
+        }
+    
+        fetchData();
+    }, [cookies.token]);
+
     return (
         <div className="my_story">
             <div className='myStoryTitle'>
@@ -63,7 +87,7 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className={`shoppingBag ${activeTab === 'addToBag' ? '' : 'none'}`}  onClick={() => setActiveTab('addToBag')}>
                     장바구니
                 </div>
-                <div className='closeMystoryBtn' onClick={closeInfo}><img src="/img/closeBtn.png" alt="" /></div>
+                <div className='closeMystoryBtn' onClick={closeInfo}><IoMdCloseCircle size='35' color='gray'/></div>
             </div>
             {/* 내 정보 */}
             <div className={`myInfo ${activeTab === 'myInfo' ? '' : 'close'}`}>
@@ -71,39 +95,51 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className="basicInfo">
                     <div className="basicInfoContents">
                         <div className="profile">
-                            <CgProfile className="profileIcon" color='rgba(161, 161, 161, 0.9)'/>
-                            <div className="name">이름</div>                        
-                            <div>수정</div>
+                            <div className='profile_list'>
+                                <img src='/pic/icon_pic/name.webp' className="profileIcon"/>
+                                {userInfo ? <div className="name">{userInfo.userName}</div> : <div className="name">이름</div>}        
+                            </div>                  
+                            {/* <div className='editInfo'>수정</div> */}
                         </div>
                         <div className="emailInfo">
-                            <MdOutlineEmail className="emailIcon" color='rgba(161, 161, 161, 0.9)'/>
-                            <div className="emailInfo_address">이메일</div>                        
-                            <div>수정</div>
+                            <div className='profile_list'>
+                                <img src='/pic/icon_pic/mail.webp' className="emailIcon"/>
+                                {userInfo ? <div className="emailInfo_address">{userInfo.userID}</div> : <div className="emailInfo_address">이메일</div>  }                         
+                            </div>
+                            {/* <div className='editInfo'>수정</div> */}
                         </div>
                         <div className="phoneInfo">
-                            <MdOutlinePhoneAndroid className="phoneIcon" color='rgba(161, 161, 161, 0.9)'/>
-                            <div className="phoneNum">핸드폰번호</div>
-                            <div>수정</div>
+                            <div className='profile_list'>
+                                <img src='/pic/icon_pic/phone.webp' className="phoneIcon"/>
+                                {userInfo ? <div className="phoneNum">{userInfo.userPhone}</div> : <div className="phoneNum">핸드폰번호</div>}
+                            </div>
+                            {/* <div className='editInfo'>수정</div> */}
                         </div>
                         <div className="addressInfo">
-                            <FaLocationDot className="addressIcon" color='rgba(161, 161, 161, 0.9)'/>
-                            <div className="addresshome">자택 주소</div>
-                            <div>수정</div>
+                            <div className='profile_list'>
+                                <img src='/pic/icon_pic/address.webp' className="addressIcon"/>
+                                {userInfo ? <div className="addresshome">{userInfo.userAdd}, {userInfo.userSubAdd}</div> : <div className="addresshome">배송지 관리</div>}  
+                            </div>
+                            {/* <div className='editInfo'>수정</div> */}
                         </div>
                     </div>
                 </div>
                 <div className="promotionTitle">프로모션 정보수신 동의</div>
                 <div className="promotion">
                     <div className="phoneAgree">
-                        <MdOutlinePhoneAndroid className="phoneIcon" color='rgba(161, 161, 161, 0.9)'/>
-                        <div>휴대폰</div>
+                        <div className='profile_list'>
+                            <img src='/pic/icon_pic/phone.webp' className="phoneIcon"/>
+                            <div>휴대전화</div>
+                        </div>
                         <div className="onoffIcon" onClick={()=>{toggleClick(1)}}>{isToggleOn_1 ? 
                         <LiaToggleOffSolid  color='rgba(161, 161, 161, 0.9)' size='1.3vw'/> 
                         : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                     <div className="emailAgree">
-                        <MdOutlineEmail className="emailIcon" color='rgba(161, 161, 161, 0.9)'/>
-                        <div>이메일</div>
+                        <div className='profile_list'>
+                            <img src='/pic/icon_pic/mail.webp' className="emailIcon"/>
+                            <div>이메일</div>
+                        </div>
                         <div className="onoffIcon" onClick={()=>{toggleClick(2)}}>{isToggleOn_2 ? 
                         <LiaToggleOffSolid  color='rgba(161, 161, 161, 0.9)' size='1.3vw'/> 
                         : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
@@ -112,35 +148,48 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className="alarmTitle">게시물 조치 알림 수신 동의</div>
                 <div className="alarm">
                     <div className="phoneAgree">
-                        <MdOutlinePhoneAndroid className="phoneIcon" color='rgba(161, 161, 161, 0.9)'/>
-                        <div>휴대폰</div>
+                        <div className='profile_list'>
+                            <img src='/pic/icon_pic/phone.webp' className="phoneIcon"/>
+                            <div>휴대전화</div>
+                        </div>
                         <div className="onoffIcon" onClick={()=>{toggleClick(3)}}>{isToggleOn_3 ? 
                         <LiaToggleOffSolid  color='rgba(161, 161, 161, 0.9)' size='1.3vw'/> 
                         : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                     <div className="emailAgree">
-                        <MdOutlineEmail className="emailIcon" color='rgba(161, 161, 161, 0.9)'/>
-                        <div>이메일</div>
+                        <div className='profile_list'>
+                            <img src='/pic/icon_pic/mail.webp' className="emailIcon"/>
+                            <div>이메일</div>
+                        </div>
                         <div className="onoffIcon" onClick={()=>{toggleClick(4)}}>{isToggleOn_4 ? 
                         <LiaToggleOffSolid  color='rgba(161, 161, 161, 0.9)' size='1.3vw'/> 
                         : <LiaToggleOnSolid color='rgba(161, 161, 161, 0.9)' size='1.3vw'/>}</div>
                     </div>
                 </div>
+                <div className='editInfoBtn'>회원정보 수정 &gt;</div>
+                <div className='withdrawal'>회원탈퇴 &gt;</div>
+                {userInfo ? <Link to='/admin' className={`admin ${userInfo.userRole === 0 ? '' : 'hidden'}`} onClick={closeInfo}>관리자 페이지</Link> : 
+                <Link to='/admin' className="admin hidden" onClick={closeInfo}>관리자 페이지</Link>}
             </div>
             {/* 나의 명세서 */}
             <div className={`specs ${activeTab === 'specs' ? '' : 'close'}`}>
                 <div className='specsname'>추억의 물품 판매 신청 내역</div>
                 <div className='sales'>
                     <div className='salesList'>
-                        <div className='date'>날짜</div>
                         <div className='salesInfo'>
-                            <div>이미지</div>
+                            <img src="/pic/shop_pic/chair.webp" alt="" className='salesInfoImg'/>
                             <div>
-                                <div>물품명</div>
-                                <div>희망가격</div>
+                                <div>영국 황실 의자</div>
+                                <div>희망가격 : 3,500,000원</div>
                             </div>
-                            <div>전문가 검수 확인중</div>
-                            <div>검수중 아이콘</div>
+                            <div>
+                                <div>신청 날짜 : 2023.12.17 신청</div>
+                                <div>전문가 검수 확인중</div>
+                            </div>
+                            <div className='purchaseConfirmList'>
+                                <div><img src="/pic/icon_pic/check.webp" alt="" className='checkProd'/></div>
+                                <div className='purchaseConfirm_txt'>검수중</div>
+                            </div>
                         </div>
                     </div>
                     <div className='plus'>+ 더보기</div>
@@ -148,14 +197,20 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className='specsname_2'>구매 내역</div>
                 <div className='purchase'>
                     <div className='purchaseList'>
-                        <div className='date'>날짜</div>
                         <div className='purchaseInfo'>
-                            <div>이미지</div>
+                            <img src="/pic/shop_pic/lamp.webp" alt="" className="purchaseInfoImg" />
                             <div>
-                                <div>물품명</div>
-                                <div>가격</div>
+                                <div>조명</div>
+                                <div>결제금액 : 3,500,000원</div>
                             </div>
-                            <div>구매확정완료</div>
+                            <div>
+                                <div>2023.12.17 구매</div>
+                                <div>전문가 검수 진행중</div>
+                            </div>
+                            <div className='purchaseConfirmList'>
+                                <div><img src="/pic/icon_pic/purchaseConfirm.webp" alt="" className='purchaseConfirm'/></div>
+                                <div className='purchaseConfirm_txt'>구매확정</div>
+                            </div>
                         </div>
                     </div>
                     <div className='plus'>+ 더보기</div>
@@ -166,22 +221,24 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                 <div className='shoppingBagList'>장바구니 내역</div>
                 <div className='shoppingProduct'>
                     <div className='shoppingProductInfo'>
-                        <div className='shoppingImg'>상품 이미지</div>
-                        <div className='shoppingProdName'>상품명</div>
-                        <div className='shoppingPrice'>가격</div>
-                        <input type="checkbox" />
+                        <img src='/pic/shop_pic/LP.webp' className='shoppingImg_1'/>
+                        <div>
+                            <div className='shoppingProdName'>상품명 : The Beatles 1st LP</div>
+                            <div className='shoppingPrice'>가격 : 124,000원</div>
+                        </div>
+                        <input type="checkbox" className='shoppingCheck'/>
                     </div>
                     <div className='shoppingProductInfo'>
-                        <div className='shoppingImg'>상품 이미지</div>
-                        <div className='shoppingProdName'>상품명</div>
-                        <div className='shoppingPrice'>가격</div>
-                        <input type="checkbox" />
+                        <img src='/pic/shop_pic/cup.webp' className='shoppingImg_2'/>
+                        <div>
+                            <div className='shoppingProdName'>상품명 : Noritake</div>
+                            <div className='shoppingPrice_2'>가격 : 280,000원</div>
+                        </div>
+                        <input type="checkbox" className='shoppingCheck2'/>
                     </div>
                 </div>
-                <Link to='/payment' className='buyButton' onClick={closeInfo}>구매하기</Link>
+                <Link to='/cart' className='buyButton' onClick={closeInfo}>구매하기</Link>
             </div>
-            <div className='withdrawal'>회원탈퇴 &gt;</div>
-            {/* <Link to='/admin' className='admin' onClick={closeInfo}>관리자 페이지</Link> */}
         </div>
     );
 });
