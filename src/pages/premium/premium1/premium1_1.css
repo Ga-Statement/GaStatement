@@ -169,7 +169,7 @@
 
 .premium1_1_Info_3_1_specialist{
     margin-right: 15px;
-    margin-top: -3.5px;
+    margin-top: -4px;
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: lighter;
@@ -203,7 +203,7 @@
 
 .premium1_1_Info_3_2_prodStatus{
     margin-right: 15px;
-    margin-top: -3.5px;
+    margin-top: -4px;
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: lighter;
@@ -253,12 +253,12 @@
 }
 
 .premium1_1_buyIcon{
-    width: 20px;
+    width: 25px;
     height: 23px;
 }
 
 .premium1_1_basketIcon{
-    width: 20px;
+    width: 25px;
     height: 23px;
 }
 

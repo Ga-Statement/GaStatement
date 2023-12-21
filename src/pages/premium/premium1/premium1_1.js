@@ -7,7 +7,7 @@ import './premium1_1.css';
 
 const Premium1_1 = () => {
     const [currentTime, setCurrentTime] = useState(new Date());
-    const [endTime, setEndTime] = useState(new Date('2023-12-20T23:59:59'));
+    const [endTime, setEndTime] = useState(new Date('2023-12-30T23:59:59'));
 
     const timeDiff = endTime.getTime() - currentTime.getTime();
     const secondsRemaining = Math.floor(timeDiff / 1000);
@@ -94,21 +94,21 @@ const Premium1_1 = () => {
         setCount_1(initialValue);
         };
 
-    // useEffect(() => {
-    //     // count_2가 0이 되면 자동으로 초기값으로 리셋
-    //     if (count_2 === 0) {
-    //         handleResetClick();
-    //     }
-    // }, [count_2]);
-
     useEffect(() => {
-        // count_2가 0이 되면 정지
-        if (count_1 <= 200000) {
-            
-            clearInterval(intervalIdRef.current);
-            clearInterval(timerRef.current);
+        // count_1이 0이 되면 자동으로 초기값으로 리셋
+        if (count_1 === 0) {
+            handleResetClick();
         }
     }, [count_1]);
+
+    // useEffect(() => {
+    //     // count_1이  200000 이하가 되면 정지
+    //     if (count_1 <= 200000) {
+            
+    //         clearInterval(intervalIdRef.current);
+    //         clearInterval(timerRef.current);
+    //     }
+    // }, [count_1]);
 
     const productData = async () => {
         const { data } = await axios.get(

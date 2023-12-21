@@ -13,8 +13,9 @@
     flex: 1.2;
     text-align: center;
     position: relative;
-    top: 17%;
-    left: 1%;
+    top: 23%;
+    left: 0.5%;
+    height: 50%;
 }
 
 .cart_pay_complete_product_img{

@@ -37,7 +37,7 @@
 .borderR{
     border-right: 1px solid black;
     margin: 0 1vw;
-    height: 3vh;
+    height: 2.4vh;
 }
 
 .closeMystoryBtn{
@@ -295,7 +295,7 @@
 
 .purchase{
     width: 30vw;
-    height: 20vh;
+    height: 18vh;
     border: 2px solid rgba(161, 161, 161, 0.9);
     border-radius: 1vw;
     margin: 0 auto;
@@ -323,6 +323,7 @@
 .purchaseInfoImg{
     width: 1.2vw;
     height: 5vh;
+    margin-left: 0.5vw;
 }
 
 .shoppingBagList{
@@ -438,4 +439,20 @@
 
 .hidden {
     visibility: hidden;
+}
+
+.salesInfo_1{
+    margin-bottom: 0.5vh;
+}
+
+.salesInfo_3{
+    margin-bottom: 0.5vh;
+}
+
+.purchaseInfo_1{
+    margin-bottom: 0.5vh;
+}
+
+.purchaseInfo_3{
+    margin-bottom: 0.5vh;
 }

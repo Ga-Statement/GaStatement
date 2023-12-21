@@ -16,7 +16,7 @@ import './standard1.css';
 
 const Standard1 = () => {
     const [currentTime, setCurrentTime] = useState(new Date());
-    const [endTime, setEndTime] = useState(new Date('2023-12-20T23:59:59'));
+    const [endTime, setEndTime] = useState(new Date('2023-12-29T23:59:59'));
 
     const timeDiff = endTime.getTime() - currentTime.getTime();
     const secondsRemaining = Math.floor(timeDiff / 1000);
@@ -103,21 +103,21 @@ const Standard1 = () => {
     setCount_3(initialValue);
     };
 
-    // useEffect(() => {
-    //     // count_3이 0이 되면 자동으로 초기값으로 리셋
-    //     if (count_3 === 0) {
-    //         handleResetClick();
-    //     }
-    // }, [count_3]);
-
     useEffect(() => {
-        // count_3이 0이 되면 정지
-        if (count_3 <= 40000) {
-            
-            clearInterval(intervalIdRef.current);
-            clearInterval(timerRef.current);
+        // count_3이 0이 되면 자동으로 초기값으로 리셋
+        if (count_3 === 0) {
+            handleResetClick();
         }
     }, [count_3]);
+
+    // useEffect(() => {
+    //     // count_3이 40000 이하가 되면 정지
+    //     if (count_3 <= 40000) {
+            
+    //         clearInterval(intervalIdRef.current);
+    //         clearInterval(timerRef.current);
+    //     }
+    // }, [count_3]);
 
     const productData = async () => {
         const { data } = await axios.get(

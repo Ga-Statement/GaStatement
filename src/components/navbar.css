@@ -108,7 +108,7 @@ body{
     bottom: 0;
     left: 37%;
     width: 35vw;
-    height: 83vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,7 +116,7 @@ body{
     background-color: rgba(255, 255, 255, 0.9);    
     color: rgb(0, 0, 0);
     border-radius: 2vh;
-    transform: translateY(-5.3%);
+    transform: translateY(-5.2%);
     transition: transform 1.5s ease-in-out;
     z-index: 3;
     opacity: 1;
@@ -233,7 +233,7 @@ body{
         position: fixed;
         top: 0;
         right: 0%;
-        z-index: 1;
+        z-index: 2;
     }
 
     .sidebar .sideOpenBtn, .sideCloseBtn{

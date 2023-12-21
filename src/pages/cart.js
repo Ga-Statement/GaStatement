@@ -11,9 +11,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../components/loading';
 import './cart.css';
-import { FaRegUser } from "react-icons/fa";
-import { MdOutlinePhoneAndroid, MdOutlineLocalPostOffice } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
 import { PiNoteBold } from "react-icons/pi";
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
@@ -22,12 +19,12 @@ const Cart = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
     
-    const [isChecked1, setIsChecked1] = useState(false);
-    const [isChecked2, setIsChecked2] = useState(false);
-    const [isChecked3, setIsChecked3] = useState(false);
-    const [isChecked4, setIsChecked4] = useState(false);
-    const [isChecked5, setIsChecked5] = useState(false);
-    const [isChecked6, setIsChecked6] = useState(false);
+    const [isChecked1, setIsChecked1] = useState(true);
+    const [isChecked2, setIsChecked2] = useState(true);
+    // const [isChecked3, setIsChecked3] = useState(false);
+    // const [isChecked4, setIsChecked4] = useState(false);
+    // const [isChecked5, setIsChecked5] = useState(false);
+    // const [isChecked6, setIsChecked6] = useState(false);
 
     const [cookies, setCookie] = useCookies(['token']);
     const [userInfo, setUserInfo] = useState(null);
@@ -218,6 +215,7 @@ const Cart = () => {
                                     </>
                             )}
                         </div>
+                        <div className='cartPayAgree'><input type="checkbox"/> 주문 내용을 확인하였으며, 정보 제공 등에 동의합니다.</div>
                         <Link to='/cartpaycomplete' className='purchase_btn'>구매하기</Link>
                     </div>
                 </div>
