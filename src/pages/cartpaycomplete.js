@@ -86,7 +86,7 @@ const CartPayComplete = () => {
                                 <div className="vr"/>
                                 <div className="cart_pay_account_info_2_2">
                                     <div className="cart_pay_account_info_2_2_1">서랍페이</div>
-                                    <div className="cart_pay_account_info_2_2_2">404,000원</div>
+                                    <div className="cart_pay_account_info_2_2_2">407,000원</div>
                                     <div className="cart_pay_account_info_2_2_3">{formattedDateTime}</div>
                                 </div>
                             </div>
