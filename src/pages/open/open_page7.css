@@ -1,6 +1,6 @@
 .item {
   width: 15vw;
-  height: 15vh;
+  height: 30vh;
   background-position: center;
   background-size: 35vh;
   margin: 1vw;
@@ -15,12 +15,16 @@
     overflow: hidden;
   }
 
+.page7_name{ font-size: 1.2em; transform: translateY(-2.8em);  color:gray; font-weight: 700;}
+
 .page7_step1{font-weight: 700; color:white; font-size: 5em;margin-top: 3em;}
 .page7_step1_text{font-weight: 700; color:white; font-size: 2em;
           text-align: center;}
 .page7_step1_text2{margin-top: 1em; font-weight: 400; color:white; font-size: 1.5em;
           text-align:center;}
-.page7_last_text{margin-top: 10em; font-weight: 200; color:white; font-size: 2em;
+.page7_last_text{margin-top: 15em; font-weight: 200; background: linear-gradient(to top, #494949, #ffffff);
+  color: transparent;
+  -webkit-background-clip: text; font-size: 1.5em;
           text-align:center; height: 70vh; font-family: 'Noto Serif KR'}
 
 #page7_h3{margin-top: 1.5em; font-size: 1.3em;}

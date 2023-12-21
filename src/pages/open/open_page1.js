@@ -4,6 +4,8 @@ import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveI
 // Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut
 import { Aos } from "aos";
 import { motion } from "framer-motion";
+import { GiExitDoor } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const Open_page1 = () => {
     return (
@@ -83,6 +85,9 @@ const Open_page1 = () => {
             <div className='font_wrap'>
 <div className="text_open"> open. </div>
 <div className="text_drawer"> DRAWER </div>
+<Link to="/main">
+<div className="text_putin"> <GiExitDoor size={55}/></div>
+</Link>
             </div>
           </div>
           <motion.div className="girdbox8"
