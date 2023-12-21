@@ -180,13 +180,13 @@ const Cart = () => {
                         <div className="payment_method_title">결제 방법</div>
                         <div className="payment_method">
                             <form action="paymentMethod" className='payment_method_list'>
-                                <label><input type="radio" value='1' name='paymentMethod' checked={selectedPaymentMethod === '1'}
+                                <label className='paymentMethodInput'><input type="radio" value='1' name='paymentMethod' checked={selectedPaymentMethod === '1'}
                                 onChange={() => handlePaymentMethodChange('1')}/>서랍페이</label>
-                                <label><input type="radio" value='2' name='paymentMethod' checked={selectedPaymentMethod === '2'}
+                                <label className='paymentMethodInput'><input type="radio" value='2' name='paymentMethod' checked={selectedPaymentMethod === '2'}
                                 onChange={() => handlePaymentMethodChange('2')}/>무통장입금</label>
-                                <label><input type="radio" value='3' name='paymentMethod' checked={selectedPaymentMethod === '3'}
+                                <label className='paymentMethodInput'><input type="radio" value='3' name='paymentMethod' checked={selectedPaymentMethod === '3'}
                                 onChange={() => handlePaymentMethodChange('3')}/>가상계좌</label>
-                                <label><input type="radio" value='4' name='paymentMethod' checked={selectedPaymentMethod === '4'}
+                                <label className='paymentMethodInput'><input type="radio" value='4' name='paymentMethod' checked={selectedPaymentMethod === '4'}
                                 onChange={() => handlePaymentMethodChange('4')}/>휴대폰결제</label>
                                 <label><input type="radio" value='5' name='paymentMethod' checked={selectedPaymentMethod === '5'}
                                 onChange={() => handlePaymentMethodChange('5')}/>신용/체크카드</label>

@@ -187,7 +187,7 @@ const Premium1_1 = () => {
                     </div>
                 </div>
                 <div className="premium1_1_BuyBag">
-                    <button onClick={handleResetClick}>값 초기화</button>
+                    {/* <button onClick={handleResetClick}>값 초기화</button> */}
                 </div>
             </div>
         </div>

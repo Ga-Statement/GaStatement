@@ -282,3 +282,7 @@
 .payAgree1 input{
     accent-color: gray;
 }
+
+.paymentMethodInput{
+    margin-bottom: 0.5vh;;
+}
