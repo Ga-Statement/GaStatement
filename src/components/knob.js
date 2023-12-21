@@ -66,7 +66,7 @@ const Knob = ({closeKnobBtn}) => {
         setKnobEmail('');
         setKnobPrice('');
         setKnobDesc('');
-        setSelectedAddress('');
+        setKnobAdd('');
     }
     
     const [knobProd, setKnobProd] = useState('');
@@ -78,7 +78,7 @@ const Knob = ({closeKnobBtn}) => {
     const [knobEmail, setKnobEmail] = useState('');
     const [knobPrice, setKnobPrice] = useState('');
     const [knobDesc, setKnobDesc] = useState('');
-    const [selectedAddress, setSelectedAddress] = useState('');
+    const [knobAdd, setKnobAdd] = useState('');
 
     const [cookies, setCookie] = useCookies(["token"]);
     const [userInfo, setUserInfo] = useState(null);
@@ -128,8 +128,9 @@ const Knob = ({closeKnobBtn}) => {
         setKnobDesc(newDesc);
     }
 
-    const handleAddressChange = (address) => {
-        setSelectedAddress(address);
+    const handleAdd = (event) => {
+        const newAdd = event.target.value;
+        setKnobAdd(newAdd);
     };
 
     useEffect(() => {
@@ -158,14 +159,14 @@ const Knob = ({closeKnobBtn}) => {
         if (userInfo) {
           setKnobName(userInfo.userName || '');  // 빈 문자열로 기본값 설정
           setKnobPhone(userInfo.userPhone || '');
-          setSelectedAddress(userInfo.userAdd || '');
+          setKnobAdd(userInfo.userAdd || '');
           setKnobAddress(userInfo.userSubAdd || '');
           setKnobEmail(userInfo.userID || '');
           // 다른 필요한 초기값도 설정할 수 있습니다.
         } else {
             setKnobName('');  // 빈 문자열로 기본값 설정
             setKnobPhone('');
-            setSelectedAddress('');
+            setKnobAdd('');
             setKnobAddress('');
             setKnobEmail('');
         }
@@ -185,8 +186,7 @@ const Knob = ({closeKnobBtn}) => {
                 <div><input className='knob_email' type="text" placeholder='이메일' name="user_email" value={knobEmail} onChange={handleEmail}/></div>
                 <div><input className='applicant_name' type="text" placeholder='신청자 성함' name="user_name" value={knobName} onChange={handleName}/></div>
                 <div><input className='applicant_phone' type="text" placeholder='전화번호' name="user_phone" value={knobPhone} onChange={handlePhone}/></div>
-                <div><input className='knob_address' type="text" placeholder='주소' name="user_add" value={selectedAddress} readOnly/></div>
-                <div><Address setAddress={handleAddressChange}/><br/></div>
+                <div><input className='knob_address' type="text" placeholder='주소' name="user_add" value={knobAdd} onChange={handleAdd} /></div>
                 <div><input className="knob_address" type="text" placeholder='상세주소' name="user_subadd" value={knobAddress} onChange={handleAddr}/></div>
                 <div><input className='prod_name' type="text" placeholder='상품명' name="pd_name" value={knobProd} onChange={handleProd}/></div>
                 <div><input className='prod_brand' type="text" placeholder='브랜드' name="pd_brand" value={knobBrand} onChange={handleBrand}/></div>

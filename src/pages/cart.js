@@ -15,6 +15,8 @@ import { FaRegUser } from "react-icons/fa";
 import { MdOutlinePhoneAndroid, MdOutlineLocalPostOffice } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { PiNoteBold } from "react-icons/pi";
+import { useCookies } from 'react-cookie';
+import axios from 'axios';
 
 const Cart = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +28,9 @@ const Cart = () => {
     const [isChecked4, setIsChecked4] = useState(false);
     const [isChecked5, setIsChecked5] = useState(false);
     const [isChecked6, setIsChecked6] = useState(false);
+
+    const [cookies, setCookie] = useCookies(['token']);
+    const [userInfo, setUserInfo] = useState(null);
 
 
     useEffect(() => {
@@ -43,6 +48,28 @@ const Cart = () => {
     const handleImageClick = (checkboxSetter) => {
         checkboxSetter((prev) => !prev);
     };
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            if (cookies.token) {
+              const userNO = cookies.token.userData;
+    
+              const res = await axios.get(`http://localhost:3000/user/mypage?userNO=${userNO}`);
+              setUserInfo(res.data);
+              console.log("data: ", res.data);
+            }
+          } catch (error) {
+            console.error('Error fetching user data:', error);
+          }
+        };
+
+        if(!cookies.token) {
+            setUserInfo(null);
+        }
+    
+        fetchData();
+    }, [cookies.token]);
 
     return(
         <>
@@ -89,7 +116,7 @@ const Cart = () => {
                             <div className="payment_user_info__1">
                                 <div className="payment_user_info_1_name">
                                     <img src='/pic/icon_pic/name.webp' className='payment_user_info_1_icon'/>
-                                    이름
+                                    {userInfo ? <span>{userInfo.userName}</span> : <span>이름</span>}
                                 </div>
                                 {/* <div className="payment_user_info_1_edit">수정</div> */}
                             </div>
@@ -97,7 +124,7 @@ const Cart = () => {
                             <div className="payment_user_info__2">
                                 <div className="payment_user_info_2_phone">
                                     <img src='/pic/icon_pic/phone.webp' className='payment_user_info_2_icon'/>
-                                    010-1234-5678
+                                    {userInfo ? <span>{userInfo.userPhone}</span> : <span>01012345678</span>}
                                 </div>
                                 {/* <div className="payment_user_info_2_edit">수정</div> */}
                             </div>
@@ -105,7 +132,7 @@ const Cart = () => {
                             <div className="payment_user_info__3">
                                 <div className="payment_user_info_3_email">
                                     <img src='/pic/icon_pic/mail.webp' className='payment_user_info_3_icon'/>
-                                    abc123@naver.com
+                                    {userInfo ? <span>{userInfo.userID}</span> : <span>abc123@naver.com</span>}
                                 </div>
                                 {/* <div className="payment_user_info_3_edit">수정</div> */}
                             </div>
@@ -113,7 +140,7 @@ const Cart = () => {
                             <div className="payment_user_info__4">
                                 <div className="payment_user_info_4_address">
                                     <img src='/pic/icon_pic/address.webp' className='payment_user_info_4_icon'/>
-                                    배송지 주소
+                                    {userInfo ? <span>{userInfo.userAdd}, {userInfo.userSubAdd}</span> : <span>배송지 주소</span>}
                                 </div>
                                 {/* <div className="payment_user_info_4_edit">수정</div> */}
                             </div>
@@ -141,7 +168,7 @@ const Cart = () => {
                         <div className="payment_amount">
                             <div className="payment_amount_1">
                                 <div className="payment_amount_1_1">상품 가격</div>
-                                <div className="payment_amount_1_2">500,000원</div>
+                                <div className="payment_amount_1_2">404,000원</div>
                             </div>
                             <div className="payment_amount__2">
                                 <div className="payment_amount_2_1">배송비</div>
@@ -150,7 +177,7 @@ const Cart = () => {
                             <div className="bottomLine_2"/>
                             <div className="payment_amount_3">
                                 <div className="payment_amount_3_1">총 결제금액</div>
-                                <div className="payment_amount_3_2">503,000원</div>
+                                <div className="payment_amount_3_2">407,000원</div>
                             </div>
                         </div>
                         <div className="payment_method_title">결제 방법</div>
