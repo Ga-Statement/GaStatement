@@ -17,11 +17,11 @@ const TextChange = () => {
     // (마운트될 때, 업데이트 될 때, 언마운트 될 때)
     // 컴포넌트가 렌더링 될 때마다 특정한 동작을 수행하도록
     useEffect(() => {
-        const characters =  ['헌 것', '폐 품', '중 고', '추 억', '고 물', '기 억'];
+        const characters =  ['헌 것', '폐 품', '중 고', '추 억', '고 물', '기 억', '모든것'];
         const randomText = setInterval(() => {
         // setInterval: "시간(ms)"을 간격으로 "콜백함수"를 반복 호출 하는 함수
             if (counter === 20) {
-                setText('서 랍');
+                setText('"서 랍"');
                 clearInterval(randomText);
                 // clearInterval(변수)를 호출하여 반복을 중단
             } else {
@@ -33,7 +33,7 @@ const TextChange = () => {
                 // prevState는 컴포넌트의 이전 상태를 기반으로 함
                 // 단어가 한 번 나올 때마다 1씩 증가
             };
-        }, 80); // 1000ms = 1s
+        }, 40); // 1000ms = 1s
 
         return () => clearInterval(randomText);
         // return을 사용하지 않으면 새로운 useEffect를 수행하기 전에 아무런 작업을 하지 않는 것으로 인식

@@ -1,0 +1,14 @@
+.page5{position: relative; height: 100vh;}
+
+.black_box{ height:40vh; width: 100%; background-color: white;}
+.black_one{width: 100vw; height:50vh;
+            position: absolute; top:0;}
+.black_two{width: 100vw; height:50vh; 
+    position: absolute; bottom:0;}
+
+.page5_font_box{ display:flex; flex-direction: column;
+                width: 100%; text-align: center;}
+
+#page5_text1 {font-size: 4em; font-weight: 700; margin-bottom: -.7em; }
+#page5_text2 {font-size: 10em; font-weight: 700; margin:0; margin-bottom: -.1em;}
+#page5_text3 {font-size: 3em;}
