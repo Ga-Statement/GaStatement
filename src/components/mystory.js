@@ -205,7 +205,7 @@ const MyStory = forwardRef(({ closeMyStory }, ref) => {
                             </div>
                             <div>
                                 <div className='purchaseInfo_3'>2023.12.17 구매</div>
-                                <div className='purchaseInfo_4'>전문가 검수 진행중</div>
+                                <div className='purchaseInfo_'>전문가 검수 진행중</div>
                             </div>
                             <div className='purchaseConfirmList'>
                                 <div><img src="/pic/icon_pic/purchaseConfirm.webp" alt="" className='purchaseConfirm'/></div>
