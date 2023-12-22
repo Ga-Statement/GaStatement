@@ -250,7 +250,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
             if (email != null && email != "" && isEmailValid) {
                 try {
                     const { data } = await axios.post(
-                        'http://REACT_APP_HJ_TEST_IP:3000/user/validate/email', {userID: userData.userID}
+                        `http://${process.env.REACT_APP_HJ_TEST_IP}:3000/user/validate/email`, {userID: userData.userID}
                     );
                     setIsEmailChecked(true);
                     if (data.result) {
