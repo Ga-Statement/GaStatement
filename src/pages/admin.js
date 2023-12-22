@@ -20,14 +20,14 @@ const Admin = () => {
 
     const adminUserData = async () => {
         const { data } = await axios.get(
-            `http://REACT_APP_HJ_TEST_IP:3000/user/admin/admin_user`
+            `http://${process.env.REACT_APP_HJ_TEST_IP}:3000/user/admin/admin_user`
         );
         setUserData(data);
     }
 
     const adminPdData = async () => {
         const { data } = await axios.get(
-            `http://REACT_APP_HJ_TEST_IP:3000/product/admin/admin_product`
+            `http://${process.env.REACT_APP_HJ_TEST_IP}:3000/product/admin/admin_product`
         );
         setPdData(data);
     }

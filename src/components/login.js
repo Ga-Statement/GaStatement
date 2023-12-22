@@ -47,7 +47,7 @@ const Login = ({ goToSignUp, closeLogin }) => {
 
     const handleLogin = async (e) => {
         try {
-          const { data } = await axios.post("http://REACT_APP_HJ_TEST_IP:3000/user/signin", {
+          const { data } = await axios.post(`http://${process.env.REACT_APP_HJ_TEST_IP}:3000/user/signin`, {
             userID: emailId,
             userPW: password,
           });
