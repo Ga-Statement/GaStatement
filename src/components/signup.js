@@ -224,7 +224,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
                 onCloseSignUp();
                 try {
                     const res = await axios.post(
-                        'http://localhost:3000/user/signup', userData
+                        'http://REACT_APP_HJ_TEST_IP:3000/user/signup', userData
                     );
                     console.log("요청 성공 : ", res);
                     // alert("회원가입이 완료되었습니다.");
@@ -250,7 +250,7 @@ const SignUp = ({closeSignUp, signUpSuccess}) => {
             if (email != null && email != "" && isEmailValid) {
                 try {
                     const { data } = await axios.post(
-                        'http://localhost:3000/user/validate/email', {userID: userData.userID}
+                        'http://REACT_APP_HJ_TEST_IP:3000/user/validate/email', {userID: userData.userID}
                     );
                     setIsEmailChecked(true);
                     if (data.result) {

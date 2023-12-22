@@ -121,7 +121,7 @@ const Standard2 = () => {
 
     const productData = async () => {
         const { data } = await axios.get(
-            `http://localhost:3000/product/4`
+            `http://REACT_APP_HJ_TEST_IP:3000/product/4`
         );
         setPdData(data);
     }
