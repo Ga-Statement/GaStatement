@@ -139,7 +139,7 @@ const Knob = ({closeKnobBtn}) => {
             if (cookies.token) {
               const userNO = cookies.token.userData;
     
-              const res = await axios.get(`http://localhost:3000/user/mypage?userNO=${userNO}`);
+              const res = await axios.get(`http://REACT_APP_HJ_TEST_IP:3000/user/mypage?userNO=${userNO}`);
               setUserInfo(res.data);
               console.log("data: ", res.data);
             }
